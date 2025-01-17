@@ -1,0 +1,150 @@
+---
+title: 'Pixel Perfect Websites'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/landing.jpg'
+permalink: 'surprise/'
+eleventyNavigation:
+  key: Areas We Serve
+  order: 400
+---
+
+{% extends "layouts/base.html" %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/surprise.css" />
+
+    <!-- Script for Netlify Identity -->
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script defer>
+        if (window.netlifyIdentity) {
+            window
+                .netlifyIdentity
+                .on('init', (user) => {
+                    if (!user) {
+                        window
+                            .netlifyIdentity
+                            .on('login', () => {
+                                document.location.href = '/admin/';
+                            });
+                    }
+                });
+        }
+    </script>
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-849">
+    <div class="cs-container">
+        <span class="cs-int-title">Surprise AZ</span>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background" aria-hidden="true">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/sm.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/sm.jpg">
+        <img loading="lazy" decoding="async" src="/assets/images/sm.jpg" alt="yoga" width="1280" height="568">
+    </picture>
+    <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+    <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="white"/>
+    </svg>
+</div>
+
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
+
+<!-- ============================================ 
+    This Stitch is used for content heavy interior pages
+    that have no design or layout.  Often times these are 
+    content silos where you talk extensively about a topic
+    to educate your visitors and rank on Google for the 
+    content.  These are great for pages that have a TON
+    of content.  Design isn't important here, it's all 
+    about making the content accessible and easy to read.
+================================================= -->
+
+<section id="content-page-849">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h1 class="cs-title">Property Management in <span class="cs-color">Surprise Arizona</span></h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4-6</h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam eum quae in temporibus cumque tempora expedita mollitia nostrum adipisci, ipsum commodi, cupiditate, sequi quos enim! Quaerat esse non sunt! Lorem ipsum dolor sit amet <a href="">link example</a>. Est, quis!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam eum quae in temporibus cumque tempora expedita mollitia nostrum <strong>adipisci, ipsum commodi</strong>, cupiditate, sequi quos enim! 
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam eum quae in temporibus cumque tempora expedita mollitia nostrum adipisci, ipsum commodi, cupiditate, sequi quos enim! Quaerat esse non sunt! Lorem ipsum dolor sit amet <a href="">link example</a>. Est, quis!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam eum quae in temporibus cumque tempora expedita mollitia nostrum <strong>adipisci, ipsum commodi</strong>, cupiditate, sequi quos enim! 
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam eum quae in temporibus cumque tempora expedita mollitia nostrum adipisci, ipsum commodi, cupiditate, sequi quos enim! Quaerat esse non sunt! Lorem ipsum dolor sit amet <a href="">link example</a>. Est, quis!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam eum quae in temporibus cumque tempora expedita mollitia nostrum <strong>adipisci, ipsum commodi</strong>, cupiditate, sequi quos enim! 
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam eum quae in temporibus cumque tempora expedita mollitia nostrum adipisci, ipsum commodi, cupiditate, sequi quos enim! Quaerat esse non sunt! Lorem ipsum dolor sit amet <a href="">link example</a>. Est, quis!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam eum quae in temporibus cumque tempora expedita mollitia nostrum <strong>adipisci, ipsum commodi</strong>, cupiditate, sequi quos enim! 
+            </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        </div>
+        <div class="cs-image-group">
+            <!--Top Picture-->
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/test2.png">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/test2.png">
+                <img decoding="async" src="/assets/images/test2.png" alt="person" width="542" height="520" aria-hidden="true">
+            </picture>
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/property-management-surprise-m.webp">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/property-management-surprise.webp">
+                <img decoding="async" src="property-management-surprise.webp" alt="person" width="542" height="520" aria-hidden="true">
+            </picture>
+        </div>
+    </div>
+</section>
+                                
+
+    {% include 'components/cta.html' %}
+{% endblock %}

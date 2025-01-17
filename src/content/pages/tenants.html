@@ -1,0 +1,79 @@
+---
+title: 'Tenants'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'project-one/'
+eleventyNavigation:
+    key: Tenants
+    order: 3100
+    parent: Services
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/tenants.css">
+{% endblock %}
+
+{% block body %}
+
+{% include 'components/banner.html' %}
+
+<!-- ============================================ -->
+<!--                    Services                  -->
+<!-- ============================================ -->
+
+<section id="services-1354">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Services</span>
+            <h2 class="cs-title">We’re Committed to Deliver Top High Quality Services</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <h3 class="cs-h3"><span class="cs-span">Pay</span> Rent</h3>
+                </a>
+                <picture class="cs-background">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting1.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting1.jpg">
+                    <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting1.jpg" alt="construction" width="305" height="305" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <h3 class="cs-h3"><span class="cs-span">Tenant</span> Portal</h3>
+                </a>
+                <picture class="cs-background">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting2.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting2.jpg">
+                    <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting2.jpg" alt="construction" width="305" height="305" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <h3 class="cs-h3"><span class="cs-span">Operational</span> Excellence</h3>
+                </a>
+                <picture class="cs-background">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting3.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting3.jpg">
+                    <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting3.jpg" alt="construction" width="305" height="305" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <h3 class="cs-h3"><span class="cs-span">Lifetime</span> Maintenance</h3>
+                </a>
+                <picture class="cs-background">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting4.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting4.jpg">
+                    <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting4.jpg" alt="construction" width="305" height="305" aria-hidden="true">
+                </picture>
+            </li>
+        </ul>
+    </div>
+</section>
+
+    {% include 'components/cta.html' %}
+
+{% endblock %}
