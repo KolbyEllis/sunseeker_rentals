@@ -1,4 +1,192 @@
 /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-1168 {
+        background-color: #fff;
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            /* changes to 1440px at large desktop */
+            max-width: (824/16rem);
+            width: 100%;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+            width: 100%;
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+        }
+
+        .cs-title {
+            max-width: 20ch;
+        }
+
+        .cs-card-group {
+            display: grid;
+            align-items: stretch;
+            grid-template-columns: repeat(12, 1fr);
+            margin: 0;
+            width: 100%;
+            padding: 0;
+            /* 16px - 20px */
+            gap: clamp(1rem, 2vw, 1.25rem);
+        }
+
+        .cs-item {
+            z-index: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: #f7f7f7;
+            width: 100%;
+            list-style: none;
+            text-align: left;
+            grid-column: span 12;
+
+            &:hover {
+                .cs-picture {
+                    img {
+                        transform: scale(1.2);
+                    }
+                }
+
+                .cs-h3,
+                .cs-link {
+                    color: var(--primary);
+                }
+
+                .cs-arrow {
+                    filter: initial;
+                }
+            }
+        }
+
+        .cs-picture {
+            position: relative;
+            display: block;
+            /* 180px - 240px */
+            height: clamp(11.25rem, 24vw, 15rem);
+            width: 100%;
+            /* clips the image from overflowing parent on hover */
+            overflow: hidden;
+
+            img {
+                z-index: -1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition: transform 0.65s;
+            }
+        }
+
+        .cs-info {
+            display: flex;
+            flex-direction: column;
+            padding: (24/16rem);
+        }
+
+        .cs-h3 {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            /* prevents padding and border from affecting height and width */
+            box-sizing: border-box;
+            /* 20px - 25px */
+            font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+            line-height: 1.5em;
+            font-weight: 700;
+            color: var(--headerColor);
+            transition: background-color 0.3s;
+            text-align: inherit;
+            margin: 0 0 (12/16rem) 0;
+            transition: color 0.3s;
+        }
+
+        .cs-item-text {
+            width: 100%;
+            /* prevents padding and border from affecting height and width */
+            box-sizing: border-box;
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            color: var(--bodyTextColor);
+            text-align: inherit;
+            margin: 0;
+        }
+
+        .cs-link {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            text-decoration: none;
+            font-size: (16/16rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            color: var(--headerColor);
+            text-align: inherit;
+            margin-top: (20/16rem);
+            transition: color 0.3s;
+
+            &:hover {
+                .cs-arrow {
+                    transform: translateX(0.25rem);
+                }
+            }
+        }
+
+        .cs-arrow {
+            filter: grayscale(1) brightness(0);
+            display: block;
+            height: auto;
+            width: (20/16rem);
+            transition:
+                filter 0.3s,
+                transform 0.3s;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #services-1168 {
+        .cs-item {
+            grid-column: span 6;
+        }
+    }
+}
+
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #services-1168 {
+        .cs-container {
+            max-width: (1440/16rem);
+        }
+
+        .cs-item {
+            grid-column: span 3;
+        }
+    }
+}
+
+                                
+/*-- -------------------------- -->
 <---       Why Choose Us        -->
 <--- -------------------------- -*/
 
@@ -173,150 +361,7 @@
         }
     }
 }
-                                
-/*-- -------------------------- -->
-<---          Services          -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #why-choose-1479 {
-        padding: var(--sectionPadding);
-
-        .cs-container {
-            width: 100%;
-            /* changes to 1280px at tablet */
-            max-width: (584/16rem);
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
-        }
-
-        .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: center;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: center;
-        }
-
-        .cs-text {
-            max-width: (784/16rem);
-        }
-
-        .cs-card-group {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            /* 8px - 20px */
-            gap: clamp(0.5rem, 2vw, 1.25rem);
-        }
-
-        .cs-item {
-            list-style: none;
-            width: 100%;
-            box-sizing: border-box;
-            /* 24px - 80px - top and bottom*/
-            /* 12px - 60px - Left and right*/
-            padding: clamp(1.5rem, 5vw, 5rem) clamp(0.75rem, 1vw, 3.75rem);
-            border: 1px solid #e8e8e8;
-            background-color: #fff;
-            /* 24px - 60px */
-            border-radius: clamp(1.5rem, 4vw, 3.75rem);
-            grid-column: span 6;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: clamp(1rem, 1.7vw, 1.5rem);
-            position: relative;
-            overflow: hidden;
-            transition: border-color 0.3s, background-color 0.3s;
-
-            &:hover {
-                border-color: var(--primary);
-
-                .cs-icon {
-                    filter: none;
-                }
-
-                .cs-graphic {
-                    filter: grayscale(0);
-                }
-            }
-        }
-
-        .cs-icon {
-            width: auto;
-            /* 48px - 60px */
-            height: clamp(3rem, 5vw, 3.75rem);
-            /* greyscale gets removed on hover, revealing the color of the icon. customise your icons to match your color scheme and the hover effect will work automatically */
-            filter: grayscale(1);
-            transition: filter 0.3s;
-        }
-
-        .cs-h3 {
-            font-size: (20/16rem);
-            font-weight: 700;
-            line-height: 1.2em;
-            text-align: center;
-            max-width: (185/16rem);
-            margin: 0 auto;
-            color: var(--headerColor);
-        }
-
-        .cs-graphic {
-            min-width: (310/16rem);
-            width: 100%;
-            height: auto;
-            filter: grayscale(1);
-            display: none;
-            position: absolute;
-            /* changes to 0 at large desktop */
-            bottom: (-35/16rem);
-            left: 0;
-            transition: filter .3s;
-        }
-    }
-}
-
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #why-choose-1479 {
-        .cs-container {
-            max-width: (1280/16rem);
-        }
-
-        .cs-item {
-            grid-column: span 3;
-        }
-    }
-}
-
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #why-choose-1479 {
-        .cs-graphic {
-            display: block;
-        }
-    }
-}
-
-/* Large Desktop - 1300px */
-@media only screen and (min-width: 81.25rem) {
-    #why-choose-1479 {
-        .cs-graphic {
-            bottom: 0;
-        }
-    }
-}
-                                
+                                                                
 /*-- -------------------------- -->
 <---        Side By Side        -->
 <--- -------------------------- -*/
@@ -657,6 +702,9 @@
         .cs-label {
             grid-column: span 6;
         }
+        .cs-form .cs-label:nth-child(5) {
+            grid-column: span 12;
+        }
 
         .cs-message {
             grid-column: span 12;
@@ -829,6 +877,7 @@
 /* Large Desktop - 1300px */
 @media only screen and (min-width: 81.25rem) {
     #cs-content-1792 {
+        margin-bottom: 5rem;
         .cs-ul {
             flex-direction: row;
             flex-wrap: wrap;

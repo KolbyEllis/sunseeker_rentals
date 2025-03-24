@@ -1,15 +1,23 @@
 // Select DOM elements
-const bodyElement = document.querySelector("body");
+const bodyElement = document.body;
 const navbarMenu = document.querySelector("#cs-navigation");
 const hamburgerMenu = document.querySelector("#cs-navigation .cs-toggle");
+const navLinks = document.querySelectorAll("#cs-navigation .cs-li-link");
+const dropdownElements = document.querySelectorAll(".cs-dropdown");
+const dropdownLinks = document.querySelectorAll(".cs-drop-li > .cs-li-link");
+const tertiaryDropTriggers = document.querySelectorAll("#cs-navigation .cs-drop3-main");
 
-// Function to toggle the aria-expanded attribute
+// Track screen width
+const isMobile = () => window.matchMedia("(max-width: 63.9375rem)").matches;
+
+// Toggle aria-expanded for accessibility
 function toggleAriaExpanded(element) {
-    const isExpanded = element.getAttribute("aria-expanded");
-    element.setAttribute("aria-expanded", isExpanded === "false" ? "true" : "false");
+    if (!element) return;
+    const expanded = element.getAttribute("aria-expanded") === "true";
+    element.setAttribute("aria-expanded", !expanded);
 }
 
-// Function to toggle the menu open or closed
+// Toggle hamburger menu
 function toggleMenu() {
     hamburgerMenu.classList.toggle("cs-active");
     navbarMenu.classList.toggle("cs-active");
@@ -17,84 +25,101 @@ function toggleMenu() {
     toggleAriaExpanded(hamburgerMenu);
 }
 
-// Add click event listener to the hamburger menu
+// Toggle dropdowns on mobile
+function toggleDropdown(element) {
+    if (!element) return;
+    element.classList.toggle("cs-active");
+    const button = element.querySelector(".cs-dropdown-button");
+    toggleAriaExpanded(button);
+}
+
+// Handle nav link active state
+function setActiveLink(event) {
+    navLinks.forEach(link => link.classList.remove("cs-active"));
+    event.currentTarget.classList.add("cs-active");
+    localStorage.setItem("activeNavLink", event.currentTarget.getAttribute("href"));
+}
+
+// Restore active link on page load
+document.addEventListener("DOMContentLoaded", () => {
+    const savedLink = localStorage.getItem("activeNavLink");
+    if (savedLink) {
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === savedLink) {
+                link.classList.add("cs-active");
+            }
+        });
+    }
+});
+
+// Event Listeners
 hamburgerMenu.addEventListener("click", toggleMenu);
 
-// Add click event listener to the navbar menu to handle clicks on the pseudo-element
-navbarMenu.addEventListener("click", function (event) {
+navbarMenu.addEventListener("click", (event) => {
     if (event.target === navbarMenu && navbarMenu.classList.contains("cs-active")) {
         toggleMenu();
     }
 });
 
-// Function to handle dropdown toggle
-function toggleDropdown(element) {
-    element.classList.toggle("cs-active");
-    const dropdownButton = element.querySelector(".cs-dropdown-button");
-    if (dropdownButton) {
-        toggleAriaExpanded(dropdownButton);
-    }
-}
+navLinks.forEach(link => {
+    link.addEventListener("click", setActiveLink);
+});
 
-// Add event listeners to each dropdown element for accessibility
-const dropdownElements = document.querySelectorAll(".cs-dropdown");
 dropdownElements.forEach(element => {
     let escapePressed = false;
 
-    element.addEventListener("focusout", function (event) {
-        // Skip the focusout logic if escape was pressed
+    if (isMobile()) {
+        // Only apply toggle on click for mobile
+        element.addEventListener("click", () => toggleDropdown(element));
+    }
+
+    element.addEventListener("focusout", (event) => {
         if (escapePressed) {
             escapePressed = false;
             return;
         }
-
-        // If the focus has moved outside the dropdown, remove the active class from the dropdown 
         if (!element.contains(event.relatedTarget)) {
             element.classList.remove("cs-active");
-            const dropdownButton = element.querySelector(".cs-dropdown-button");
-
-            if (dropdownButton) {
-                toggleAriaExpanded(dropdownButton);
-            }
+            const button = element.querySelector(".cs-dropdown-button");
+            toggleAriaExpanded(button);
         }
     });
 
-    element.addEventListener("keydown", function (event) {
-        if (element.classList.contains("cs-active")) {
-            event.stopPropagation();
-        }
-
-        // Pressing Enter or Space will toggle the dropdown and adjust the aria-expanded attribute
+    element.addEventListener("keydown", (event) => {
         if (event.key === "Enter" || event.key === " ") {
             event.preventDefault();
             toggleDropdown(element);
         }
-
-        // Pressing Escape will remove the active class from the dropdown. The stopPropagation above will stop the hamburger menu from closing
         if (event.key === "Escape") {
             escapePressed = true;
-            toggleDropdown(element);
+            element.classList.remove("cs-active");
         }
     });
-
-    // Handles dropdown menus on mobile - the matching media query (max-width: 63.9375rem) is necessary so that clicking the dropdown button on desktop does not add the active class and thus interfere with the hover state
-    const maxWidthMediaQuery = window.matchMedia("(max-width: 63.9375rem)");
-    if (maxWidthMediaQuery.matches) {
-        element.addEventListener("click", () => toggleDropdown(element));
-    }
 });
 
-// Pressing Enter will redirect to the href
-const dropdownLinks = document.querySelectorAll(".cs-drop-li > .cs-li-link");
+// Tertiary Nav — only apply on mobile
+if (isMobile()) {
+    tertiaryDropTriggers.forEach(trigger => {
+        trigger.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const parent = trigger.closest(".cs-drop-li");
+            if (parent) {
+                parent.classList.toggle("drop3-active");
+            }
+        });
+    });
+}
+
+// Enter key to activate dropdown links
 dropdownLinks.forEach(link => {
-    link.addEventListener("keydown", function (event) {
+    link.addEventListener("keydown", (event) => {
         if (event.key === "Enter") {
-            window.location.href = this.href;
+            window.location.href = link.href;
         }
     });
 });
 
-// If you press Escape and the hamburger menu is open, close it
+// Escape closes mobile nav
 document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && hamburgerMenu.classList.contains("cs-active")) {
         toggleMenu();

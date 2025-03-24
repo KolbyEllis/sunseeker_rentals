@@ -487,6 +487,12 @@
     gap: 0.5rem;
     position: relative;
   }
+  #reviews-727 .cs-icon {
+    margin-bottom: 2rem;
+  }
+  #reviews-727 .cs-text {
+    margin-bottom: 1rem;
+  }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
@@ -512,6 +518,76 @@
     /* Ensures text stretches if needed */
     overflow: hidden;
     /* Prevents overflow issues */
+  }
+  #reviews-727 .cs-icon {
+    margin-bottom: 1rem;
+  }
+}
+/*-- -------------------------- -->
+<---         CS-Content         -->
+<--- -------------------------- -*/
+/* you can place this CSS group in your global stylesheet that is loaded on every page of the site so all you need to do is copy and paste the HTML into any section and it will all work. Or piece it inside the media queries in whatever section you want to add it to. You can also remove the cs-topper, cs-title, and cs-text and if they aren't already in your global stylesheet you can paste them outside these media queries so all cs-topper, cs-title, and cs-text on your site will pull from 1 place. */
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+  #cs-content-830 {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #cs-content-830 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #cs-content-830 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #cs-content-830 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #cs-content-830 .cs-button-solid {
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #cs-content-830 {
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  #cs-content-830 .cs-title {
+    margin: 0;
   }
 }
 /*-- -------------------------- -->
@@ -630,6 +706,13 @@
     right: clamp(1rem, 4vw, 2rem);
     bottom: 0rem;
   }
+  #sbs-r .cs-button-solid {
+    border-radius: 0.25rem;
+    color: #fff;
+    white-space: nowrap;
+    width: auto;
+    padding: 0.625rem 1.25rem;
+  }
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64em) {
@@ -647,36 +730,8 @@
   #sbs-r .cs-right {
     margin: 0;
   }
-}
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #sbs-r .cs-left:before,
-  body.dark-mode #sbs-r .cs-left:after {
-    background: var(--accent);
-  }
-  body.dark-mode #sbs-r .cs-picture2 {
-    background-color: var(--dark);
-    /* 6px - 12px */
-    border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
-  }
-  body.dark-mode #sbs-r .cs-topper {
-    color: var(--primaryLight);
-  }
-  body.dark-mode #sbs-r .cs-title,
-  body.dark-mode #sbs-r .cs-text,
-  body.dark-mode #sbs-r .cs-h3,
-  body.dark-mode #sbs-r .cs-flex-p,
-  body.dark-mode #sbs-r .cs-name {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-mode #sbs-r .cs-flex-group {
-    background-color: var(--accent);
-  }
-  body.dark-mode #sbs-r .cs-job {
-    color: var(--bodyTextColorWhite);
-    opacity: 0.8;
-  }
-  body.dark-mode #sbs-r .cs-quote-icon {
-    opacity: 0.2;
+  #sbs-r .cs-button-solid {
+    border-radius: 0.25rem;
+    color: #fff;
   }
 }

@@ -1,0 +1,37 @@
+---
+title: 'Rentals'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'rentals/'
+eleventyNavigation:
+    key: Rentals
+    order: 3200
+    parent: Services
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/rentals.css">
+{% endblock %}
+
+{% block body %}
+
+{% include 'components/banner.html' %}
+
+
+<script type='text/javascript' charset='utf-8'>
+    document.write(unescape("%3Cscript src='" + (('https:' == document.location.protocol) ? 'https:' : 'http:') + "//sunseeker.appfolio.com/javascripts/listing.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  
+  <script type='text/javascript' charset='utf-8'>
+    Appfolio.Listing({
+      hostUrl: 'sunseeker.appfolio.com',
+      //propertyGroup: 'My Group Name',
+      themeColor: '#676767',
+      height: '575px',
+      width: '100%'
+    });
+  </script>
+
+{% endblock %}
