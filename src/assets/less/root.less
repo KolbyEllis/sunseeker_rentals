@@ -633,7 +633,7 @@ html {
 
         .cs-button-solid {
             display: none;
-        }
+        } 
     }
 }
 
@@ -765,6 +765,10 @@ html {
                 transform 0.3s,
                 visibility 0.3s,
                 opacity 0.3s;
+        }
+
+        .cs-li-link.no-underline::before {
+            display: none;
         }
 
         .cs-drop-li {
@@ -1019,7 +1023,7 @@ html {
                     margin: (12/16rem) auto 0 auto;
                     height: auto;
                     padding: (24/16rem);
-                }
+                } 
 
                 .cs-drop-link {
                     opacity: 1;
@@ -1067,6 +1071,7 @@ html {
                     transform: scale(1);
                     height: auto;
                     padding: (20/16rem) (16/16rem) (20/16rem) (20/16rem);
+                    display: none;
                 }
 
                 .cs-drop3-main {
@@ -1081,6 +1086,7 @@ html {
 
             .cs-drop-icon {
                 filter: grayscale(1) brightness(1000%);
+                display: none;
             }
         }
 
@@ -1089,6 +1095,7 @@ html {
         }
     }
 }
+
 
 /* Desktop - 1024px */
 @media only screen and (min-width: 1024px) {

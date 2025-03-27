@@ -86,6 +86,9 @@
     z-index: 1;
     transition: color 0.3s;
     margin-bottom: 2rem;
+    white-space: nowrap;
+    padding: 0 1.5rem;
+    width: 15rem;
   }
   #hero-1298 .cs-button-solid:before {
     content: "";

@@ -674,7 +674,170 @@
     }
 }
 
-                                
+/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbsr-684 {
+        padding: var(--sectionPadding);
+        /* clips the zigzag graphic so it does cause overflows */
+        overflow: hidden;
+        padding-top: 0;
+
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: (542/16rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-text {
+            margin-bottom: (16/16rem);
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: (150/16rem);
+            padding: 0 (24/16rem);
+            background-color: var(--primary);
+            border-radius: (4/16rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: (4/16rem);
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-image-group {
+            /* everything inside the image group is in ems so the font size will scale them down.  Font size minimum is tied to view width size, and grows until it reaches 75% of the value on em */
+            font-size: ~"min(2.3vw, .75em)";
+            width: (632/16em);
+            height: (820/16em);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cs-picture {
+            width: (306/16em);
+            height: (360/16em);
+            overflow: hidden;
+            display: block;
+            position: absolute;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .cs-picture1 {
+            top: (0/16em);
+            left: 0;
+        }
+
+        .cs-picture2 {
+            top: (80/16em);
+            right: 0;
+        }
+
+        .cs-picture3 {
+            bottom: (80/16em);
+            left: 0;
+        }
+
+        .cs-picture4 {
+            bottom: (0/16em);
+            right: 0;
+        }
+
+        .cs-graphic {
+            display: none;
+        }
+    }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #sbsr-684 {
+        .cs-container {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .cs-image-group {
+            font-size: ~"min(1.2vw, 1em)";
+            flex: none;
+            /* sends it to the right in the 2nd position */
+            order: 2;
+        }
+
+        .cs-graphic {
+            width: (983/16em);
+            height: auto;
+            display: block;
+            position: absolute;
+            bottom: (165/16em);
+            left: (-32/16em);
+            z-index: -1;
+            /* flips it horizontally */
+            transform: scaleX(-1);
+        }
+    }
+}
+
+                                                                                               
 
 /*-- -------------------------- -->
 <---       Side By Side         -->

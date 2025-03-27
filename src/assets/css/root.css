@@ -625,6 +625,9 @@ html {
     transform-origin: top;
     transition: transform 0.3s, visibility 0.3s, opacity 0.3s;
   }
+  #cs-navigation .cs-li-link.no-underline::before {
+    display: none;
+  }
   #cs-navigation .cs-drop-li {
     list-style: none;
     font-size: 1rem;
@@ -879,6 +882,7 @@ html {
     transform: scale(1);
     height: auto;
     padding: 1.25rem 1rem 1.25rem 1.25rem;
+    display: none;
   }
   #cs-navigation .cs-drop-li.drop3-active .cs-drop3-main {
     margin-bottom: 0.75rem;
@@ -889,6 +893,7 @@ html {
   }
   #cs-navigation .cs-drop3-main .cs-drop-icon {
     filter: grayscale(1) brightness(1000%);
+    display: none;
   }
   #cs-navigation .cs-drop-li3 {
     list-style: none;
