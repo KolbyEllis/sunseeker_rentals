@@ -874,3 +874,289 @@
     color: #fff;
   }
 }
+/*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #cta-697 {
+    padding: var(--sectionPadding);
+    background-color: var(--primary);
+    position: relative;
+    z-index: 1;
+  }
+  #cta-697 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #cta-697 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #cta-697 .cs-title {
+    color: var(--bodyTextColorWhite);
+  }
+  #cta-697 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--secondary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #cta-697 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #cta-697 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #cta-697 .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* makes it act like a background image */
+    object-fit: cover;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #cta-697 .cs-content {
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #reviews-287 {
+    /* centers the button */
+    text-align: center;
+    padding: var(--sectionPadding);
+    /* remove padding left & right so the image can be full width */
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #reviews-287 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #reviews-287 .cs-content {
+    text-align: left;
+    max-width: 35.625rem;
+    /* allows children to leave the parent container, as if it doesn't exist so
+               flexbox can arrange them with the .cs-picture. This lets us use the 
+               flexbox "order" property on the .cs-review to position itself after 
+               the .cs-picture */
+    display: contents;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #reviews-287 .cs-topper,
+  #reviews-287 .cs-title {
+    width: 100%;
+    /* move left & right padding to elements */
+    padding: 0 1rem;
+    /* prevents padding from affecting width */
+    box-sizing: border-box;
+    display: block;
+  }
+  #reviews-287 .cs-text {
+    max-width: 40.625rem;
+    margin: 0 auto;
+    /* move left & right padding to elements */
+    padding: 0 1rem;
+    /* 48px - 64px */
+    margin-bottom: clamp(3rem, 6vw, 4rem);
+    /* prevents padding from affecting width */
+    box-sizing: border-box;
+  }
+  #reviews-287 .cs-review {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    text-align: left;
+    margin: 0 1rem;
+    /* pulls it 28px up to overlap the picture */
+    margin-top: -1.75rem;
+    /* 48px - 64px */
+    margin-bottom: clamp(3rem, 6vw, 4rem);
+    /* 24px - 32px top & bottom */
+    /* 28px - 32px left & right */
+    padding: clamp(1.5rem, 2.75vw, 2rem) clamp(1.75rem, 3vw, 2rem);
+    background-color: #f1f1f4;
+    /* puts it in the 2nd position from the bottom */
+    order: 2;
+    /* prevents padding from affecting height & width */
+    box-sizing: border-box;
+    /* add z index so it can sit on top of picture */
+    position: relative;
+    z-index: 10;
+  }
+  #reviews-287 .cs-name {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    text-align: left;
+    font-weight: 700;
+    /* 14px - 16px */
+    margin-top: clamp(0.75rem, 1.7vw, 1rem);
+    display: block;
+  }
+  #reviews-287 .cs-picture {
+    width: 100%;
+    aspect-ratio: 360/230;
+    display: block;
+    position: relative;
+  }
+  #reviews-287 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  #reviews-287 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #reviews-287 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #reviews-287 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #reviews-287 {
+    /* added padding left and right back to the section container */
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  #reviews-287 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    column-gap: 2.75rem;
+  }
+  #reviews-287 .cs-content {
+    width: 52%;
+    padding: 0;
+    /* bring the children back home under the parent container */
+    display: flex;
+  }
+  #reviews-287 .cs-topper,
+  #reviews-287 .cs-title,
+  #reviews-287 .cs-text {
+    /* reset the padding */
+    padding: 0;
+  }
+  #reviews-287 .cs-picture {
+    position: relative;
+    z-index: 10;
+  }
+  #reviews-287 .cs-review {
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+    position: relative;
+    z-index: 1;
+  }
+  #reviews-287 .cs-review:before {
+    /* extended review backgorund that goes under the image */
+    content: "";
+    /* 644px - 1172px */
+    width: clamp(40.25rem, 90vw, 73.25rem);
+    height: 100%;
+    background: inherit;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #reviews-287 .cs-picture {
+    width: 50%;
+    /* 300px - 630px */
+    max-width: clamp(18.75rem, 47vw, 39.375rem);
+    /* 397px - 411px */
+    height: clamp(24.8125rem, 37vw, 25.6875rem);
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+}
