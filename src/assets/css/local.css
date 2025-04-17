@@ -5,7 +5,7 @@
 @media only screen and (min-width: 0rem) {
   #stats-539 {
     padding: var(--sectionPadding);
-    padding-top: 32.5rem;
+    padding-top: 0;
   }
   #stats-539 .cs-container {
     width: 100%;
@@ -131,13 +131,12 @@
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #stats-539 {
-    padding: 0rem 2rem;
+    padding: 0;
   }
   #stats-539 .cs-container {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-    padding-top: 17.5rem;
   }
   #stats-539 .cs-content {
     width: 41%;
@@ -153,7 +152,7 @@
 /* Desktop - 1024px */
 @media only screen and (min-width: 64em) {
   #stats-539 {
-    padding-top: 0rem;
+    padding-top: 0;
   }
 }
 /*-- -------------------------- -->

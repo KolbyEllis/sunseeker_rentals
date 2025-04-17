@@ -1,0 +1,51 @@
+---
+title: 'Vendors'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'vendors/'
+eleventyNavigation:
+    key: Vendors
+    order: 3600
+    parent: Services
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/vendors.css">
+{% endblock %}
+
+{% block body %}
+
+{% include 'components/banner.html' %}
+
+<!-- ============================================ -->
+<!--                    Services                  -->
+<!-- ============================================ -->
+
+<section id="services-1354">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Vendors Page</span>
+            <h2 class="cs-title">Vendors Please Submit Your Invoices Below</h2>
+            <div class="cs-text">Before submitting your invoices, please name the file as your company or individual name followed by the date. Example name the file "ABC Pest Control 071015" if your company name is ABC Pest Control and you are uploading an invoice to us on 7/10/15.
+            </div>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="https://www.dropbox.com/request/yX4yL4sUaGVCRtaGlhH7" target="_blank" class="cs-link">
+                    <h3 class="cs-h3"><span class="cs-span">Submit </span>Invoices Here</h3>
+                </a>
+                <picture class="cs-background">
+                    <source media="(max-width: 600px)" srcset="/assets/images/vendors.png">
+                    <source media="(min-width: 601px)" srcset="/assets/images/vendors.png">
+                    <img decoding="async" src="/assets/images/vendors.png" alt="construction" width="305" height="305" aria-hidden="true">
+                </picture>
+            </li>
+
+            </li>
+        </ul>
+    </div>
+</section>
+
+{% endblock %}

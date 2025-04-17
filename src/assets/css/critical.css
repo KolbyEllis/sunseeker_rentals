@@ -1,292 +1,220 @@
-/* STYLES FOR ABOVE THE FOLD */
 /*-- -------------------------- -->
 <---           Hero             -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #hero-1298 {
-    /* 150px - 350px */
-    padding: clamp(9rem, 30.95vw, 21.875rem) 1rem;
-    padding-bottom: 0;
+  #hero-1839 {
+    /* 200px - 300px - leaving extra space for the navigation */
+    padding: clamp(12.5rem, 25.95vw, 18.75em) 1rem;
+    /* prevents the topper line from causing an overflow */
+    overflow: hidden;
     position: relative;
+    z-index: 1;
   }
-  #hero-1298 .cs-container {
+  #hero-1839 .cs-container {
     width: 100%;
     max-width: 80rem;
     margin: auto;
-    position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    /* 48px - 64px */
-    gap: clamp(3rem, 7vw, 4rem);
-  }
-  #hero-1298 .cs-content {
-    /* set text align to left if content needs to be left aligned */
-    text-align: center;
-    width: 100%;
-    max-width: 39.375rem;
-    display: flex;
-    flex-direction: column;
-    /* centers content horizontally, set to flex-start to left align */
     align-items: center;
-    position: relative;
-    z-index: 10;
+    flex-wrap: wrap;
+    /* 120px - 200px */
+    gap: clamp(7.5rem, 15vw, 12.5rem);
   }
-  #hero-1298 .cs-topper {
-    font-size: var(--topperFontSize);
-    line-height: 1.2em;
-    text-transform: uppercase;
-    text-align: inherit;
-    letter-spacing: 0.1em;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 0.25rem;
-    display: block;
-  }
-  #hero-1298 .cs-title {
-    /* 39px - 61px */
-    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
-    font-weight: 900;
-    line-height: 1.2em;
-    width: 100%;
-    max-width: 17ch;
-    margin: 0 0 1rem;
-    color: white;
-    position: relative;
-  }
-  #hero-1298 .cs-text {
-    /* 16px - 20px */
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    line-height: 1.5em;
-    width: 100%;
-    max-width: 43.75rem;
-    /* 28px - 40px */
-    margin: 0 0 clamp(1.75rem, 4vw, 2.5rem);
-    color: white;
-  }
-  #hero-1298 .cs-button-solid {
-    font-size: 1rem;
+  #hero-1839 .cs-content {
     text-align: center;
+    width: 100%;
+    max-width: 46.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #hero-1839 .cs-title {
+    /* 49px - 84px */
+    font-size: clamp(3.0625rem, 6vw, 5.25rem);
+  }
+  #hero-1839 .cs-title,
+  #hero-1839 .cs-text {
+    color: var(--bodyTextColorWhite);
+  }
+  #hero-1839 .cs-text {
+    margin-bottom: 2rem;
+  }
+  #hero-1839 .cs-button-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  #hero-1839 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
     /* 46px - 56px */
     line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-    width: 11.25rem;
+    text-align: center;
     text-decoration: none;
-    font-weight: 700;
-    /* clips corners of the before element */
-    overflow: hidden;
+    min-width: 12.5rem;
     margin: 0;
-    color: #ffffff;
-    padding: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 1.5rem;
     background-color: var(--primary);
+    color: var(--bodyTextColorWhite);
     border-radius: 0.25rem;
     display: inline-block;
     position: relative;
     z-index: 1;
-    transition: color 0.3s;
-    margin-bottom: 2rem;
-    white-space: nowrap;
-    padding: 0 1.5rem;
-    width: 15rem;
   }
-  #hero-1298 .cs-button-solid:before {
+  #hero-1839 .cs-button-solid:before {
     content: "";
-    position: absolute;
-    display: block;
-    height: 100%;
     width: 0%;
+    height: 100%;
     background: #000;
     opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     transition: width 0.3s;
   }
-  #hero-1298 .cs-button-solid:hover {
-    color: #fff;
-  }
-  #hero-1298 .cs-button-solid:hover:before {
+  #hero-1839 .cs-button-solid:hover:before {
     width: 100%;
   }
-  #hero-1298 .cs-picture {
+  #hero-1839 .cs-card-group {
     width: 100%;
-    /* 427px - 468px */
-    max-width: clamp(26.6875rem, 50vw, 29.25rem);
-    height: auto;
-    display: flex;
-    align-items: flex-end;
-    position: relative;
-    z-index: 7;
-  }
-  #hero-1298 .cs-picture img {
-    width: 100%;
-    height: auto;
-  }
-  #hero-1298 .cs-card-group {
-    width: 100%;
-    max-width: 80rem;
-    /* changes to -550px at tablet */
-    margin: 0 0 -28.125rem 0;
-    padding: 0 1rem;
-    /* prevents padding and border from affecting height and width */
-    background-color: #fff;
-    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    position: relative;
-    z-index: 15;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.3vw, 1.25rem);
   }
-  #hero-1298 .cs-item {
+  #hero-1839 .cs-item {
     text-align: left;
     list-style: none;
     width: 100%;
-    border-bottom: 1px solid #e8e8e8;
-    box-sizing: border-box;
-    grid-column: span 12;
-    transition: background-color 0.3s, border-color 0.3s;
-  }
-  #hero-1298 .cs-item:last-of-type {
-    border-bottom: none;
-  }
-  #hero-1298 .cs-link {
-    text-decoration: none;
-    /* 24px - 60px top & Bottom */
-    /* 24px - 16px top & Bottom */
-    padding: clamp(1.5rem, 5.3vw, 3.75rem) clamp(1rem, 2.7vw, 2.5rem);
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  #hero-1298 .cs-icon {
-    /* 32px - 40px */
-    height: clamp(2rem, 4vw, 2.5rem);
-    width: auto;
-    margin: 0 0 1rem 0;
-  }
-  #hero-1298 .cs-h3 {
-    /* 20px - 25px */
-    font-size: clamp(1.25rem, 2vw, 1.5625rem);
-    font-weight: 700;
-    text-align: inherit;
-    line-height: 1.2em;
-    margin: 0 0 0.75rem 0;
-    color: var(--headerColor);
-    transition: color 0.3s;
-  }
-  #hero-1298 .cs-item-text {
-    /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
-    text-align: inherit;
-    line-height: 1.5em;
     margin: 0;
-    color: var(--bodyTextColor);
-    transition: color 0.3s, opacity 0.3s;
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    /* 24px - 40px */
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    background-color: #fff;
+    box-shadow: 0px 12px 80px 0px rgba(26, 26, 26, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: span 12;
+    grid-row: span 1;
+    gap: 1.25rem;
+    position: relative;
+    z-index: 1;
   }
-  #hero-1298 .cs-background {
+  #hero-1839 .cs-picture {
+    width: 100%;
+    height: 10rem;
+    display: block;
+    /* causes the image to grow to it's "auto" size, but won't shrink. the cs-info fills the remaining space */
+    flex: 1 0 auto;
+  }
+  #hero-1839 .cs-picture img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+  }
+  #hero-1839 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    font-weight: bold;
+    line-height: 1.2em;
+    text-align: inherit;
+    /* 8px - 16px */
+    margin: 0 0 clamp(0.5rem, 1.2vw, 1rem) 0;
+    color: var(--headerColor);
+  }
+  #hero-1839 .cs-item-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+    color: var(--bodyTextColor);
+  }
+  #hero-1839 .cs-link {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-decoration: none;
+    width: 100%;
+    margin: 1.5rem 0 0;
+    color: var(--primary);
+    display: flex;
+    gap: 0.25rem;
+  }
+  #hero-1839 .cs-link:hover img {
+    transform: translateX(0.25rem);
+  }
+  #hero-1839 .cs-link img {
+    transition: transform 0.3s;
+  }
+  #hero-1839 .cs-background {
+    width: 100%;
+    height: 50%;
     display: block;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -2;
   }
-  #hero-1298 .cs-background:before {
-    /* background color overlay */
+  #hero-1839 .cs-background:before {
+    /* Overlay */
     content: "";
-    position: absolute;
-    display: block;
-    height: 100%;
     width: 100%;
-    background: #000000;
-    opacity: 0.5;
+    height: 100%;
+    background: #000;
+    /* prevents the cursor from interacting with it */
+    pointer-events: none;
+    opacity: 0.7;
+    display: block;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
   }
-  #hero-1298 .cs-background img {
+  #hero-1839 .cs-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
-    /* Makes img tag act as a background image */
-    object-fit: cover;
   }
 }
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-  #hero-1298 {
-    padding-bottom: 9.375rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5.625rem;
-  }
-  #hero-1298 .cs-container {
-    justify-content: flex-start;
+/* Large Phone/Tablet - 500px */
+@media only screen and (min-width: 31.25rem) {
+  #hero-1839 .cs-item {
     flex-direction: row;
+    align-items: stretch;
   }
-  #hero-1298 .cs-content {
-    text-align: left;
-    width: 60%;
-    align-items: flex-start;
+  #hero-1839 .cs-picture {
+    height: auto;
+    min-height: 8.75rem;
+    max-width: 8.75rem;
   }
-  #hero-1298 .cs-picture {
-    width: 43%;
-    position: absolute;
-    bottom: -9.4375rem;
-    right: 0rem;
+  #hero-1839 .cs-info {
+    align-self: center;
   }
-  #hero-1298 .cs-card-group {
-    margin: 0 0 -21.875rem 0;
-    padding: 0;
-  }
-  #hero-1298 .cs-item {
-    grid-column: span 4;
-    border-bottom: none;
-    border-right: 1px solid #e8e8e8;
-  }
-  #hero-1298 .cs-item:nth-of-type(3) {
-    border-bottom: none;
-    border-right: none;
-  }
-  #hero-1298 .cs-background {
-    overflow: hidden;
-  }
-  #hero-1298 .cs-background:before {
-    opacity: 0.5;
-    background: linear-gradient(89deg, rgba(0, 0, 0, 0.96) 47.66%, rgba(255, 255, 255, 0) 71.43%);
+  #hero-1839 .cs-background {
+    height: 60%;
   }
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-  #hero-1298 .cs-item:hover {
-    background-color: #1a1a1a;
-    border-color: #1a1a1a;
+  #hero-1839 .cs-item {
+    grid-column: span 6;
   }
-  #hero-1298 .cs-item:hover .cs-h3,
-  #hero-1298 .cs-item:hover .cs-item-text {
-    color: var(--bodyTextColorWhite);
-  }
-  #hero-1298 .cs-item:hover .cs-item-text {
-    opacity: 0.8;
-  }
-}
-/* Large Desktop - 1600px (Parallax Effect) */
-@media only screen and (min-width: 100rem) {
-  #hero-1298 .cs-background {
-    background: url("/assets/images/hero.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-  #hero-1298 .cs-background img {
-    display: none;
+  #hero-1839 .cs-background {
+    height: 70%;
   }
 }
