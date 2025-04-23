@@ -523,6 +523,16 @@ html {
     font-size: clamp(0.875rem, 2vw, 1.25rem);
     color: #fff;
   }
+  .cs-drop-li .cs-li-link.cs-drop-link {
+    font-weight: normal;
+    /* Or 700 if bold match is needed */
+    font-size: clamp(0.875rem, 2vw, 1.25rem);
+    color: #fff;
+    text-align: center;
+    line-height: 1.4;
+    padding: 0.5rem 1rem;
+    display: block;
+  }
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
