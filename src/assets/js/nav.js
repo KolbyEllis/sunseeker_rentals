@@ -40,7 +40,6 @@ function setActiveLink(event) {
     localStorage.setItem("activeNavLink", event.currentTarget.getAttribute("href"));
 }
 
-// Restore active link on page load
 document.addEventListener("DOMContentLoaded", () => {
     const savedLink = localStorage.getItem("activeNavLink");
     if (savedLink) {
@@ -50,7 +49,22 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+    // 🔽 Add the snippet here
+    if (isMobile()) {
+        dropdownLinks.forEach(link => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const href = this.getAttribute("href");
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 100);
+            });
+        });
+    }
 });
+
 
 // Event Listeners
 hamburgerMenu.addEventListener("click", toggleMenu);
@@ -125,3 +139,5 @@ document.addEventListener("keydown", (event) => {
         toggleMenu();
     }
 });
+
+
