@@ -95,19 +95,6 @@
     margin-bottom: 9.375rem;
   }
 }
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-mode #reviews .review {
-    background: var(--medium);
-  }
-  body.dark-mode #reviews .review .name {
-    color: #fff;
-  }
-  body.dark-mode #reviews .review .desc {
-    opacity: 0.7;
-    color: #fff;
-  }
-}
 /*-- -------------------------- -->
 <---           Stats            -->
 <--- -------------------------- -*/
