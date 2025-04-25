@@ -97,11 +97,12 @@
     font-weight: 700;
     text-align: center;
     margin: 0;
-    color: #1a1a1a;
+    color: #ffffff;
     border: none;
     min-width: 9.375rem;
     padding: 0 1.5rem;
     background-color: var(--primary);
+    border-radius: 0.25rem;
     overflow: hidden;
     display: inline-block;
     position: relative;
@@ -115,6 +116,7 @@
     position: absolute;
     height: 100%;
     width: 0%;
+    border-radius: 0.25rem;
     background: #000;
     opacity: 1;
     top: 0;
@@ -376,7 +378,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    cursor: pointer;
   }
   #map-720 .cs-background img {
     position: absolute;

@@ -1205,6 +1205,20 @@ html {
     display: block;
     font-size: 1rem;
   }
+  #footer .credit .credit-inner {
+    display: flex;
+    flex-direction: column;
+    /* stack on mobile */
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  #footer .credit .equal-housing-logo {
+    height: 5rem;
+    width: auto;
+    display: block;
+  }
 }
 /* Small Desktop */
 @media only screen and (min-width: 64rem) {
@@ -1275,5 +1289,19 @@ html {
   }
   #footer .credit .copyright {
     display: inline-block;
+  }
+  #footer .credit .credit-inner {
+    display: flex;
+    flex-direction: column;
+    /* stack on mobile */
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  #footer .credit .equal-housing-logo {
+    height: 5rem;
+    width: auto;
+    display: block;
   }
 }

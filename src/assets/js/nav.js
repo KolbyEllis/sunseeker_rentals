@@ -7,7 +7,7 @@ const dropdownElements = document.querySelectorAll(".cs-dropdown");
 const dropdownLinks = document.querySelectorAll(".cs-drop-li > .cs-li-link");
 const tertiaryDropTriggers = document.querySelectorAll("#cs-navigation .cs-drop3-main");
 
-// Track screen width
+// Detect mobile
 const isMobile = () => window.matchMedia("(max-width: 63.9375rem)").matches;
 
 // Toggle aria-expanded for accessibility
@@ -33,24 +33,36 @@ function toggleDropdown(element) {
     toggleAriaExpanded(button);
 }
 
-// Handle nav link active state
+// Set active nav link, except for Contact page
 function setActiveLink(event) {
+    const href = event.currentTarget.getAttribute("href");
+
+    if (href === "/contact" || href === "/contact/") {
+        localStorage.removeItem("activeNavLink");
+        return;
+    }
+
     navLinks.forEach(link => link.classList.remove("cs-active"));
     event.currentTarget.classList.add("cs-active");
-    localStorage.setItem("activeNavLink", event.currentTarget.getAttribute("href"));
+    localStorage.setItem("activeNavLink", href);
 }
 
+// DOM loaded
 document.addEventListener("DOMContentLoaded", () => {
     const savedLink = localStorage.getItem("activeNavLink");
-    if (savedLink) {
+    const currentPath = window.location.pathname;
+
+    // Prevent active underline on contact page
+    if (currentPath !== "/contact" && currentPath !== "/contact/") {
         navLinks.forEach(link => {
-            if (link.getAttribute("href") === savedLink) {
+            const href = link.getAttribute("href");
+            if (href === currentPath || href === savedLink) {
                 link.classList.add("cs-active");
             }
         });
     }
 
-    // 🔽 Add the snippet here
+    // Prevent dropdown collapse too early on mobile
     if (isMobile()) {
         dropdownLinks.forEach(link => {
             link.addEventListener("click", function (e) {
@@ -65,25 +77,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-
-// Event Listeners
+// Hamburger toggle
 hamburgerMenu.addEventListener("click", toggleMenu);
 
+// Close menu if background clicked
 navbarMenu.addEventListener("click", (event) => {
     if (event.target === navbarMenu && navbarMenu.classList.contains("cs-active")) {
         toggleMenu();
     }
 });
 
+// Track nav link clicks
 navLinks.forEach(link => {
     link.addEventListener("click", setActiveLink);
 });
 
+// Dropdown behavior
 dropdownElements.forEach(element => {
     let escapePressed = false;
 
     if (isMobile()) {
-        // Only apply toggle on click for mobile
         element.addEventListener("click", () => toggleDropdown(element));
     }
 
@@ -111,7 +124,7 @@ dropdownElements.forEach(element => {
     });
 });
 
-// Tertiary Nav — only apply on mobile
+// Tertiary dropdown on mobile
 if (isMobile()) {
     tertiaryDropTriggers.forEach(trigger => {
         trigger.addEventListener("click", (e) => {
@@ -124,7 +137,7 @@ if (isMobile()) {
     });
 }
 
-// Enter key to activate dropdown links
+// Handle Enter key nav
 dropdownLinks.forEach(link => {
     link.addEventListener("keydown", (event) => {
         if (event.key === "Enter") {
@@ -133,11 +146,18 @@ dropdownLinks.forEach(link => {
     });
 });
 
-// Escape closes mobile nav
+// Escape key closes nav
 document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && hamburgerMenu.classList.contains("cs-active")) {
         toggleMenu();
     }
 });
 
-
+const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
+        for (const item of faqItems) {
+            const onClick = () => {
+            item.classList.toggle('active')
+        }
+        item.addEventListener('click', onClick)
+        }
+                                

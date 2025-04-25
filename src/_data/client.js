@@ -1,21 +1,18 @@
 module.exports = {
-    "name": "Code Stitch Web Designs",
-    "email": "help@codestitch.app",
-    "phoneForTel": "555-779-4407",
-    "phoneFormatted": "(555) 779-4407",
+    "name": "SunSeeker Rentals",
+    "email": "ken.sunseeker@gmail.com",
+    "phoneForTel": "623-248-1929",
+    "phoneFormatted": "(623) 248-1929",
     "address": {
-        "lineOne": "First Address Line",
-        "lineTwo": "Second Address Line",
-        "city": "Denver",
-        "state": "CO",
-        "zip": "80206",
+        "lineOne": "560 N Bullard Ave",
+        "lineTwo": "Suite 51",
+        "city": "Goodyear",
+        "state": "AZ",
+        "zip": "85338",
         "country": "US",
-        "mapLink": "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6"
+        "mapLink": "https://maps.app.goo.gl/GXQho5Fod2oCGxbD6"
     },
-    "socials": {
-        "facebook": "https://www.facebook.com/",
-        "instagram": "https://www.instagram.com/",
-    },
+
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
-    "domain": "https://www.example.com"
+    "domain": "https://www.sunseekerrentals.com"
 };
