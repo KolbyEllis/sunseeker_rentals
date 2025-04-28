@@ -1,3 +1,4 @@
+
 /*-- -------------------------- -->
 <---           Stats            -->
 <--- -------------------------- -*/
@@ -16,6 +17,7 @@
             align-items: flex-start;
             /* 48px - 64px */
             gap: clamp(3rem, 6vw, 4rem);
+            margin-top: -10rem;
         }
 
         .cs-content {
@@ -182,6 +184,205 @@
     }
 }
 
+/*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #contact-983 {
+        padding: var(--sectionPadding);
+        position: relative;
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1064px at tablet */
+            max-width: (550/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: (40/16rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-content .cs-text {
+            color: white;
+        }
+
+        .cs-title {
+            color: var(--bodyTextColorWhite);
+        }
+
+        .cs-form {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: (12/16rem);
+        }
+
+        .cs-label {
+            font-size: (16/16rem);
+            line-height: 1.5em;
+            width: 100%;
+            color: #fff;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: (8/16rem);
+            grid-column: span 12;
+        }
+
+        .cs-input {
+            font-family: inherit;
+            font-size: (16/16rem);
+            width: 100%;
+            height: (56/16rem);
+            padding-left: (24/16rem);
+            /* prevents padding and border from affecting height and width */
+            box-sizing: border-box;
+            color: #fff;
+            background-color: #484848;
+            border: none;
+
+            &::placeholder {
+                padding-top: (16/16rem);
+                color: #fff;
+                opacity: 0.5;
+            }
+        }
+
+        .cs-textarea {
+            height: (120/16rem);
+            margin-bottom: (32/16rem);
+            padding-top: (16/16rem);
+        }
+
+        .cs-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            grid-column: span 12;
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: (150/16rem);
+            padding: 0 (32/16rem);
+            background-color: var(--primary);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-submit {
+            border: none;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            &:before {
+                /* background color overlay */
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 100%;
+                background: #1a1a1a;
+                opacity: 0.9;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                /* Makes img tag act as a background image */
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #contact-983 {
+        margin-top: 5rem;
+        .cs-container {
+            max-width: (1064/16rem);
+        }
+
+        .cs-label {
+            grid-column: span 6;
+        }
+        .cs-form .cs-label:nth-child(5) {
+            grid-column: span 12;
+        }
+
+        .cs-message {
+            grid-column: span 12;
+        }
+
+        .cs-wrapper {
+            grid-column: span 12;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
 
 /*-- -------------------------- -->
 <---          Contact           -->
