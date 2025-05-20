@@ -3,6 +3,29 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "{{ client.name }}",
+  "image": "/assets/images/landing.webp",
+  "telephone": "{{ client.phoneFormatted }}",
+  "email": "{{ client.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ client.address.lineOne }}, {{ client.address.lineTwo }}",
+    "addressLocality": "{{ client.address.city }}",
+    "addressRegion": "{{ client.address.state }}",
+    "postalCode": "{{ client.address.zip }}",
+    "addressCountry": "{{ client.address.country }}"
+  },
+  "url": "{{ client.domain }}"
+}
+</script>
+
+
+
         <!-- Standard meta tags -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,26 +76,6 @@
           gtag('js', new Date());
           gtag('config', 'G-R9Z0FQ89PL');
         </script>
-
-        <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "{{ client.name }}",
-  "image": "/assets/images/landing.webp",
-  "telephone": "{{ client.phoneFormatted }}",
-  "email": "{{ client.email }}",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "{{ client.address.lineOne }}, {{ client.address.lineTwo }}",
-    "addressLocality": "{{ client.address.city }}",
-    "addressRegion": "{{ client.address.state }}",
-    "postalCode": "{{ client.address.zip }}",
-    "addressCountry": "{{ client.address.country }}"
-  },
-  "url": "{{ client.domain }}"
-}
-</script>
 
 
     </head>
