@@ -53,7 +53,7 @@ eleventyNavigation:
                     {% if client.address.state %},
                         "addressRegion": "{{ client.address.state }}"
                     {% endif %}
-                    {% if client.address.zip %},F
+                    {% if client.address.zip %}
                         "postalCode": "{{ client.address.zip }}"
                     {% endif %}
                     {% if client.address.country %},
