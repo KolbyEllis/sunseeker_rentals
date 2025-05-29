@@ -477,6 +477,7 @@
 			height: 100%;
 			object-fit: cover;
 			display: block;
+            
 		}
 		.cs-picture .cs-link-icon {
 			position: absolute;
@@ -557,47 +558,78 @@
         }
 	}
 }
-#why-2392 .cs-picture {
-    width: 100%;
-    height: clamp(19.375rem, 30vw, 22.25rem);
-    border-radius: 1rem; /* or (16/16rem); */
-    overflow: hidden;
-    display: block;
-    position: relative;
-    cursor: pointer;
-}
-#why-2392 .cs-picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.7s;
-}
-#why-2392 .cs-picture:hover img {
-    transform: scale(1.1);
-}
-#why-2392 .cs-link-icon {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    pointer-events: none; /* remove if you want icon clickable */
-    transition:
-        transform 0.3s,
-        box-shadow 0.3s;
-}
-#why-2392 .cs-picture:hover .cs-link-icon {
-    transform: translate(-50%, -50%) scale(1.1);
-    box-shadow: 0px 7px 29px 0px rgba(0,0,0,0.5);
-}
+        .cs-big-link {
+            width: 100%;
+            /* changes to a clamp at tablet */
+            height: (320/16rem);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
 
+            &:hover {
+                .cs-background {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            /* clips the img from overflowing the container on hover */
+            overflow: hidden;
+            display: block;
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            border-radius: (16/16rem);
+
+            &:before {
+                /* color overlay */
+                content: "";
+                width: 100%;
+                height: 100%;
+                opacity: 0.72;
+                background-blend-mode: multiply;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                z-index: 10;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                z-index: -1;
+                transition: transform 0.7s;
+            }
+        }
+
+        .cs-link-icon {
+            /* 80px - 110px */
+            width: clamp(5rem, 11vw, 6.875rem);
+            height: clamp(5rem, 11vw, 6.875rem);
+            border-radius: 50%;
+            position: absolute;
+            z-index: 10;
+            transition:
+                transform 0.3s,
+                box-shadow 0.3s;
+
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: rgba(0, 0, 0, 0.5) 0px 7px 29px 0px;
+            }
+        }
                         
 /*-- -------------------------- -->
 <---          Reviews           -->
