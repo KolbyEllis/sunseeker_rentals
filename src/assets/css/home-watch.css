@@ -48,6 +48,9 @@
     left: 50%;
     z-index: 0;
   }
+  #hero-81 #cs-contact-486 {
+    scroll-behavior: smooth;
+  }
   #hero-81 .cs-background {
     width: 100%;
     height: 100%;
