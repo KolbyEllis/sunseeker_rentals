@@ -186,7 +186,10 @@ eleventyNavigation:
             <h4 class="cs-text">Fill out your info and we'll reach out to schedule a free rental evaluation.</h4>
         </div>
         <!--Form-->
-<form class="cs-form" id="cs-form-983" name="Rental Consultation Form" method="post" netlify>
+<form class="cs-form" id="cs-form-983" name="Rental Consultation Form" method="post" netlify netlify-honeypot="bot-field">
+    <!-- Honeypot field (hidden from users) -->
+    <input type="text" name="bot-field" style="display:none" tabindex="-1" autocomplete="off">
+
     <label class="cs-label">
         First Name
         <input class="cs-input" required type="text" id="name-587-983" name="First Name" placeholder="First Name">
@@ -204,7 +207,7 @@ eleventyNavigation:
         <input class="cs-input" required type="text" id="phone-587-983" name="phone" placeholder="Enter Your Phone Number">
     </label>
     <label class="cs-label">
-        </br>
+    </br>
         Property Address
         <input class="cs-input" required type="text" id="address-587-983" name="Property Address" placeholder="Your Property Address">
     </label>
@@ -212,16 +215,10 @@ eleventyNavigation:
         Tell Us About Your Property
         <textarea class="cs-input cs-textarea" name="Tell Us About Your Property" id="message-587-983" placeholder="Tell Us About Your Property"></textarea>
     </label>
-    <!-- reCAPTCHA widget here -->
-    <div class="g-recaptcha" data-sitekey="6Ldx6IMrAAAAAHrivtIWZgEkpgS2CWTiXrwOdxW8"></div>
     <div class="cs-wrapper">
         <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
     </div>
 </form>
-
-<!-- Add this script before your closing </body> tag -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
     </div>
     <!--Background Image-->
     <picture class="cs-background">
