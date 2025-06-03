@@ -1,0 +1,47 @@
+---
+title: 'Submission Complete'
+preloadImg: '/assets/images/cabinets2.webp'
+permalink: 'submission-complete/'
+eleventyNavigation:
+    key: Submission Complete
+    order: 9999
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/submission-complete.css">
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                   Video                      -->
+<!-- ============================================ -->
+
+<section id="video-548">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Thank you</span>
+            <h2 class="cs-title">Form Submission Complete</h2>
+            <p class="cs-text">
+Thanks for reaching out! We’ll connect with you soon. Until then, check out the video below to learn more.
+
+            </p>
+        </div>
+        <a href="https://www.youtube.com/watch?v=54HDhyOZI8k" target="_blank" class="cs-big-link">
+            <!--Background Image-->
+            <picture class="cs-background">
+                <source media="(min-width: 1024px)" srcset="/assets/images/thumbnail.webp">
+                <source media="(min-width: 601px)" srcset="/assets/images/thumbnail.webp">
+                <source media="(max-width: 600px)" srcset="/assets/images/thumbnail-m.webp">
+                <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Stats/meet-d.jpg" alt="meeting" width="1280" height="580">
+            </picture>
+            <!--Play Icon-->
+            <img class="cs-link-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Stats/play-yellow.svg" alt="play icon" width="110" height="110">
+        </a>
+    </div>
+</section>
+                                
+
+{% endblock %}
