@@ -186,8 +186,14 @@ eleventyNavigation:
             <h4 class="cs-text">Fill out your info and we'll reach out to schedule a free rental evaluation.</h4>
         </div>
         <!--Form-->
-<form class="cs-form" id="cs-form-983" name="Rental Consultation Form" method="post" data-netlify-recaptcha="true">
-    
+<form class="cs-form" id="cs-form-983" name="Rental Consultation Form"
+      method="post"
+      action="/submission-complete/"
+      data-netlify="true"
+      data-netlify-recaptcha="true">
+
+    <input type="hidden" name="form-name" value="Rental Consultation Form">
+
     <label class="cs-label">
         First Name
         <input class="cs-input" required type="text" id="name-587-983" name="First Name" placeholder="First Name">
@@ -205,7 +211,7 @@ eleventyNavigation:
         <input class="cs-input" required type="text" id="phone-587-983" name="phone" placeholder="Enter Your Phone Number">
     </label>
     <label class="cs-label">
-    </br>
+        </br>
         Property Address
         <input class="cs-input" required type="text" id="address-587-983" name="Property Address" placeholder="Your Property Address">
     </label>
@@ -218,6 +224,7 @@ eleventyNavigation:
         <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
     </div>
 </form>
+
     </div>
     <!--Background Image-->
     <picture class="cs-background">
