@@ -1,0 +1,50 @@
+/*-- -------------------------- -->
+<---         CS-Content         -->
+<--- -------------------------- -*/
+/* you can place this CSS group in your global stylesheet that is loaded on every page of the site so all you need to do is copy and paste the HTML into any section and it will all work. Or piece it inside the media queries in whatever section you want to add it to. You can also remove the cs-topper, cs-title, and cs-text and if they aren't already in your global stylesheet you can paste them outside these media queries so all cs-topper, cs-title, and cs-text on your site will pull from 1 place. */
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+  #cs-content-831 {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+    padding: 2rem 0;
+  }
+  #cs-content-831 .cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  #cs-content-831 .cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+  }
+  #cs-content-831 .cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  h3 {
+    padding-bottom: 1rem;
+  }
+}
