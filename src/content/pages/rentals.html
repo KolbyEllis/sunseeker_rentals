@@ -4,63 +4,102 @@ description: 'Browse available rental homes from SunSeeker Rentals. View current
 preloadImg: '/assets/images/cabinets2.webp'
 permalink: 'rentals/'
 eleventyNavigation:
-    key: Rentals
-    order: 3200
-    parent: Services
+  key: Rentals
+  order: 3200
+  parent: Services
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/rentals.css">
+  <link rel="stylesheet" href="/assets/css/rentals.css">
 {% endblock %}
 
 {% block body %}
 
 {% include 'components/banner.html' %}
-        
-<!--                   
-    This is a cs-content section that you can swap out with any cs-content you have in your site that is not a Side By Side. 
--->
 
 <div id="cs-content-831">
-    <h2 class="cs-title">Attention Realtors</h2>
-    <h3 class="cs-text">
-We will compensate you for bringing us a tenant! These are our minimum rental requirements. Please note that some owners of individual properties may have slighlty different reqiurements
-
-    </h3>
-        <p class="cs-text">
-Credit score of at least 625
-    </p>
-            <p class="cs-text">
-Monthly income of at least 3x the monthly rent
-    </p>
-            <p class="cs-text">
-Currently employed for at least 12 months    </p>
-            <p class="cs-text">
-No prior evictions or landlord judgments    </p>
-       <p class="cs-text">
-No open bankruptcy’s    </p>
-     <p class="cs-text">
-Positive rental reference if applicable    </p>
-<p class="cs-text">
-No Cats    </p>
-<p class="cs-text">
-No Smoking    </p>
+  <h2 class="cs-title">Attention Realtors</h2>
+  <h3 class="cs-text">
+    We will compensate you for bringing us a tenant! These are our minimum rental requirements. Please note that some owners of individual properties may have slightly different requirements.
+  </h3>
+  <p class="cs-text">Credit score of at least 625</p>
+  <p class="cs-text">Earn at least 3x the monthly rent</p>
+  <p class="cs-text">Currently employed for at least 12 months</p>
+  <p class="cs-text">No prior evictions or landlord judgments</p>
+  <p class="cs-text">No open bankruptcies</p>
+  <p class="cs-text">Positive rental reference if applicable</p>
+  <p class="cs-text">No Cats</p>
+  <p class="cs-text">No Smoking</p>
 </div>
-                                
-<script type='text/javascript' charset='utf-8'>
+
+<style>
+  #listing-wrapper {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (min-width: 1024px) {
+    #listing-wrapper {
+      width: 50%;
+      border: 1rem #676767 solid;
+    }
+  }
+
+  .mobile-only-link {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 767px) {
+    .mobile-only-link {
+      display: block;
+    }
+  }
+
+  .mobile-only-link a {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #676767;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+
+  .mobile-only-link a:hover {
+    background-color: #4f4f4f;
+  }
+</style>
+
+<!-- Mobile-only link ABOVE listings -->
+<div class="mobile-only-link">
+  <a href="https://sunseeker.appfolio.com/listings" target="_blank">
+    View Desktop Version
+  </a>
+</div>
+
+<!-- Listing Embed -->
+<div id="listing-wrapper">
+  <script type='text/javascript' charset='utf-8'>
     document.write(unescape("%3Cscript src='" + (('https:' == document.location.protocol) ? 'https:' : 'http:') + "//sunseeker.appfolio.com/javascripts/listing.js' type='text/javascript'%3E%3C/script%3E"));
   </script>
-  
+
   <script type='text/javascript' charset='utf-8'>
     Appfolio.Listing({
       hostUrl: 'sunseeker.appfolio.com',
-      //propertyGroup: 'My Group Name',
       themeColor: '#676767',
       height: '575px',
       width: '100%',
     });
   </script>
+</div>
 
 {% endblock %}
