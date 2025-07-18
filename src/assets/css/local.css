@@ -334,22 +334,6 @@
     align-items: center;
   }
 }
-/* Mobile - 600px and below: center form and prevent overflow */
-@media only screen and (max-width: 37.5rem) {
-  #contact-983 .cs-container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    box-sizing: border-box;
-  }
-  #contact-983 .cs-form {
-    width: 100%;
-    box-sizing: border-box;
-  }
-  #contact-983 .cs-label {
-    width: 100%;
-    box-sizing: border-box;
-  }
-}
 /*-- -------------------------- -->
 <---          Contact           -->
 <--- -------------------------- -*/
