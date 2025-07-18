@@ -1305,3 +1305,15 @@ html {
     display: block;
   }
 }
+.cs-li-link.active::before,
+.cs-li-link.cs-active::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: var(--primary);
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  display: block;
+  border-radius: 2px;
+}

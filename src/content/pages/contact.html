@@ -49,6 +49,18 @@ permalink: 'contact/'
         <input class="cs-input" required type="text" id="phone-1333" name="Phone" placeholder="Phone">
     </label>
     <label class="cs-label">
+        Purpose of Inquiry
+        <div class="custom-dropdown" tabindex="0">
+          <div class="custom-selected">Please Select An Option</div>
+          <ul class="custom-options">
+            <li data-value="Owner">I am a property owner looking for management services</li>
+            <li data-value="Tenant">I am looking to rent as a tenant</li>
+            <li data-value="Other">Other</li>
+          </ul>
+          <input type="hidden" name="Inquiry Purpose" required>
+        </div>
+    </label>
+    <label class="cs-label">
         Message
         <textarea class="cs-input cs-textarea" required name="Message" id="message-1333" placeholder="Write message..."></textarea>
     </label>

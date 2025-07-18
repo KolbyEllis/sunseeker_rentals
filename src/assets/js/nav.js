@@ -2,7 +2,7 @@
 const bodyElement = document.body;
 const navbarMenu = document.querySelector("#cs-navigation");
 const hamburgerMenu = document.querySelector("#cs-navigation .cs-toggle");
-const navLinks = document.querySelectorAll("#cs-navigation .cs-li-link");
+const navLinks = document.querySelectorAll("#cs-navigation .cs-li-link[href]");
 const dropdownElements = document.querySelectorAll(".cs-dropdown");
 const dropdownLinks = document.querySelectorAll(".cs-drop-li > .cs-li-link");
 const tertiaryDropTriggers = document.querySelectorAll("#cs-navigation .cs-drop3-main");
@@ -33,34 +33,25 @@ function toggleDropdown(element) {
     toggleAriaExpanded(button);
 }
 
-// Set active nav link, except for Contact page
-function setActiveLink(event) {
-    const href = event.currentTarget.getAttribute("href");
-
-    if (href === "/contact" || href === "/contact/") {
-        localStorage.removeItem("activeNavLink");
-        return;
-    }
-
-    navLinks.forEach(link => link.classList.remove("cs-active"));
-    event.currentTarget.classList.add("cs-active");
-    localStorage.setItem("activeNavLink", href);
+// Set active nav link based only on current path
+function setActiveLinkByPath() {
+    const currentPath = window.location.pathname;
+    navLinks.forEach(link => {
+        const href = link.getAttribute("href");
+        // Remove trailing slash for comparison
+        const cleanHref = href.replace(/\/$/, "");
+        const cleanPath = currentPath.replace(/\/$/, "");
+        if (cleanHref === cleanPath) {
+            link.classList.add("cs-active");
+        } else {
+            link.classList.remove("cs-active");
+        }
+    });
 }
 
 // DOM loaded
 document.addEventListener("DOMContentLoaded", () => {
-    const savedLink = localStorage.getItem("activeNavLink");
-    const currentPath = window.location.pathname;
-
-    // Prevent active underline on contact page
-    if (currentPath !== "/contact" && currentPath !== "/contact/") {
-        navLinks.forEach(link => {
-            const href = link.getAttribute("href");
-            if (href === currentPath || href === savedLink) {
-                link.classList.add("cs-active");
-            }
-        });
-    }
+    setActiveLinkByPath(); // Re-enabled
 
     // Prevent dropdown collapse too early on mobile
     if (isMobile()) {
@@ -77,6 +68,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  var select = document.querySelector('#contact-1333 select.cs-input');
+  if (select) {
+    function updateSelectColor() {
+      if (select.value === "") {
+        select.style.color = "#b0b0b0"; // Lighter grey for placeholder
+      } else {
+        select.style.color = "#222"; // Normal text color
+      }
+    }
+    updateSelectColor();
+    select.addEventListener('change', updateSelectColor);
+  }
+});
+
 // Hamburger toggle
 hamburgerMenu.addEventListener("click", toggleMenu);
 
@@ -89,7 +95,7 @@ navbarMenu.addEventListener("click", (event) => {
 
 // Track nav link clicks
 navLinks.forEach(link => {
-    link.addEventListener("click", setActiveLink);
+    link.addEventListener("click", setActiveLinkByPath);
 });
 
 // Dropdown behavior
@@ -160,4 +166,42 @@ const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
         }
         item.addEventListener('click', onClick)
         }
-                                
+
+document.querySelectorAll('.custom-dropdown').forEach(dropdown => {
+  const selected = dropdown.querySelector('.custom-selected');
+  const options = dropdown.querySelector('.custom-options');
+  const input = dropdown.querySelector('input[type="hidden"]');
+  function updateSelectedState() {
+    if (input.value) {
+      dropdown.classList.add('has-value');
+    } else {
+      dropdown.classList.remove('has-value');
+    }
+  }
+  selected.addEventListener('click', () => {
+    dropdown.classList.toggle('open');
+  });
+  options.querySelectorAll('li').forEach(option => {
+    option.addEventListener('click', () => {
+      selected.textContent = option.textContent;
+      input.value = option.getAttribute('data-value');
+      dropdown.classList.remove('open');
+      options.querySelectorAll('li').forEach(li => li.classList.remove('active'));
+      option.classList.add('active');
+      updateSelectedState();
+    });
+  });
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) dropdown.classList.remove('open');
+  });
+  dropdown.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      dropdown.classList.toggle('open');
+      e.preventDefault();
+    }
+    if (e.key === 'Escape') {
+      dropdown.classList.remove('open');
+    }
+  });
+  updateSelectedState();
+});                                

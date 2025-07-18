@@ -66,6 +66,9 @@
     align-items: flex-start;
     gap: 0.25rem;
   }
+  #contact-1333 .cs-label:has(select.cs-input):hover {
+    cursor: pointer;
+  }
   #contact-1333 .cs-input {
     font-size: 1rem;
     width: 100%;
@@ -136,6 +139,83 @@
   }
   #contact-1333 .cs-submit:hover {
     cursor: pointer;
+  }
+  #contact-1333 .custom-dropdown {
+    position: relative;
+    width: 100%;
+    font-size: 1rem;
+    color: var(--headerColor);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+  }
+  #contact-1333 .custom-dropdown.open .custom-options {
+    display: block;
+  }
+  #contact-1333 .custom-dropdown.has-value .custom-selected {
+    color: var(--headerColor);
+  }
+  #contact-1333 .custom-selected {
+    width: 100%;
+    height: 3.5rem;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    color: var(--headerColor);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+  }
+  #contact-1333 .custom-selected:after {
+    content: '';
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid var(--primary);
+    transition: transform 0.3s;
+  }
+  #contact-1333 .custom-dropdown.open .custom-selected:after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  #contact-1333 .custom-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  #contact-1333 .custom-options li {
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    list-style: none;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  #contact-1333 .custom-options li:hover {
+    background-color: #f5f5f5;
+  }
+  #contact-1333 .custom-options li:last-child {
+    border-bottom: none;
+  }
+  #contact-1333 .custom-options li.active {
+    background-color: var(--primary);
+    color: #fff;
   }
   #contact-1333 .cs-faq-group {
     padding: 0;
@@ -244,6 +324,25 @@
     overflow: hidden;
     transition: opacity 0.3s, padding-bottom 0.3s;
   }
+}
+#contact-1333 select.cs-input {
+  color: #222;
+}
+#contact-1333 select.cs-input option[value=""] {
+  color: #b0b0b0;
+  opacity: 0.4;
+}
+#contact-1333 select.cs-input option[value="Owner"] {
+  color: #222;
+  opacity: 1;
+}
+#contact-1333 select.cs-input option[value="Tenant"],
+#contact-1333 select.cs-input option[value="Other"] {
+  color: #222;
+  opacity: 1;
+}
+.cs-label select.cs-input {
+  cursor: pointer;
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
