@@ -306,11 +306,13 @@
     object-fit: cover;
   }
 }
+#contact-983,
+#contact-983 * {
+  box-sizing: border-box;
+}
 @media only screen and (max-width: 37.5rem) {
-  #contact-983 .cs-label,
-  #contact-983 .cs-message,
-  #contact-983 .cs-wrapper {
-    grid-column: span 12;
+  #contact-983 {
+    overflow-x: hidden;
   }
 }
 /* Tablet - 768px */
