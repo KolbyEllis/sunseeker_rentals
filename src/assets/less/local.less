@@ -215,12 +215,12 @@
             align-items: center;
         }
 
-        .cs-content .cs-text {
-            color: white;
-        }
-
         .cs-title {
             color: var(--bodyTextColorWhite);
+        }
+
+        .cs-text {
+            color: white;
         }
 
         .cs-form {
@@ -229,8 +229,6 @@
             grid-template-columns: repeat(12, 1fr);
             gap: (12/16rem);
         }
-        
-
 
         .cs-label {
             font-size: (16/16rem);
@@ -245,6 +243,8 @@
             grid-column: span 12;
         }
 
+        
+
         .cs-input {
             font-family: inherit;
             font-size: (16/16rem);
@@ -258,6 +258,7 @@
             border: none;
 
             &::placeholder {
+
                 color: #fff;
                 opacity: 0.5;
             }
@@ -360,16 +361,12 @@
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
     #contact-983 {
-        margin-top: 5rem;
         .cs-container {
             max-width: (1064/16rem);
         }
 
         .cs-label {
             grid-column: span 6;
-        }
-        .cs-form .cs-label:nth-child(5) {
-            grid-column: span 12;
         }
 
         .cs-message {
@@ -384,6 +381,7 @@
         }
     }
 }
+                                
 
 /*-- -------------------------- -->
 <---          Contact           -->
