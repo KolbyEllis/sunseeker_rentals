@@ -357,36 +357,29 @@
     }
 }
 
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #contact-983 {
-        margin-top: 5rem;
-        .cs-container {
-            max-width: (1064/16rem);
-        }
-
-        .cs-label {
-            grid-column: span 6;
-        }
-        .cs-form .cs-label:nth-child(4),
-        .cs-form .cs-label:nth-child(5) {
-            grid-column: span 6;
-        }
-        .cs-form .cs-label:nth-child(6) {
-            grid-column: span 12;
-        }
-
-        .cs-message {
-            grid-column: span 12;
-        }
-
-        .cs-wrapper {
-            grid-column: span 12;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+@media only screen and (max-width: 37.5rem) {
+  #contact-983 {
+    .cs-container {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      box-sizing: border-box;
     }
+    .cs-form {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      box-sizing: border-box;
+      padding: 0;
+    }
+    .cs-label, .cs-input, .cs-textarea {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+  }
 }
 
 
