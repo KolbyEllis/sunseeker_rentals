@@ -317,11 +317,7 @@
   #contact-983 .cs-label {
     grid-column: span 6;
   }
-  #contact-983 .cs-form .cs-label:nth-child(4),
   #contact-983 .cs-form .cs-label:nth-child(5) {
-    grid-column: span 6;
-  }
-  #contact-983 .cs-form .cs-label:nth-child(6) {
     grid-column: span 12;
   }
   #contact-983 .cs-message {
