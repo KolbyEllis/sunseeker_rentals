@@ -1317,3 +1317,8 @@ html {
   display: block;
   border-radius: 2px;
 }
+@media only screen and (min-width: 48rem) and (max-width: 63.9375rem) {
+  #cs-navigation .cs-dropdown > .cs-li-link {
+    cursor: pointer;
+  }
+}

@@ -313,6 +313,44 @@
 @media only screen and (max-width: 37.5rem) {
   #contact-983 {
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    min-width: 0;
+  }
+  #contact-983 .cs-container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  #contact-983 .cs-form {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  #contact-983 .cs-label,
+  #contact-983 .cs-input,
+  #contact-983 .cs-textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  #contact-983 .cs-wrapper {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 }
 /* Tablet - 768px */
