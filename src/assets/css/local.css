@@ -207,6 +207,7 @@
     flex-direction: column;
     gap: 0.5rem;
     grid-column: span 12;
+    padding: 0 1rem;
   }
   #contact-983 .cs-input {
     font-family: inherit;
