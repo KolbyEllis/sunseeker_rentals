@@ -554,12 +554,12 @@
             align-items: center;
         }
 
-        .cs-content .cs-text {
-            color: white;
-        }
-
         .cs-title {
             color: var(--bodyTextColorWhite);
+        }
+
+        .cs-text {
+            color: white;
         }
 
         .cs-form {
@@ -694,6 +694,56 @@
     }
 }
 
+#contact-983, #contact-983 * {
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 37.5rem) {
+  #contact-983 {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    min-width: 0;
+    
+    .cs-container {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+    
+    .cs-form {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
+      overflow-x: hidden;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    
+    .cs-label, .cs-input, .cs-textarea {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+    
+    .cs-wrapper {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
+      overflow-x: hidden;
+        }
+    }
+}
+
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
     #contact-983 {
@@ -703,9 +753,6 @@
 
         .cs-label {
             grid-column: span 6;
-        }
-        .cs-form .cs-label:nth-child(5) {
-            grid-column: span 12;
         }
 
         .cs-message {
