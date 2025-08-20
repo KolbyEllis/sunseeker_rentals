@@ -36,18 +36,18 @@ function toggleDropdown(element) {
 // Set active nav link based only on current path
 function setActiveLinkByPath() {
     const currentPath = window.location.pathname;
-    navLinks.forEach(link => {
-        const href = link.getAttribute("href");
+        navLinks.forEach(link => {
+            const href = link.getAttribute("href");
         // Remove trailing slash for comparison
         const cleanHref = href.replace(/\/$/, "");
         const cleanPath = currentPath.replace(/\/$/, "");
         if (cleanHref === cleanPath) {
-            link.classList.add("cs-active");
+                link.classList.add("cs-active");
         } else {
             link.classList.remove("cs-active");
-        }
-    });
-}
+            }
+        });
+    }
 
 // DOM loaded
 document.addEventListener("DOMContentLoaded", () => {
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     updateSelectColor();
     select.addEventListener('change', updateSelectColor);
-  }
+    }
 });
 
 // Hamburger toggle
@@ -166,7 +166,7 @@ const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
         }
         item.addEventListener('click', onClick)
         }
-
+                                
 document.querySelectorAll('.custom-dropdown').forEach(dropdown => {
   const selected = dropdown.querySelector('.custom-selected');
   const options = dropdown.querySelector('.custom-options');
