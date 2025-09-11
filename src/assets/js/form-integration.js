@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             email: formData.get('email') || formData.get('email-address') || '',
             phone: formData.get('phone') || formData.get('phone-number') || '',
             location: formData.get('location') || formData.get('approximate-location') || '',
-            message: formData.get('message') || formData.get('property-details') || '',
+            message: formData.get('Message') || formData.get('message') || formData.get('property-details') || '',
             source: 'sunseeker-rentals',
             tags: [
                 'Property Management Lead',
