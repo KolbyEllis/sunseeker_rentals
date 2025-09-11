@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     contactForm.addEventListener('submit', async function(e) {
-        e.preventDefault(); // Prevent default form submission
+        // Don't prevent default - let Netlify handle the form submission
+        // We'll send to Keap clone after Netlify processes it
         
         // Get form data
         const formData = new FormData(contactForm);
@@ -45,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (submitButton.value) submitButton.value = 'Submitting...';
 
         try {
-            // Send to Netlify function (which forwards to Keap clone)
+            // Send to Keap clone (let Netlify handle the main form submission)
             const response = await fetch('/.netlify/functions/submit-contact', {
                 method: 'POST',
                 headers: {
@@ -60,9 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Success! Show success message
                 showSuccessMessage('Thank you! Your information has been submitted successfully. We\'ll contact you soon.');
                 
-                // Reset form
-                contactForm.reset();
-                
                 // Optional: Track conversion
                 if (typeof gtag !== 'undefined') {
                     gtag('event', 'contact_form_submit', {
@@ -72,12 +70,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 
             } else {
-                throw new Error(result.error || 'Submission failed');
+                console.error('Keap clone submission failed:', result.error);
+                // Don't show error to user - let Netlify handle the main submission
             }
 
         } catch (error) {
-            console.error('Form submission error:', error);
-            showErrorMessage('Sorry, there was an error submitting your information. Please try again or call us at (623) 248-1929.');
+            console.error('Keap clone submission error:', error);
+            // Don't show error to user - let Netlify handle the main submission
         } finally {
             // Reset button state
             submitButton.disabled = false;
