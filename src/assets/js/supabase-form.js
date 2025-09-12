@@ -1,18 +1,34 @@
 // Supabase configuration and form handling
-import { createClient } from 'https://cdn.skypack.dev/@supabase/supabase-js@2'
+// Load Supabase from CDN
+let supabase = null;
 
 // Initialize Supabase client
 // Supabase project credentials
 const supabaseUrl = 'https://tukqivldrbcxijqjgqkw.supabase.co'
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR1a3FpdmxkcmJjeGlqcWpncWt3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc2Mjg4ODcsImV4cCI6MjA3MzIwNDg4N30.0zp-fED7GB7QgajlzmHk3M7iYTPaXob-rH1bY63_Eq4'
 
-// Supabase is now configured with your project credentials
-
-const supabase = createClient(supabaseUrl, supabaseKey)
+// Initialize Supabase when script loads
+async function initializeSupabase() {
+    try {
+        // Load Supabase from CDN
+        const { createClient } = await import('https://cdn.skypack.dev/@supabase/supabase-js@2')
+        supabase = createClient(supabaseUrl, supabaseKey)
+        console.log('Supabase initialized successfully')
+        return true
+    } catch (error) {
+        console.error('Failed to initialize Supabase:', error)
+        return false
+    }
+}
 
 // Form submission handler
 async function handleFormSubmission(formData) {
     try {
+        // Check if Supabase is initialized
+        if (!supabase) {
+            throw new Error('Supabase not initialized')
+        }
+
         // Prepare data for Supabase
         const submissionData = {
             first_name: formData.get('first_name'),
@@ -162,15 +178,22 @@ function showMessage(message, type) {
 }
 
 // Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     console.log('Supabase form script loaded')
     console.log('Supabase URL:', supabaseUrl)
-    console.log('Supabase configured:', supabaseUrl !== 'YOUR_SUPABASE_URL')
     
-    // Test Supabase connection on page load
-    testSupabaseConnection()
+    // Initialize Supabase first
+    const initialized = await initializeSupabase()
     
-    setupFormSubmission()
+    if (initialized) {
+        // Test Supabase connection on page load
+        await testSupabaseConnection()
+        
+        // Setup form submission
+        setupFormSubmission()
+    } else {
+        console.error('Failed to initialize Supabase, form will not work')
+    }
 })
 
 // Test Supabase connection
