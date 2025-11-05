@@ -215,47 +215,6 @@ async function testSupabaseConnection() {
     }
 }
 
-// Trigger n8n webhook
-async function triggerN8nWebhook(formData) {
-    try {
-        // Your n8n webhook URL
-        const n8nWebhookUrl = 'https://n8n.sunseekerrentals.com/webhook/contact-form'
-        
-        if (n8nWebhookUrl === 'YOUR_N8N_WEBHOOK_URL') {
-            console.warn('n8n webhook URL not configured')
-            return
-        }
-        
-        const webhookData = {
-            first_name: formData.get('first_name'),
-            last_name: formData.get('last_name'),
-            phone: formData.get('phone'),
-            email: formData.get('email'),
-            location: formData.get('location'),
-            message: formData.get('Message'),
-            form_name: formData.get('form-name'),
-            submitted_at: new Date().toISOString(),
-            page_url: window.location.href
-        }
-        
-        const response = await fetch(n8nWebhookUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(webhookData)
-        })
-        
-        if (response.ok) {
-            console.log('n8n webhook triggered successfully')
-        } else {
-            console.error('n8n webhook failed:', response.status)
-        }
-    } catch (error) {
-        console.error('Error triggering n8n webhook:', error)
-    }
-}
-
 // Export for potential use in other scripts
 window.SupabaseFormHandler = {
     handleFormSubmission,
