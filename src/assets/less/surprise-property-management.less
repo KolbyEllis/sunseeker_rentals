@@ -1,0 +1,17 @@
+@import "property-management-base.less";
+
+/* City-specific overrides */
+
+/* Desktop - 1300px (Hero background image) */
+@media only screen and (min-width: 81.25rem) {
+    #hero-81 {
+        background-image: url("/assets/images/pm-surprise.webp");
+    }
+}
+
+/* City Content & FAQ - surprise specific */
+@media only screen and (min-width: 0rem) {
+    .city-content-styles(surprise);
+    .faq-styles(surprise);
+}
+
