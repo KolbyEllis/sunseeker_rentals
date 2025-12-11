@@ -1,6 +1,6 @@
 ---
-title: 'Property Management Services in Gilbert'
-description: 'Property management services in Gilbert & Valley. Full-service leasing, inspections, maintenance, and responsive local experts for your rental property.'
+title: 'Property Management Services in Gilbert, AZ | Top-Rated Schools | 28+ Years'
+description: 'Expert property management in Gilbert, AZ. Specializing in San Tan Valley, Power Ranch, Higley & top-rated school districts. Full-service leasing, maintenance & responsive local experts. 450+ properties managed.'
 preloadImg: '/assets/images/pm-gilbert.webp'
 permalink: 'gilbert-property-management/'
 ---
@@ -9,10 +9,42 @@ permalink: 'gilbert-property-management/'
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/gilbert-property-management.css">
+    
+    <!-- Include reusable schema markup -->
+    {% include "components/property-management-schema.html" %}
+    
+    <!-- Define FAQs once for both schema and HTML -->
+    {% set faqs = [
+        {
+            "question": "What makes Gilbert different from other East Valley rental markets?",
+            "answer": "Gilbert stands out for its top-rated schools, reputation as one of the nation's safest cities, and emphasis on family-friendly, community-focused living. The city's combination of excellent schools, quality master-planned communities, and strong economy creates a premium rental market that attracts families and professionals willing to pay premium rates for quality housing."
+        },
+        {
+            "question": "What rental rates can I expect in Gilbert?",
+            "answer": "Rental rates in Gilbert are typically premium compared to many Valley cities, reflecting the community's reputation for safety, schools, and quality of life. Properties in desirable school districts or master-planned communities command the highest rates. We provide detailed market analysis to ensure competitive yet profitable pricing for your specific property."
+        },
+        {
+            "question": "How quickly do properties rent in Gilbert?",
+            "answer": "With Gilbert's strong reputation and rental demand from families and professionals, well-maintained properties typically lease within 25-30 days. Properties in desirable school districts or master-planned communities may lease even faster. We prioritize tenant quality to ensure long-term, stable tenancies that protect your investment."
+        },
+        {
+            "question": "What type of tenants do Gilbert properties attract?",
+            "answer": "Gilbert attracts quality tenants including families seeking excellent schools and safe neighborhoods, professionals working in Gilbert's growing economy, and residents who value community-focused living. These tenant demographics prioritize long-term housing stability, property care, and community involvement, resulting in reliable rental income and property preservation."
+        },
+        {
+            "question": "Do you manage properties in Gilbert's master-planned communities?",
+            "answer": "Yes, we actively manage properties across Gilbert's neighborhoods including various master-planned communities. These communities often have specific HOA requirements and amenities that enhance property appeal. We ensure tenant compliance with community guidelines, coordinate with HOAs, and leverage community features in our marketing to attract quality tenants and maximize rental income."
+        }
+    ] %}
+    
+    <!-- Include FAQ schema -->
+    {% include "components/faq-schema.html" %}
 {% endblock %}
 
 {% block body %}
 
+<!-- Include breadcrumbs -->
+{% include "components/property-management-breadcrumbs.html" %}
 
 <!-- ============================================ -->
 <!--                    Hero                      -->
@@ -20,7 +52,7 @@ permalink: 'gilbert-property-management/'
 
 <section id="hero-81">
     <div class="cs-container">
-        <h1 class="cs-title">Gilbert Property Management Made Simple</h1>
+        <h1 class="cs-title">Gilbert Property Management | Experienced Local Managers | Full-Service Solutions</h1>
         <p class="cs-text">
 Full-service leasing, thorough inspections, and responsive local experts for your Gilbert rental property. Trusted by 450+ property owners in the Valley.
         </p>
@@ -31,7 +63,7 @@ Full-service leasing, thorough inspections, and responsive local experts for you
     <picture class="cs-background">
         <source media="(max-width: 600px)" srcset="/assets/images/pm-gilbert-m.webp">
         <source media="(min-width: 601px)" srcset="/assets/images/pm-gilbert.webp">
-        <img fetchpriority="high" decoding="async" src="/assets/images/pm-gilbert.webp" alt="Gilbert" width="2250" height="1500" aria-hidden="true">
+        <img fetchpriority="high" decoding="async" src="/assets/images/pm-gilbert.webp" alt="Property management services for rental properties in Gilbert, Arizona including San Tan Valley, Power Ranch, and Higley" width="2250" height="1500" aria-hidden="true">
     </picture>
 </section>
 
@@ -138,7 +170,7 @@ Based in Gilbert and serving San Tan Valley, Power Ranch, Higley, and all Valley
                     Access to trusted local vendors and contractors.
                 </li>
             </ul>
-				<a href="/contact" class="cs-button-solid">Start Your Journey Today</a>
+				<a href="/contact" class="cs-button-solid">Get Started Today</a>
 			</div>
 		</div>
 		<ul class="cs-card-group">
@@ -226,7 +258,9 @@ I can't imagine another company who could be more responsive and communicative.
             <a href="https://www.google.com/search?q=sunseeker+rentals&rlz=1C1VDKB_enUS1004US1004&oq=sunseeker+rentals&gs_lcrp=EgZjaHJvbWUqDwgAECMYJxjjAhiABBiKBTIPCAAQIxgnGOMCGIAEGIoFMhUIARAuGCcYrwEYxwEYgAQYigUYjgUyEAgCEC4YxwEYsQMY0QMYgAQyFggDEC4YrwEYxwEYsQMYgAQYmAUYmgUyBwgEEAAYgAQyBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQg1MTIwajBqN6gCCLACAQ&sourceid=chrome&ie=UTF-8#lrd=0x872b386610816511:0x3232c3c142555ad2,1,,,," target="_blank" class="cs-button-solid">Read More Google Reviews</a>
     </div>
 </section>
-                                
+
+<!-- Include review schema -->
+{% include "components/property-management-reviews-schema.html" %}
 
 <!-- ============================================ -->
 <!--                    Form                      -->
@@ -278,6 +312,33 @@ Interested in our property management services or want to discuss your rental pr
     </div>
 </section>
 
+<!-- Define FAQs for HTML rendering (needed because variables don't persist across blocks) -->
+{% set faqs = [
+    {
+        "question": "What makes Gilbert different from other East Valley rental markets?",
+        "answer": "Gilbert stands out for its top-rated schools, reputation as one of the nation's safest cities, and emphasis on family-friendly, community-focused living. The city's combination of excellent schools, quality master-planned communities, and strong economy creates a premium rental market that attracts families and professionals willing to pay premium rates for quality housing."
+    },
+    {
+        "question": "What rental rates can I expect in Gilbert?",
+        "answer": "Rental rates in Gilbert are typically premium compared to many Valley cities, reflecting the community's reputation for safety, schools, and quality of life. Properties in desirable school districts or master-planned communities command the highest rates. We provide detailed market analysis to ensure competitive yet profitable pricing for your specific property."
+    },
+    {
+        "question": "How quickly do properties rent in Gilbert?",
+        "answer": "With Gilbert's strong reputation and rental demand from families and professionals, well-maintained properties typically lease within 25-30 days. Properties in desirable school districts or master-planned communities may lease even faster. We prioritize tenant quality to ensure long-term, stable tenancies that protect your investment."
+    },
+    {
+        "question": "What type of tenants do Gilbert properties attract?",
+        "answer": "Gilbert attracts quality tenants including families seeking excellent schools and safe neighborhoods, professionals working in Gilbert's growing economy, and residents who value community-focused living. These tenant demographics prioritize long-term housing stability, property care, and community involvement, resulting in reliable rental income and property preservation."
+    },
+    {
+        "question": "Do you manage properties in Gilbert's master-planned communities?",
+        "answer": "Yes, we actively manage properties across Gilbert's neighborhoods including various master-planned communities. These communities often have specific HOA requirements and amenities that enhance property appeal. We ensure tenant compliance with community guidelines, coordinate with HOAs, and leverage community features in our marketing to attract quality tenants and maximize rental income."
+    }
+] %}
+
+<!-- Include FAQ HTML -->
+{% include "components/faq-html.html" %}
+
 <!-- ============================================ -->
 <!--              City-Specific Content            -->
 <!-- ============================================ -->
@@ -318,49 +379,8 @@ Interested in our property management services or want to discuss your rental pr
     </div>
 </section>
 
-<!-- ============================================ -->
-<!--                    FAQ Section                -->
-<!-- ============================================ -->
-
-<section id="faq-gilbert">
-    <div class="cs-container">
-        <div class="cs-content">
-            <h2 class="cs-title">Frequently Asked Questions About Gilbert Property Management</h2>
-        </div>
-        <ul class="cs-faq-list">
-            <li class="cs-faq-item">
-                <h3 class="cs-faq-title">What makes Gilbert different from other East Valley rental markets?</h3>
-                <p class="cs-faq-text">
-                    Gilbert stands out for its top-rated schools, reputation as one of the nation's safest cities, and emphasis on family-friendly, community-focused living. The city's combination of excellent schools, quality master-planned communities, and strong economy creates a premium rental market that attracts families and professionals willing to pay premium rates for quality housing.
-                </p>
-            </li>
-            <li class="cs-faq-item">
-                <h3 class="cs-faq-title">What rental rates can I expect in Gilbert?</h3>
-                <p class="cs-faq-text">
-                    Rental rates in Gilbert are typically premium compared to many Valley cities, reflecting the community's reputation for safety, schools, and quality of life. Properties in desirable school districts or master-planned communities command the highest rates. We provide detailed market analysis to ensure competitive yet profitable pricing for your specific property.
-                </p>
-            </li>
-            <li class="cs-faq-item">
-                <h3 class="cs-faq-title">How quickly do properties rent in Gilbert?</h3>
-                <p class="cs-faq-text">
-                    With Gilbert's strong reputation and rental demand from families and professionals, well-maintained properties typically lease within 25-30 days. Properties in desirable school districts or master-planned communities may lease even faster. We prioritize tenant quality to ensure long-term, stable tenancies that protect your investment.
-                </p>
-            </li>
-            <li class="cs-faq-item">
-                <h3 class="cs-faq-title">What type of tenants do Gilbert properties attract?</h3>
-                <p class="cs-faq-text">
-                    Gilbert attracts quality tenants including families seeking excellent schools and safe neighborhoods, professionals working in Gilbert's growing economy, and residents who value community-focused living. These tenant demographics prioritize long-term housing stability, property care, and community involvement, resulting in reliable rental income and property preservation.
-                </p>
-            </li>
-            <li class="cs-faq-item">
-                <h3 class="cs-faq-title">Do you manage properties in Gilbert's master-planned communities?</h3>
-                <p class="cs-faq-text">
-                    Yes, we actively manage properties across Gilbert's neighborhoods including various master-planned communities. These communities often have specific HOA requirements and amenities that enhance property appeal. We ensure tenant compliance with community guidelines, coordinate with HOAs, and leverage community features in our marketing to attract quality tenants and maximize rental income.
-                </p>
-            </li>
-        </ul>
-    </div>
-</section>
+<!-- Include cross-linking section -->
+{% include "components/property-management-crosslinks.html" %}
                                 
                                           
 {% endblock %}

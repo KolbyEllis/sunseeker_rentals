@@ -1,0 +1,139 @@
+{% set cityKey = cityKey | default(page.fileSlug | replace("-property-management", "")) %}
+{% set city = cities[cityKey] %}
+{% set cityName = city.name %}
+{% set businessName = client.name + " - " + cityName + " Property Management" %}
+
+<!-- LocalBusiness Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "{{ businessName }}",
+  "image": "{{ client.domain }}{{ city.image }}",
+  "telephone": "{{ client.phoneFormatted }}",
+  "email": "{{ client.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ client.address.lineOne }}{% if client.address.lineTwo %}, {{ client.address.lineTwo }}{% endif %}",
+    "addressLocality": "{{ client.address.city }}",
+    "addressRegion": "{{ client.address.state }}",
+    "postalCode": "{{ client.address.zip }}",
+    "addressCountry": "{{ client.address.country }}"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "{{ city.latitude }}",
+    "longitude": "{{ city.longitude }}"
+  },
+  "url": "{{ client.domain }}{{ page.url }}",
+  "priceRange": "$$",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "09:00",
+    "closes": "16:00"
+  },
+  "paymentAccepted": ["{{ client.paymentAccepted }}"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ client.aggregateRating.ratingValue }}",
+    "reviewCount": "{{ client.aggregateRating.reviewCount }}",
+    "bestRating": "{{ client.aggregateRating.bestRating }}",
+    "worstRating": "{{ client.aggregateRating.worstRating }}"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "{{ cityName }}",
+    "containedIn": {
+      "@type": "State",
+      "name": "Arizona"
+    }
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Property Management Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Property Management Services in {{ cityName }}",
+          "description": "{{ description | default(page.description) }}"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<!-- FAQPage Schema - Override in page if needed -->
+{% block faqSchema %}{% endblock %}
+
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ client.domain }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Property Management",
+      "item": "{{ client.domain }}/about"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ cityName }} Property Management",
+      "item": "{{ client.domain }}{{ page.url }}"
+    }
+  ]
+}
+</script>
+
+<!-- Person Schema for Owners -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ken Ellis",
+  "jobTitle": "Property Manager",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "{{ client.name }}"
+  },
+  "email": "{{ client.email }}",
+  "telephone": "{{ client.phoneFormatted }}"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Cindy Ellis",
+  "jobTitle": "Property Manager",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "{{ client.name }}"
+  },
+  "email": "{{ client.email }}",
+  "telephone": "{{ client.phoneFormatted }}"
+}
+</script>
+
+<!-- Review Schema - Include via partial after reviews section -->
+{% block reviewSchema %}{% endblock %}
+

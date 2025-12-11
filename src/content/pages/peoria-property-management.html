@@ -1,6 +1,6 @@
 ---
-title: 'Property Management Services in Peoria'
-description: 'Property management services in Peoria & West Valley. Full-service leasing, inspections, maintenance, and responsive local experts for your rental property.'
+title: 'Property Management Services in Peoria, AZ | Vistancia Experts | 28+ Years'
+description: 'Expert property management in Peoria, AZ. Specializing in Vistancia, Westbrook Village, Lake Pleasant & excellent schools. Full-service leasing, maintenance & responsive local experts. 450+ properties managed.'
 preloadImg: '/assets/images/pm-peoria.webp'
 permalink: 'peoria-property-management/'
 ---
@@ -9,10 +9,42 @@ permalink: 'peoria-property-management/'
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/peoria-property-management.css">
+    
+    <!-- Include reusable schema markup -->
+    {% include "components/property-management-schema.html" %}
+    
+    <!-- Define FAQs once for both schema and HTML -->
+    {% set faqs = [
+        {
+            "question": "What makes Peoria different from other West Valley rental markets?",
+            "answer": "Peoria stands out for its excellent school districts, family-friendly reputation, and premium master-planned communities like Vistancia. The city's combination of quality education, recreational amenities including Lake Pleasant access, and established communities creates strong rental demand from families and professionals seeking quality living."
+        },
+        {
+            "question": "How do you handle properties in Vistancia and Westbrook Village?",
+            "answer": "We have extensive experience managing properties in Peoria's master-planned communities including Vistancia and Westbrook Village. These communities have specific HOA requirements and amenities that enhance property appeal. We ensure tenant compliance with community guidelines, coordinate with HOA boards, and leverage community amenities in our marketing to attract quality tenants."
+        },
+        {
+            "question": "What rental rates can I expect in Peoria?",
+            "answer": "Rental rates in Peoria vary by community and property type. Properties in premier communities like Vistancia command premium rates due to amenities and location, while other established neighborhoods offer competitive family-friendly pricing. We provide comprehensive market analysis for your specific property location and type to optimize rental pricing."
+        },
+        {
+            "question": "How quickly do properties rent in Peoria?",
+            "answer": "With Peoria's strong reputation and rental demand from families and professionals, well-maintained properties typically lease within 25-30 days. Properties in desirable communities like Vistancia often lease even faster due to their amenities and school access. We prioritize tenant quality to ensure long-term, stable tenancies."
+        },
+        {
+            "question": "What type of tenants do Peoria properties attract?",
+            "answer": "Peoria attracts quality tenants including families seeking excellent schools, professionals wanting access to amenities and Lake Pleasant, and retirees drawn to master-planned communities with resort-style features. These tenant demographics prioritize long-term housing, property care, and community involvement, resulting in reliable rental income."
+        }
+    ] %}
+    
+    <!-- Include FAQ schema -->
+    {% include "components/faq-schema.html" %}
 {% endblock %}
 
 {% block body %}
 
+<!-- Include breadcrumbs -->
+{% include "components/property-management-breadcrumbs.html" %}
 
 <!-- ============================================ -->
 <!--                    Hero                      -->
@@ -20,7 +52,7 @@ permalink: 'peoria-property-management/'
 
 <section id="hero-81">
     <div class="cs-container">
-        <h1 class="cs-title">Peoria Property Management Made Simple</h1>
+        <h1 class="cs-title">Peoria Property Management | Local Property Management Experts | 28+ Years</h1>
         <p class="cs-text">
 Full-service leasing, thorough inspections, and responsive local experts for your Peoria rental property. Trusted by 450+ property owners in the West Valley.
         </p>
@@ -31,7 +63,7 @@ Full-service leasing, thorough inspections, and responsive local experts for you
     <picture class="cs-background">
         <source media="(max-width: 600px)" srcset="/assets/images/pm-peoria-m.webp">
         <source media="(min-width: 601px)" srcset="/assets/images/pm-peoria.webp">
-        <img fetchpriority="high" decoding="async" src="/assets/images/pm-peoria.webp" alt="Peoria" width="2250" height="1500" aria-hidden="true">
+        <img fetchpriority="high" decoding="async" src="/assets/images/pm-peoria.webp" alt="Property management services for rental properties in Peoria, Arizona including Vistancia, Westbrook Village, and Lake Pleasant" width="2250" height="1500" aria-hidden="true">
     </picture>
 </section>
 
@@ -138,7 +170,7 @@ Based in Peoria and serving Vistancia, Westbrook Village, Lake Pleasant, and all
                     Access to trusted local vendors and contractors.
                 </li>
             </ul>
-				<a href="/contact" class="cs-button-solid">Start Your Journey Today</a>
+				<a href="/contact" class="cs-button-solid">Get Started Today</a>
 			</div>
 		</div>
 		<ul class="cs-card-group">
@@ -226,7 +258,9 @@ I can't imagine another company who could be more responsive and communicative.
             <a href="https://www.google.com/search?q=sunseeker+rentals&rlz=1C1VDKB_enUS1004US1004&oq=sunseeker+rentals&gs_lcrp=EgZjaHJvbWUqDwgAECMYJxjjAhiABBiKBTIPCAAQIxgnGOMCGIAEGIoFMhUIARAuGCcYrwEYxwEYgAQYigUYjgUyEAgCEC4YxwEYsQMY0QMYgAQyFggDEC4YrwEYxwEYsQMYgAQYmAUYmgUyBwgEEAAYgAQyBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQg1MTIwajBqN6gCCLACAQ&sourceid=chrome&ie=UTF-8#lrd=0x872b386610816511:0x3232c3c142555ad2,1,,,," target="_blank" class="cs-button-solid">Read More Google Reviews</a>
     </div>
 </section>
-                                
+
+<!-- Include review schema -->
+{% include "components/property-management-reviews-schema.html" %}
 
 <!-- ============================================ -->
 <!--                    Form                      -->
@@ -278,6 +312,33 @@ Interested in our property management services or want to discuss your rental pr
     </div>
 </section>
 
+<!-- Define FAQs for HTML rendering (needed because variables don't persist across blocks) -->
+{% set faqs = [
+    {
+        "question": "What makes Peoria different from other West Valley rental markets?",
+        "answer": "Peoria stands out for its excellent school districts, family-friendly reputation, and premium master-planned communities like Vistancia. The city's combination of quality education, recreational amenities including Lake Pleasant access, and established communities creates strong rental demand from families and professionals seeking quality living."
+    },
+    {
+        "question": "How do you handle properties in Vistancia and Westbrook Village?",
+        "answer": "We have extensive experience managing properties in Peoria's master-planned communities including Vistancia and Westbrook Village. These communities have specific HOA requirements and amenities that enhance property appeal. We ensure tenant compliance with community guidelines, coordinate with HOA boards, and leverage community amenities in our marketing to attract quality tenants."
+    },
+    {
+        "question": "What rental rates can I expect in Peoria?",
+        "answer": "Rental rates in Peoria vary by community and property type. Properties in premier communities like Vistancia command premium rates due to amenities and location, while other established neighborhoods offer competitive family-friendly pricing. We provide comprehensive market analysis for your specific property location and type to optimize rental pricing."
+    },
+    {
+        "question": "How quickly do properties rent in Peoria?",
+        "answer": "With Peoria's strong reputation and rental demand from families and professionals, well-maintained properties typically lease within 25-30 days. Properties in desirable communities like Vistancia often lease even faster due to their amenities and school access. We prioritize tenant quality to ensure long-term, stable tenancies."
+    },
+    {
+        "question": "What type of tenants do Peoria properties attract?",
+        "answer": "Peoria attracts quality tenants including families seeking excellent schools, professionals wanting access to amenities and Lake Pleasant, and retirees drawn to master-planned communities with resort-style features. These tenant demographics prioritize long-term housing, property care, and community involvement, resulting in reliable rental income."
+    }
+] %}
+
+<!-- Include FAQ HTML -->
+{% include "components/faq-html.html" %}
+
 <!-- ============================================ -->
 <!--              City-Specific Content            -->
 <!-- ============================================ -->
@@ -318,49 +379,8 @@ Interested in our property management services or want to discuss your rental pr
     </div>
 </section>
 
-<!-- ============================================ -->
-<!--                    FAQ Section                -->
-<!-- ============================================ -->
-
-<section id="faq-peoria">
-    <div class="cs-container">
-        <div class="cs-content">
-            <h2 class="cs-title">Frequently Asked Questions About Peoria Property Management</h2>
-        </div>
-        <ul class="cs-faq-list">
-            <li class="cs-faq-item">
-                <h3 class="cs-faq-title">What makes Peoria different from other West Valley rental markets?</h3>
-                <p class="cs-faq-text">
-                    Peoria stands out for its excellent school districts, family-friendly reputation, and premium master-planned communities like Vistancia. The city's combination of quality education, recreational amenities including Lake Pleasant access, and established communities creates strong rental demand from families and professionals seeking quality living.
-                </p>
-            </li>
-            <li class="cs-faq-item">
-                <h3 class="cs-faq-title">How do you handle properties in Vistancia and Westbrook Village?</h3>
-                <p class="cs-faq-text">
-                    We have extensive experience managing properties in Peoria's master-planned communities including Vistancia and Westbrook Village. These communities have specific HOA requirements and amenities that enhance property appeal. We ensure tenant compliance with community guidelines, coordinate with HOA boards, and leverage community amenities in our marketing to attract quality tenants.
-                </p>
-            </li>
-            <li class="cs-faq-item">
-                <h3 class="cs-faq-title">What rental rates can I expect in Peoria?</h3>
-                <p class="cs-faq-text">
-                    Rental rates in Peoria vary by community and property type. Properties in premier communities like Vistancia command premium rates due to amenities and location, while other established neighborhoods offer competitive family-friendly pricing. We provide comprehensive market analysis for your specific property location and type to optimize rental pricing.
-                </p>
-            </li>
-            <li class="cs-faq-item">
-                <h3 class="cs-faq-title">How quickly do properties rent in Peoria?</h3>
-                <p class="cs-faq-text">
-                    With Peoria's strong reputation and rental demand from families and professionals, well-maintained properties typically lease within 25-30 days. Properties in desirable communities like Vistancia often lease even faster due to their amenities and school access. We prioritize tenant quality to ensure long-term, stable tenancies.
-                </p>
-            </li>
-            <li class="cs-faq-item">
-                <h3 class="cs-faq-title">What type of tenants do Peoria properties attract?</h3>
-                <p class="cs-faq-text">
-                    Peoria attracts quality tenants including families seeking excellent schools, professionals wanting access to amenities and Lake Pleasant, and retirees drawn to master-planned communities with resort-style features. These tenant demographics prioritize long-term housing, property care, and community involvement, resulting in reliable rental income.
-                </p>
-            </li>
-        </ul>
-    </div>
-</section>
+<!-- Include cross-linking section -->
+{% include "components/property-management-crosslinks.html" %}
                                 
                                           
 {% endblock %}

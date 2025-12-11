@@ -110,18 +110,8 @@
             position: relative;
 
             &:after {
-                /* Divider Line */
-                content: "";
-                /* 60px - 100px */
-                width: clamp(3.75rem, 9.5vw, 6.25rem);
-                /* 4px - 8px */
-                height: clamp(0.25rem, 0.8vw, 0.5rem);
-                /* 16px - 24px */
-                margin: clamp(1rem, 4vw, 1.5rem) auto clamp(1rem, 4vw, 1.5rem);
-                background: var(--primary);
-                opacity: 1;
-                position: relative;
-                display: block;
+                /* Divider Line - Removed */
+                display: none;
             }
         }
 
@@ -146,7 +136,7 @@
             text-decoration: none;
             font-weight: 700;
             margin: auto;
-            color: #1a1a1a;
+            color: #fff;
             min-width: (150/16rem);
             padding: 0 (24/16rem);
             background-color: var(--primary);
@@ -175,6 +165,60 @@
                 &:before {
                     width: 100%;
                 }
+            }
+        }
+    }
+}
+
+/* Breadcrumb Navigation */
+@media only screen and (min-width: 0rem) {
+    .cs-breadcrumb {
+        padding: (24/16rem) 1rem 0;
+        max-width: (1200/16rem);
+        margin: 0 auto;
+    }
+
+    .cs-breadcrumb-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: (8/16rem);
+        font-size: (14/16rem);
+    }
+
+    .cs-breadcrumb-item {
+        display: flex;
+        align-items: center;
+        color: var(--bodyTextColor);
+        
+        &:not(:last-child)::after {
+            content: "/";
+            margin-left: (8/16rem);
+            color: var(--bodyTextColor);
+            opacity: 0.5;
+        }
+        
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s;
+            
+            &:hover {
+                color: var(--primaryLight);
+                text-decoration: underline;
+            }
+        }
+        
+        &.cs-active {
+            color: var(--bodyTextColor);
+            
+            a {
+                color: var(--bodyTextColor);
+                cursor: default;
+                pointer-events: none;
             }
         }
     }
@@ -1031,6 +1075,118 @@
     }
 }
 
+/* Cross-Linking Section */
+@media only screen and (min-width: 0rem) {
+    #city-links-486 {
+        padding: var(--sectionPadding);
+        background-color: #f7f7f7;
+
+        .cs-container {
+            width: 100%;
+            max-width: (1200/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: (48/16rem);
+        }
+
+        .cs-content {
+            text-align: center;
+            width: 100%;
+            max-width: (800/16rem);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .cs-topper {
+            text-align: center;
+        }
+        
+        .cs-title {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cs-text {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cs-card-group {
+            width: 100%;
+            padding: 0;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax((300/16rem), 1fr));
+            gap: (16/16rem);
+            list-style: none;
+            justify-items: stretch;
+            max-width: (1280/16rem);
+        }
+        
+        /* Tablet and up - use 4 columns, center last row */
+        @media only screen and (min-width: 48rem) {
+            #city-links-486 {
+                .cs-card-group {
+                    grid-template-columns: repeat(4, (300/16rem));
+                    justify-content: center;
+                    max-width: 100%;
+                }
+                
+                /* Shift the last 2 items (Tempe and Gilbert) to the right - place them in columns 3 and 4 */
+                .cs-item:nth-child(10):nth-last-child(2) {
+                    grid-column: 3;
+                }
+                .cs-item:nth-child(11):nth-last-child(1) {
+                    grid-column: 4;
+                }
+            }
+        }
+
+        .cs-item {
+            list-style: none;
+            margin: 0;
+            padding: (12/16rem) (32/16rem);
+            background-color: #fff;
+            border-radius: (4/16rem);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: (48/16rem);
+            width: 100%;
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 (4/16rem) (12/16rem) rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        .cs-link {
+            display: block;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: (16/16rem);
+            line-height: 1.4em;
+            transition: color 0.3s;
+            text-align: center;
+            width: 100%;
+            white-space: nowrap;
+
+            &:hover {
+                color: var(--primaryLight);
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
     #cs-contact-486 {
@@ -1078,7 +1234,8 @@
         .cs-title {
             text-align: center;
             width: 100%;
-            margin: 0 0 (48/16rem);
+            margin: 0 auto (48/16rem);
+            display: block;
         }
 
         .cs-content-item {
@@ -1128,7 +1285,9 @@
         }
 
         .cs-title {
-            margin: 0;
+            margin: 0 auto;
+            text-align: center;
+            width: 100%;
         }
 
         .cs-faq-list {

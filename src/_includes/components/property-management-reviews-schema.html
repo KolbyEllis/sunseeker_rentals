@@ -1,0 +1,68 @@
+{% set cityKey = cityKey | default(page.fileSlug | replace("-property-management", "")) %}
+{% set city = cities[cityKey] %}
+{% set businessName = client.name + " - " + city.name + " Property Management" %}
+
+<!-- Review Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "LocalBusiness",
+    "name": "{{ businessName }}"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Property Owner"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  },
+  "reviewBody": "A very PROFESSIONAL, responsive, and HONEST company. Every employee that I have worked with has proved they deserve my business. This is a company that will protect your interests!"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "LocalBusiness",
+    "name": "{{ businessName }}"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Property Owner"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  },
+  "reviewBody": "Working with Ken & Cindy Ellis of SunSeeker Rentals has been an exceptionally easy and highly positive experience! I would recommend them, without hesitation, to anyone needing their expertise."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "LocalBusiness",
+    "name": "{{ businessName }}"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Property Owner"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  },
+  "reviewBody": "Since I live out-of-state, communication with the rental company is vital. Ken and Cindy have been amazing. They keep me up-to-date on everything that happens with my property."
+}
+</script>
+

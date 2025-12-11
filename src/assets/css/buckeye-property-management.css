@@ -101,18 +101,8 @@
     position: relative;
   }
   #hero-81 .cs-title:after {
-    /* Divider Line */
-    content: "";
-    /* 60px - 100px */
-    width: clamp(3.75rem, 9.5vw, 6.25rem);
-    /* 4px - 8px */
-    height: clamp(0.25rem, 0.8vw, 0.5rem);
-    /* 16px - 24px */
-    margin: clamp(1rem, 4vw, 1.5rem) auto clamp(1rem, 4vw, 1.5rem);
-    background: var(--primary);
-    opacity: 1;
-    position: relative;
-    display: block;
+    /* Divider Line - Removed */
+    display: none;
   }
   #hero-81 .cs-text {
     /* 16px - 25px */
@@ -134,7 +124,7 @@
     text-decoration: none;
     font-weight: 700;
     margin: auto;
-    color: #1a1a1a;
+    color: #fff;
     min-width: 9.375rem;
     padding: 0 1.5rem;
     background-color: var(--primary);
@@ -162,6 +152,52 @@
   }
   #hero-81 .cs-button-solid:hover:before {
     width: 100%;
+  }
+}
+/* Breadcrumb Navigation */
+@media only screen and (min-width: 0rem) {
+  .cs-breadcrumb {
+    padding: 1.5rem 1rem 0;
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+  .cs-breadcrumb-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+  .cs-breadcrumb-item {
+    display: flex;
+    align-items: center;
+    color: var(--bodyTextColor);
+  }
+  .cs-breadcrumb-item:not(:last-child)::after {
+    content: "/";
+    margin-left: 0.5rem;
+    color: var(--bodyTextColor);
+    opacity: 0.5;
+  }
+  .cs-breadcrumb-item a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .cs-breadcrumb-item a:hover {
+    color: var(--primaryLight);
+    text-decoration: underline;
+  }
+  .cs-breadcrumb-item.cs-active {
+    color: var(--bodyTextColor);
+  }
+  .cs-breadcrumb-item.cs-active a {
+    color: var(--bodyTextColor);
+    cursor: default;
+    pointer-events: none;
   }
 }
 /* Desktop hero background - city-specific, override in city files */
@@ -911,6 +947,105 @@
     border: none;
   }
 }
+/* Cross-Linking Section */
+@media only screen and (min-width: 0rem) {
+  #city-links-486 {
+    padding: var(--sectionPadding);
+    background-color: #f7f7f7;
+    /* Tablet and up - use 4 columns, center last row */
+  }
+  #city-links-486 .cs-container {
+    width: 100%;
+    max-width: 75rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  #city-links-486 .cs-content {
+    text-align: center;
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #city-links-486 .cs-topper {
+    text-align: center;
+  }
+  #city-links-486 .cs-title {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #city-links-486 .cs-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #city-links-486 .cs-card-group {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    gap: 1rem;
+    list-style: none;
+    justify-items: stretch;
+    max-width: 80rem;
+  }
+  #city-links-486 .cs-item {
+    list-style: none;
+    margin: 0;
+    padding: 0.75rem 2rem;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    width: 100%;
+  }
+  #city-links-486 .cs-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+  }
+  #city-links-486 .cs-link {
+    display: block;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.4em;
+    transition: color 0.3s;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+  }
+  #city-links-486 .cs-link:hover {
+    color: var(--primaryLight);
+    text-decoration: underline;
+  }
+}
+@media only screen and (min-width: 0rem) and only screen and (min-width: 48rem) {
+  #city-links-486 #city-links-486 {
+    /* Shift the last 2 items (Tempe and Gilbert) to the right - place them in columns 3 and 4 */
+  }
+  #city-links-486 #city-links-486 .cs-card-group {
+    grid-template-columns: repeat(4, 18.75rem);
+    justify-content: center;
+    max-width: 100%;
+  }
+  #city-links-486 #city-links-486 .cs-item:nth-child(10):nth-last-child(2) {
+    grid-column: 3;
+  }
+  #city-links-486 #city-links-486 .cs-item:nth-child(11):nth-last-child(1) {
+    grid-column: 4;
+  }
+}
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #cs-contact-486 .cs-container {
@@ -958,7 +1093,8 @@
   #city-content-buckeye .cs-title {
     text-align: center;
     width: 100%;
-    margin: 0 0 3rem;
+    margin: 0 auto 3rem;
+    display: block;
   }
   #city-content-buckeye .cs-content-item {
     background-color: #fff;
@@ -999,7 +1135,9 @@
     align-items: center;
   }
   #faq-buckeye .cs-title {
-    margin: 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
   }
   #faq-buckeye .cs-faq-list {
     list-style: none;

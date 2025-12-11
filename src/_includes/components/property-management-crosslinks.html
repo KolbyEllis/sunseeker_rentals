@@ -1,0 +1,29 @@
+{% set cityKey = cityKey | default(page.fileSlug | replace("-property-management", "")) %}
+{% set city = cities[cityKey] %}
+{% set cityName = city.name %}
+
+<!-- ============================================ -->
+<!--              Cross-Linking                   -->
+<!-- ============================================ -->
+
+<section id="city-links-486">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Property Management Services</span>
+            <h2 class="cs-title">We Serve Properties Throughout the Entire Phoenix Metro Area</h2>
+            <p class="cs-text">
+                SunSeeker Rentals provides expert property management services across the entire Phoenix Valley. Whether you own rental properties in {{ cityName }}, Goodyear, Glendale, or any other Valley city, we have the local expertise to maximize your investment.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            {% for key, cityData in cities %}
+                {% if key != cityKey %}
+                    <li class="cs-item">
+                        <a href="/{{ key }}-property-management" class="cs-link">{{ cityData.name }} Property Management</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+

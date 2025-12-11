@@ -1,0 +1,21 @@
+{% set cityKey = cityKey | default(page.fileSlug | replace("-property-management", "")) %}
+{% set city = cities[cityKey] %}
+{% set cityName = city.name %}
+
+<!-- ============================================ -->
+<!--                 Breadcrumbs                  -->
+<!-- ============================================ -->
+<nav aria-label="Breadcrumb" class="cs-breadcrumb">
+    <ol class="cs-breadcrumb-list">
+        <li class="cs-breadcrumb-item">
+            <a href="/">Home</a>
+        </li>
+        <li class="cs-breadcrumb-item">
+            <a href="/about">Property Management</a>
+        </li>
+        <li class="cs-breadcrumb-item cs-active" aria-current="page">
+            {{ cityName }} Property Management
+        </li>
+    </ol>
+</nav>
+

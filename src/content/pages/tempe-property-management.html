@@ -1,6 +1,6 @@
 ---
-title: 'Property Management Services in Tempe'
-description: 'Property management services in Tempe & Valley. Full-service leasing, inspections, maintenance, and responsive local experts for your rental property.'
+title: 'Property Management Services in Tempe, AZ | ASU Area Experts | 28+ Years'
+description: 'Expert property management in Tempe, AZ. Specializing in ASU area, Tempe Town Lake & South Tempe. Full-service leasing, maintenance & responsive local experts. Trusted by 450+ property owners, 140+ Google reviews.'
 preloadImg: '/assets/images/pm-tempe.webp'
 permalink: 'tempe-property-management/'
 ---
@@ -9,10 +9,42 @@ permalink: 'tempe-property-management/'
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/tempe-property-management.css">
+    
+    <!-- Include reusable schema markup -->
+    {% include "components/property-management-schema.html" %}
+    
+    <!-- Define FAQs once for both schema and HTML -->
+    {% set faqs = [
+        {
+            "question": "How does ASU impact Tempe rental properties?",
+            "answer": "Arizona State University creates consistent, year-round rental demand in Tempe. Properties near campus are ideal for student housing, while areas slightly further attract faculty, staff, and professionals who want access to ASU without the campus intensity. We understand the unique rental cycles and tenant expectations in ASU-adjacent properties."
+        },
+        {
+            "question": "What type of tenants do Tempe properties attract?",
+            "answer": "Tempe attracts a diverse tenant base including ASU students and faculty, young professionals working in Phoenix and Tempe's tech sector, and families seeking urban amenities with good schools. The specific tenant type depends on property location and type—we help you target the most profitable tenant demographic for your property."
+        },
+        {
+            "question": "How quickly do properties rent in Tempe?",
+            "answer": "With Tempe's strong rental demand, well-positioned properties typically lease within 25-30 days. Properties near ASU or Tempe Town Lake often lease even faster due to high demand. We leverage our marketing expertise across 50+ platforms to maximize visibility and attract quality tenants quickly."
+        },
+        {
+            "question": "What rental rates can I expect in Tempe?",
+            "answer": "Rental rates in Tempe vary significantly by location. Properties near ASU or Tempe Town Lake command premium rates, while South Tempe offers excellent value for families. We provide detailed market analysis considering your property's specific location, condition, and features to optimize rental pricing."
+        },
+        {
+            "question": "Do you manage student housing properties?",
+            "answer": "Yes, we manage a variety of properties including those suitable for student housing. We understand the unique considerations of student rentals including lease timing, roommate situations, and property condition expectations. We also manage properties targeting professionals and families, tailoring our approach to each property type."
+        }
+    ] %}
+    
+    <!-- Include FAQ schema -->
+    {% include "components/faq-schema.html" %}
 {% endblock %}
 
 {% block body %}
 
+<!-- Include breadcrumbs -->
+{% include "components/property-management-breadcrumbs.html" %}
 
 <!-- ============================================ -->
 <!--                    Hero                      -->
@@ -20,7 +52,7 @@ permalink: 'tempe-property-management/'
 
 <section id="hero-81">
     <div class="cs-container">
-        <h1 class="cs-title">Tempe Property Management Made Simple</h1>
+        <h1 class="cs-title">Tempe Property Management | Trusted Local Experts | 450+ Properties Managed</h1>
         <p class="cs-text">
 Full-service leasing, thorough inspections, and responsive local experts for your Tempe rental property. Trusted by 450+ property owners in the Valley.
         </p>
@@ -31,7 +63,7 @@ Full-service leasing, thorough inspections, and responsive local experts for you
     <picture class="cs-background">
         <source media="(max-width: 600px)" srcset="/assets/images/pm-tempe-m.webp">
         <source media="(min-width: 601px)" srcset="/assets/images/pm-tempe.webp">
-        <img fetchpriority="high" decoding="async" src="/assets/images/pm-tempe.webp" alt="Tempe" width="2250" height="1500" aria-hidden="true">
+        <img fetchpriority="high" decoding="async" src="/assets/images/pm-tempe.webp" alt="Property management services for rental properties in Tempe, Arizona including ASU area, Tempe Town Lake, and South Tempe" width="2250" height="1500" aria-hidden="true">
     </picture>
 </section>
 
@@ -138,7 +170,7 @@ Based in Tempe and serving Tempe Town Lake, ASU area, South Tempe, and all Valle
                     Access to trusted local vendors and contractors.
                 </li>
             </ul>
-				<a href="/contact" class="cs-button-solid">Start Your Journey Today</a>
+				<a href="/contact" class="cs-button-solid">Get Started Today</a>
 			</div>
 		</div>
 		<ul class="cs-card-group">
@@ -226,7 +258,9 @@ I can't imagine another company who could be more responsive and communicative.
             <a href="https://www.google.com/search?q=sunseeker+rentals&rlz=1C1VDKB_enUS1004US1004&oq=sunseeker+rentals&gs_lcrp=EgZjaHJvbWUqDwgAECMYJxjjAhiABBiKBTIPCAAQIxgnGOMCGIAEGIoFMhUIARAuGCcYrwEYxwEYgAQYigUYjgUyEAgCEC4YxwEYsQMY0QMYgAQyFggDEC4YrwEYxwEYsQMYgAQYmAUYmgUyBwgEEAAYgAQyBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQg1MTIwajBqN6gCCLACAQ&sourceid=chrome&ie=UTF-8#lrd=0x872b386610816511:0x3232c3c142555ad2,1,,,," target="_blank" class="cs-button-solid">Read More Google Reviews</a>
     </div>
 </section>
-                                
+
+<!-- Include review schema -->
+{% include "components/property-management-reviews-schema.html" %}
 
 <!-- ============================================ -->
 <!--                    Form                      -->
@@ -278,6 +312,33 @@ Interested in our property management services or want to discuss your rental pr
     </div>
 </section>
 
+<!-- Define FAQs for HTML rendering (needed because variables don't persist across blocks) -->
+{% set faqs = [
+    {
+        "question": "How does ASU impact Tempe rental properties?",
+        "answer": "Arizona State University creates consistent, year-round rental demand in Tempe. Properties near campus are ideal for student housing, while areas slightly further attract faculty, staff, and professionals who want access to ASU without the campus intensity. We understand the unique rental cycles and tenant expectations in ASU-adjacent properties."
+    },
+    {
+        "question": "What type of tenants do Tempe properties attract?",
+        "answer": "Tempe attracts a diverse tenant base including ASU students and faculty, young professionals working in Phoenix and Tempe's tech sector, and families seeking urban amenities with good schools. The specific tenant type depends on property location and type—we help you target the most profitable tenant demographic for your property."
+    },
+    {
+        "question": "How quickly do properties rent in Tempe?",
+        "answer": "With Tempe's strong rental demand, well-positioned properties typically lease within 25-30 days. Properties near ASU or Tempe Town Lake often lease even faster due to high demand. We leverage our marketing expertise across 50+ platforms to maximize visibility and attract quality tenants quickly."
+    },
+    {
+        "question": "What rental rates can I expect in Tempe?",
+        "answer": "Rental rates in Tempe vary significantly by location. Properties near ASU or Tempe Town Lake command premium rates, while South Tempe offers excellent value for families. We provide detailed market analysis considering your property's specific location, condition, and features to optimize rental pricing."
+    },
+    {
+        "question": "Do you manage student housing properties?",
+        "answer": "Yes, we manage a variety of properties including those suitable for student housing. We understand the unique considerations of student rentals including lease timing, roommate situations, and property condition expectations. We also manage properties targeting professionals and families, tailoring our approach to each property type."
+    }
+] %}
+
+<!-- Include FAQ HTML -->
+{% include "components/faq-html.html" %}
+
 <!-- ============================================ -->
 <!--              City-Specific Content            -->
 <!-- ============================================ -->
@@ -318,49 +379,8 @@ Interested in our property management services or want to discuss your rental pr
     </div>
 </section>
 
-<!-- ============================================ -->
-<!--                    FAQ Section                -->
-<!-- ============================================ -->
-
-<section id="faq-tempe">
-    <div class="cs-container">
-        <div class="cs-content">
-            <h2 class="cs-title">Frequently Asked Questions About Tempe Property Management</h2>
-        </div>
-        <ul class="cs-faq-list">
-            <li class="cs-faq-item">
-                <h3 class="cs-faq-title">How does ASU impact Tempe rental properties?</h3>
-                <p class="cs-faq-text">
-                    Arizona State University creates consistent, year-round rental demand in Tempe. Properties near campus are ideal for student housing, while areas slightly further attract faculty, staff, and professionals who want access to ASU without the campus intensity. We understand the unique rental cycles and tenant expectations in ASU-adjacent properties.
-                </p>
-            </li>
-            <li class="cs-faq-item">
-                <h3 class="cs-faq-title">What type of tenants do Tempe properties attract?</h3>
-                <p class="cs-faq-text">
-                    Tempe attracts a diverse tenant base including ASU students and faculty, young professionals working in Phoenix and Tempe's tech sector, and families seeking urban amenities with good schools. The specific tenant type depends on property location and type—we help you target the most profitable tenant demographic for your property.
-                </p>
-            </li>
-            <li class="cs-faq-item">
-                <h3 class="cs-faq-title">How quickly do properties rent in Tempe?</h3>
-                <p class="cs-faq-text">
-                    With Tempe's strong rental demand, well-positioned properties typically lease within 25-30 days. Properties near ASU or Tempe Town Lake often lease even faster due to high demand. We leverage our marketing expertise across 50+ platforms to maximize visibility and attract quality tenants quickly.
-                </p>
-            </li>
-            <li class="cs-faq-item">
-                <h3 class="cs-faq-title">What rental rates can I expect in Tempe?</h3>
-                <p class="cs-faq-text">
-                    Rental rates in Tempe vary significantly by location. Properties near ASU or Tempe Town Lake command premium rates, while South Tempe offers excellent value for families. We provide detailed market analysis considering your property's specific location, condition, and features to optimize rental pricing.
-                </p>
-            </li>
-            <li class="cs-faq-item">
-                <h3 class="cs-faq-title">Do you manage student housing properties?</h3>
-                <p class="cs-faq-text">
-                    Yes, we manage a variety of properties including those suitable for student housing. We understand the unique considerations of student rentals including lease timing, roommate situations, and property condition expectations. We also manage properties targeting professionals and families, tailoring our approach to each property type.
-                </p>
-            </li>
-        </ul>
-    </div>
-</section>
+<!-- Include cross-linking section -->
+{% include "components/property-management-crosslinks.html" %}
                                 
                                           
 {% endblock %}

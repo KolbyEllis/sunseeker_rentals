@@ -1,0 +1,25 @@
+{# 
+  FAQ HTML Partial - Renders FAQ HTML section from faqs variable
+  
+  Usage in body block:
+  {% set faqs = [...] %}
+  {% include "components/faq-html.html" %}
+#}
+{% set cityKey = cityKey | default(page.fileSlug | replace("-property-management", "")) %}
+{% set cityName = cities[cityKey].name %}
+<section id="faq-{{ cityKey }}">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Frequently Asked Questions About {{ cityName }} Property Management</h2>
+        </div>
+        <ul class="cs-faq-list">
+            {% for faq in faqs %}
+            <li class="cs-faq-item">
+                <h3 class="cs-faq-title">{{ faq.question }}</h3>
+                <p class="cs-faq-text">{{ faq.answer }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+

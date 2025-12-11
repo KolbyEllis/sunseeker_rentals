@@ -17,8 +17,13 @@
         <meta property="og:description" content="{{ description }}"/>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="{{ client.domain }}{{ page.url }}"/>
-        <meta property="og:image" content="/assets/images/logo-small.png"/>
-        <meta property="og:image:secure_url" content="/assets/images/logo-small.png"/>
+        {% if preloadImg != '' %}
+        <meta property="og:image" content="{{ client.domain }}{{ preloadImg }}"/>
+        <meta property="og:image:secure_url" content="{{ client.domain }}{{ preloadImg }}"/>
+        {% else %}
+        <meta property="og:image" content="{{ client.domain }}/assets/images/logo-small.png"/>
+        <meta property="og:image:secure_url" content="{{ client.domain }}/assets/images/logo-small.png"/>
+        {% endif %}
 
         <!--Favicons-->
         <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png?v=2" sizes="96x96" />
@@ -45,6 +50,33 @@
         {% block head %}{% endblock %}
 
         <title>{{ title }}</title>
+
+        <!-- Organization Schema -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "{{ client.name }}",
+          "url": "{{ client.domain }}",
+          "logo": "{{ client.domain }}/assets/images/logo-small.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "{{ client.phoneFormatted }}",
+            "contactType": "Customer Service",
+            "email": "{{ client.email }}",
+            "areaServed": "US",
+            "availableLanguage": ["en"]
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "{{ client.address.lineOne }}{% if client.address.lineTwo %}, {{ client.address.lineTwo }}{% endif %}",
+            "addressLocality": "{{ client.address.city }}",
+            "addressRegion": "{{ client.address.state }}",
+            "postalCode": "{{ client.address.zip }}",
+            "addressCountry": "{{ client.address.country }}"
+          },
+        }
+        </script>
 
          <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-R9Z0FQ89PL"></script>
