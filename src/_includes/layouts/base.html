@@ -96,6 +96,22 @@
           gtag('config', 'AW-1025883070');
         </script>
 
+        <!-- Google Ads conversion tracking: Book appointment (Click) -->
+        <script>
+          function gtag_report_conversion(url) {
+            var callback = function () {
+              if (typeof(url) != 'undefined') {
+                window.location = url;
+              }
+            };
+            gtag('event', 'conversion', {
+              'send_to': 'AW-1025883070/GxrICK_9oaEaEL73lukD',
+              'event_callback': callback
+            });
+            return false;
+          }
+        </script>
+
 
     </head>
     <body>
