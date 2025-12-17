@@ -15,7 +15,7 @@
 
 ## 💰 BUDGET ALLOCATION STRATEGY
 
-Based on West Valley location, Goodyear being best market, and West Valley focus:
+Based on West Valley location, Goodyear being best market (rank 16 organically), and West Valley focus. Current organic rankings: Goodyear at position 16, all other cities 31+ (not in top 30). Customer value: $3,000/year.
 
 **WEST VALLEY CITIES (Priority Markets):**
 | City | Monthly Budget | Daily Budget | Priority | Notes |
@@ -420,13 +420,16 @@ West Valley-based Litchfield Park experts. Premium property management for upsca
 
 ### Phase 2: Weeks 3-4 (Optimization Phase)
 - **Strategy**: Target CPA (Cost Per Acquisition)
-- **Target CPA**: $25-$40 per lead (based on city value)
+- **Target CPA**: $100-$150 per lead (based on $3k/year customer value)
+  - **Math**: $3k customer value ÷ 20% conversion rate = $600 max CPA
+  - **Target**: $100-$150 per lead = 20-30x ROI (conservative target)
+  - **Aggressive**: Can go up to $200-$300 per lead if conversion rate is high
 - **Goal**: Optimize for conversions
 - **Action**: Let Google optimize, review daily
 
 ### Phase 3: Month 2+ (Automated Phase)
 - **Strategy**: Maximize Conversions (within budget)
-- **Target**: 12-20 leads per month total
+- **Target**: 12-20 leads per month total (3-5 customers at 20-25% close rate)
 - **Goal**: Consistent lead flow
 - **Action**: Weekly review, adjust budgets as needed
 
@@ -598,20 +601,35 @@ West Valley-based Litchfield Park experts. Premium property management for upsca
 
 ## 📈 EXPECTED RESULTS (Month 1-3)
 
+**Based on $3k/year customer value:**
+- Target conversion rate: 20-25% (leads → customers)
+- Target CPA: $100-$150 per lead
+- Expected ROI: 20-30x (conservative) or 10x (aggressive at $300 CPA)
+
 ### Month 1 (Learning Phase)
 - **Leads**: 8-12
-- **CPA**: $35-$50
+- **CPA**: $100-$150 (target)
+- **Customers**: 2-3 (at 20-25% close rate)
+- **Revenue**: $6k-$9k/year
 - **Focus**: Data collection and optimization
 
 ### Month 2 (Optimization Phase)
 - **Leads**: 12-18
-- **CPA**: $28-$35
+- **CPA**: $80-$120 (optimized)
+- **Customers**: 3-4
+- **Revenue**: $9k-$12k/year
 - **Focus**: Scaling winners, pausing losers
 
 ### Month 3+ (Scaling Phase)
 - **Leads**: 15-25
-- **CPA**: $20-$30
+- **CPA**: $75-$100 (optimized)
+- **Customers**: 4-6
+- **Revenue**: $12k-$18k/year
 - **Focus**: Maximizing ROI and volume
+
+**ROI Calculation:**
+- Month 1: $500 spend → $6k-$9k revenue = 12-18x ROI
+- Month 3: $500 spend → $12k-$18k revenue = 24-36x ROI
 
 ---
 
