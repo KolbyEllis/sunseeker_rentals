@@ -171,56 +171,90 @@
 }
 
 /* Breadcrumb Navigation */
+/* Breadcrumbs inside hero section - styled for overlay */
+/* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    .cs-breadcrumb {
-        padding: (24/16rem) 1rem 0;
+    #hero-81 .cs-breadcrumb {
+        /* Position at top of hero, accounting for fixed navbar */
+        position: absolute;
+        top: (72/16rem);
+        left: 0;
+        right: 0;
+        z-index: 10;
+        padding: 0 (16/16rem);
         max-width: (1200/16rem);
         margin: 0 auto;
+        width: 100%;
+        box-sizing: border-box;
     }
 
-    .cs-breadcrumb-list {
+    #hero-81 .cs-breadcrumb-list {
         list-style: none;
         padding: 0;
         margin: 0;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: (8/16rem);
-        font-size: (14/16rem);
+        gap: 0;
+        font-size: (12/16rem);
+        line-height: 1.4;
+        justify-content: center;
     }
 
-    .cs-breadcrumb-item {
+    #hero-81 .cs-breadcrumb-item {
         display: flex;
         align-items: center;
-        color: var(--bodyTextColor);
+        color: #fff;
+        white-space: nowrap;
         
         &:not(:last-child)::after {
             content: "/";
-            margin-left: (8/16rem);
-            color: var(--bodyTextColor);
-            opacity: 0.5;
+            margin: 0 (6/16rem);
+            color: #fff;
+            opacity: 0.7;
         }
         
         a {
-            color: var(--primary);
+            color: #fff;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: opacity 0.3s;
+            opacity: 0.9;
             
             &:hover {
-                color: var(--primaryLight);
+                opacity: 1;
                 text-decoration: underline;
             }
         }
         
         &.cs-active {
-            color: var(--bodyTextColor);
+            color: #fff;
+            opacity: 0.9;
             
             a {
-                color: var(--bodyTextColor);
+                color: #fff;
                 cursor: default;
                 pointer-events: none;
             }
         }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #hero-81 .cs-breadcrumb {
+        top: (80/16rem);
+        padding: 0 (24/16rem);
+    }
+
+    #hero-81 .cs-breadcrumb-list {
+        font-size: (13/16rem);
+    }
+}
+
+/* Desktop - 1024px and up - Hide breadcrumbs */
+@media only screen and (min-width: 64rem) {
+    #hero-81 .cs-breadcrumb {
+        display: none;
     }
 }
 
