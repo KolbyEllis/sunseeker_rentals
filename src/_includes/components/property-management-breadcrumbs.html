@@ -1,6 +1,10 @@
 {% set cityKey = cityKey | default(page.fileSlug | replace("-property-management", "")) %}
 {% set city = cities[cityKey] %}
-{% set cityName = city.name %}
+{% if city and city.name %}
+    {% set cityName = city.name %}
+{% else %}
+    {% set cityName = cityKey | title %}
+{% endif %}
 
 <!-- ============================================ -->
 <!--                 Breadcrumbs                  -->
