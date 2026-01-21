@@ -223,3 +223,8 @@
     width: 53%;
   }
 }
+
+/* Hide specific links */
+#content-page-1533 .hidden-link {
+  display: none;
+}
