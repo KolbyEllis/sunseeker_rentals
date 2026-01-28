@@ -8,7 +8,9 @@ eleventyExcludeFromCollections: true
 {%- for page in collections.sitemap %}
   <url>
     <loc>{{ client.domain }}{{ page.url }}</loc>
-    <lastmod>{{ page.date | date: "%Y-%m-%d" }}</lastmod>
+    {%- if page.date %}
+    <lastmod>{{ page.date | sitemapDate }}</lastmod>
+    {%- endif %}
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

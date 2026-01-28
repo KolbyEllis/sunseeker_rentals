@@ -11,6 +11,7 @@ const configServer = require("./src/config/server");
 
 // Other
 const filterPostDate = require("./src/config/postDate");
+const { DateTime } = require("luxon");
 const isProduction = configServer.isProduction;
 
 
@@ -98,6 +99,15 @@ module.exports = function (eleventyConfig) {
      *  https://moment.github.io/luxon/api-docs/index.html#datetime
      */
     eleventyConfig.addFilter("postDate", filterPostDate);
+
+    /**
+     *  Formats dates for XML sitemaps (YYYY-MM-DD).
+     *  Use - {{ page.date | sitemapDate }}
+     */
+    eleventyConfig.addFilter("sitemapDate", (dateObj) => {
+        if (!dateObj) return "";
+        return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
+    });
     /**=====================================================================
                                     END FILTERS
     =======================================================================*/
