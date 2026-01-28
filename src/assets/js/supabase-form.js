@@ -93,6 +93,15 @@ function setupFormSubmission() {
             const result = await handleFormSubmission(formData)
             
             if (result.success) {
+                // Google Ads conversion tracking: Submit lead form (fires immediately on success)
+                try {
+                    if (typeof window.gtag === 'function') {
+                        window.gtag('event', 'conversion', { 'send_to': 'AW-1025883070/H2quCND_5-MbEL73lukD' })
+                    }
+                } catch (e) {
+                    // Don't block the user journey if tracking fails
+                }
+
                 // Show success message
                 showMessage('Thank you! Your information has been submitted successfully.', 'success')
                 

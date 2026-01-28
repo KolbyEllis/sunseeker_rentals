@@ -14,7 +14,21 @@ eleventyNavigation:
     
     <!-- Google Ads conversion tracking: Submit lead form (Page load) -->
     <script>
-      gtag('event', 'conversion', {'send_to': 'AW-1025883070/H2quCND_5-MbEL73lukD'});
+      (function reportLeadConversion(attempt) {
+        try {
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', 'conversion', { 'send_to': 'AW-1025883070/H2quCND_5-MbEL73lukD' });
+            return;
+          }
+        } catch (e) {
+          // ignore
+        }
+
+        // gtag is loaded async in the base layout; retry briefly.
+        if (attempt < 10) {
+          setTimeout(function () { reportLeadConversion(attempt + 1); }, 300);
+        }
+      })(0);
     </script>
 {% endblock %}
 
