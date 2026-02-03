@@ -2,6 +2,19 @@
   publish = "public/"
   command = "npm run build"
 
+# Redirect valleyofthesunrentals.com to primary domain (same site, cleaner URL)
+[[redirects]]
+  from = "https://valleyofthesunrentals.com/*"
+  to = "https://www.sunseekerrentals.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.valleyofthesunrentals.com/*"
+  to = "https://www.sunseekerrentals.com/:splat"
+  status = 301
+  force = true
+
 [[plugins]]
   # Installs the Lighthouse Build Plugin for all deploy contexts
   package = "@netlify/plugin-lighthouse"
