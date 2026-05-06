@@ -1,6 +1,7 @@
 [build]
   publish = "public/"
   command = "npm run build"
+  functions = "netlify/functions"
 
 # Redirect valleyofthesunrentals.com to primary domain (same site, cleaner URL)
 [[redirects]]

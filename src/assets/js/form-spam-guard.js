@@ -53,6 +53,21 @@
         }
 
         forms.forEach((form) => {
+            if (form.getAttribute("data-netlify") === "true" && (form.method || "").toLowerCase() === "post") {
+                const successPath = form.getAttribute("action") || "/submission-complete/"
+                let successInput = form.querySelector('input[name="_success_redirect"]')
+
+                if (!successInput) {
+                    successInput = document.createElement("input")
+                    successInput.type = "hidden"
+                    successInput.name = "_success_redirect"
+                    form.appendChild(successInput)
+                }
+
+                successInput.value = successPath
+                form.setAttribute("action", "/.netlify/functions/form-submit-guard")
+            }
+
             form.addEventListener("submit", (event) => {
                 if (!formHasBlockedPhrase(form)) {
                     return
