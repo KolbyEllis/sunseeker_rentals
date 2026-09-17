@@ -35,6 +35,11 @@
   color: #6b655c;
 }
 
+.home-eyebrow__brand {
+  color: var(--primary);
+  font-weight: 700;
+}
+
 .home-title {
   margin: 0 0 0.75rem;
   font-size: clamp(1.6rem, 3vw, 2.25rem);
