@@ -82,10 +82,10 @@ eleventyNavigation:
 
             {% if homes and homes.length %}
             <h2 class="cs-title" style="margin-top: 2.5rem;">Property Pages</h2>
-            <p style="margin-bottom: 1rem;">
-                Archive pages for properties we’ve marketed. For homes you can apply to right now, visit
-                <a href="/rentals/">Current Rentals</a>.
+            <p class="sitemap-homes-intro">
+                Archive pages for properties we’ve marketed. For homes you can apply to right now, visit Current Rentals.
             </p>
+            <a class="cs-button-solid sitemap-rentals-cta" href="/rentals/">Current Rentals</a>
             <ul>
                 {% for home in homes %}
                 <li>

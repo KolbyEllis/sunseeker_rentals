@@ -207,18 +207,18 @@
   max-width: 36rem;
 }
 
-/* Compact split CTA banner — dark text panel + photo panel */
+/* Split CTA banner — dark text panel + photo panel */
 .home-cta-banner {
-  background: #1a1a1a;
+  background: #121212;
 }
 
 .home-cta-banner__inner {
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
-  max-width: 80rem;
+  max-width: 90rem;
   margin: 0 auto;
-  min-height: 17rem;
+  min-height: 22rem;
 }
 
 .home-cta-banner__content {
@@ -230,57 +230,65 @@
   justify-content: center;
   gap: 0;
   text-align: left;
-  padding: 2rem 1.25rem;
-  background: #1a1a1a;
+  padding: 3rem 1.5rem;
+  background: #121212;
 }
 
 .home-cta-banner__topper {
   display: block;
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.85rem;
   color: var(--primary);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .home-cta-banner__title {
-  margin: 0 0 0.75rem;
+  margin: 0 0 1rem;
   color: #fff;
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  line-height: 1.2;
+  font-size: clamp(1.85rem, 4vw, 2.75rem);
+  line-height: 1.15;
+  font-weight: 700;
 }
 
 .home-cta-banner__text {
-  margin: 0 0 1.35rem;
+  margin: 0 0 1.75rem;
   color: #fff;
-  opacity: 0.9;
-  line-height: 1.55;
-  font-size: 0.98rem;
-  max-width: 28rem;
+  opacity: 0.92;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  max-width: 30rem;
+}
+
+.home-cta-banner .home-cta-button {
+  padding: 0 2.5rem;
+  font-size: 1.05rem;
+  line-height: 3.5em;
+  min-width: 12rem;
 }
 
 .home-cta-banner__photo {
   position: relative;
-  min-height: 14rem;
+  min-height: 18rem;
   overflow: hidden;
-  background: #1a1a1a;
+  background: #121212;
 }
 
 .home-cta-banner__photo:before {
   content: "";
   position: absolute;
   inset: 0 auto 0 0;
-  width: 35%;
+  width: 40%;
   z-index: 1;
   pointer-events: none;
-  background: linear-gradient(90deg, #1a1a1a 0%, rgba(26, 26, 26, 0.55) 45%, transparent 100%);
+  background: linear-gradient(90deg, #121212 0%, rgba(18, 18, 18, 0.55) 40%, transparent 100%);
 }
 
 .home-cta-banner__photo img {
   width: 100%;
   height: 100%;
-  min-height: 14rem;
+  min-height: 18rem;
   object-fit: cover;
   /* Keep the glowing pool in frame */
   object-position: 35% center;
@@ -293,12 +301,12 @@
   }
 
   .home-cta-banner__inner {
-    grid-template-columns: minmax(18rem, 0.85fr) minmax(0, 1.15fr);
-    min-height: 15.5rem;
+    grid-template-columns: minmax(22rem, 1fr) minmax(0, 1.15fr);
+    min-height: 24rem;
   }
 
   .home-cta-banner__content {
-    padding: 2rem 2rem 2rem 2.25rem;
+    padding: 3.5rem 2.5rem 3.5rem 3rem;
   }
 
   .home-cta-banner__photo {
@@ -344,17 +352,32 @@
   }
 
   .home-cta-banner__inner {
-    grid-template-columns: minmax(20rem, 0.8fr) minmax(0, 1.2fr);
-    min-height: 16.5rem;
+    grid-template-columns: minmax(24rem, 0.95fr) minmax(0, 1.15fr);
+    min-height: 28rem;
   }
 
   .home-cta-banner__content {
-    padding: 2.25rem 2.5rem 2.25rem 3rem;
+    padding: 4rem 3rem 4rem 4rem;
+  }
+
+  .home-cta-banner__title {
+    font-size: clamp(2.25rem, 3vw, 2.85rem);
+  }
+
+  .home-cta-banner__text {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .home-cta-banner .home-cta-button {
+    padding: 0 2.75rem;
+    font-size: 1.1rem;
+    line-height: 3.75em;
   }
 
   .home-cta-banner__photo:before {
-    width: 28%;
-    background: linear-gradient(90deg, #1a1a1a 0%, rgba(26, 26, 26, 0.4) 40%, transparent 100%);
+    width: 32%;
+    background: linear-gradient(90deg, #121212 0%, rgba(18, 18, 18, 0.45) 35%, transparent 100%);
   }
 
   .home-cta-banner__photo img {
@@ -363,9 +386,17 @@
 }
 
 @media (max-width: 699px) {
+  .home-cta-banner__inner {
+    min-height: 0;
+  }
+
+  .home-cta-banner__photo {
+    min-height: 16rem;
+  }
+
   .home-cta-banner__photo:before {
     width: 100%;
-    background: linear-gradient(180deg, #1a1a1a 0%, rgba(26, 26, 26, 0.35) 28%, transparent 55%);
+    background: linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0.35) 28%, transparent 55%);
   }
 
   .home-cta-banner__photo img {

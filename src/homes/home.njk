@@ -14,6 +14,52 @@ tags:
 
 {% block head %}
   <link rel="stylesheet" href="/assets/css/homes.css">
+
+  {# Pilot: JSON-LD for St Catherine only — expand to all homes later if it looks good #}
+  {% if home.slug == "24564-w-st-catherine-ave-buckeye-az-85326" %}
+  {% set schemaPhotos = home.photos if home.photos and home.photos.length else [] %}
+  {% set rentNumber = (home.rent or "") | replace("$", "") | replace(",", "") %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateListing",
+    "name": {{ (home.marketingTitle or home.address) | dump | safe }},
+    "description": {{ (home.description or description) | dump | safe }},
+    "url": {{ (client.domain + page.url) | dump | safe }},
+    "image": {{ schemaPhotos | dump | safe }},
+    "datePosted": {{ (home.lastSyncedAt or "") | dump | safe }},
+    "offers": {
+      "@type": "Offer",
+      "price": {{ rentNumber | dump | safe }},
+      "priceCurrency": "USD",
+      "availability": "{% if home.currentlyPosted %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
+      "url": {{ (client.domain + "/rentals/") | dump | safe }}
+    },
+    "about": {
+      "@type": "House",
+      "name": {{ home.address | dump | safe }},
+      "url": {{ (client.domain + page.url) | dump | safe }},
+      "image": {{ schemaPhotos | dump | safe }},
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "24564 W St Catherine Ave",
+        "addressLocality": "Buckeye",
+        "addressRegion": "AZ",
+        "postalCode": "85326",
+        "addressCountry": "US"
+      },
+      "numberOfBedrooms": {{ home.beds | int }},
+      "numberOfBathroomsTotal": {{ home.baths | float }},
+      "floorSize": {
+        "@type": "QuantitativeValue",
+        "value": {{ home.sqft | int }},
+        "unitCode": "FTK"
+      },
+      "petsAllowed": false
+    }
+  }
+  </script>
+  {% endif %}
 {% endblock %}
 
 {% block body %}
