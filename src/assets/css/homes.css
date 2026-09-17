@@ -207,138 +207,178 @@
   max-width: 36rem;
 }
 
-/* Split CTA banner — full-bleed photo with slanted black blend */
+/* Property CTA — slanted black blend (rotated gradient technique) */
 .home-cta-banner {
+  box-sizing: border-box;
   position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  min-height: 22rem;
+  padding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
   overflow: hidden;
-  background: #121212;
+  background: #1a1a1a;
 }
 
-.home-cta-banner__photo {
+.home-cta-banner *,
+.home-cta-banner *::before,
+.home-cta-banner *::after {
+  box-sizing: border-box;
+}
+
+.home-cta-banner__background {
+  width: 100%;
+  height: 100%;
+  display: block;
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
   z-index: 0;
 }
 
-.home-cta-banner__photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 60% center;
-  display: block;
-}
-
-/* Soft diagonal black blend — wider at top, slanted like the reference */
-.home-cta-banner__shade {
+.home-cta-banner__background::before {
+  content: "";
   position: absolute;
   inset: 0;
+  background: #1a1a1a;
+  opacity: 0.8;
   z-index: 1;
-  pointer-events: none;
-  background: #121212;
-  -webkit-mask-image: linear-gradient(
-    105deg,
-    #000 0%,
-    #000 38%,
-    rgba(0, 0, 0, 0.85) 48%,
-    rgba(0, 0, 0, 0.35) 58%,
-    transparent 70%
-  );
-  mask-image: linear-gradient(
-    105deg,
-    #000 0%,
-    #000 38%,
-    rgba(0, 0, 0, 0.85) 48%,
-    rgba(0, 0, 0, 0.35) 58%,
-    transparent 70%
-  );
+}
+
+.home-cta-banner__background img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 0% 30%;
+}
+
+.home-cta-banner__container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(3rem, 6vw, 4rem);
 }
 
 .home-cta-banner__content {
-  position: relative;
-  z-index: 2;
+  text-align: center;
+  width: 100%;
+  max-width: 32.3125rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 100%;
-  max-width: 36rem;
-  padding: 3rem 1.5rem;
-  text-align: left;
+  align-items: center;
 }
 
 .home-cta-banner__topper {
-  display: block;
-  margin-bottom: 0.85rem;
-  color: var(--primary);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  font-size: clamp(0.8125rem, 1.6vw, 1rem);
+  line-height: 1.2em;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 0.25rem;
+  display: block;
 }
 
 .home-cta-banner__title {
+  font-size: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  font-weight: 900;
+  line-height: 1.2em;
+  max-width: 43.75rem;
   margin: 0 0 1rem;
-  color: #fff;
-  font-size: clamp(1.85rem, 4vw, 2.75rem);
-  line-height: 1.15;
-  font-weight: 700;
+  color: #fafbfc;
 }
 
 .home-cta-banner__text {
-  margin: 0 0 1.75rem;
-  color: #fff;
-  opacity: 0.92;
-  line-height: 1.6;
-  font-size: 1.05rem;
-  max-width: 28rem;
+  font-size: 1rem;
+  line-height: 1.5em;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0 0 2rem;
+  color: #fafbfc;
+  opacity: 0.8;
 }
 
 .home-cta-banner .home-cta-button {
-  padding: 0 2.5rem;
-  font-size: 1.05rem;
-  line-height: 3.5em;
-  min-width: 12rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 3.125em;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 1.875rem;
+  color: #fff;
+  background-color: var(--primary);
+  display: inline-block;
+  min-width: 9.375rem;
+  border-radius: 0.25rem;
+}
+
+.home-cta-banner .home-cta-button:hover {
+  color: #fff;
+}
+
+.home-cta-banner .home-cta-button:before {
+  border-radius: 0.25rem;
 }
 
 @media (min-width: 700px) {
   .home-gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
 
-  .home-cta-banner {
-    min-height: 24rem;
+@media (min-width: 48rem) {
+  .home-cta-banner__background {
+    overflow: hidden;
+  }
+
+  .home-cta-banner__background::before {
+    width: 40%;
+    right: auto;
+    opacity: 1;
+  }
+
+  /* Rotated soft slant — matches site CTA #cta-403 technique */
+  .home-cta-banner__background::after {
+    content: "";
+    width: 31.25rem;
+    height: 93.75rem;
+    margin-right: -3.125rem;
+    background: linear-gradient(
+      to right,
+      #1a1a1a 0%,
+      #1a1a1a 57%,
+      rgba(26, 26, 26, 0) 100%
+    );
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    z-index: 1;
+    transform: rotate(10deg) translateY(-50%);
+    pointer-events: none;
+  }
+
+  .home-cta-banner__background img {
+    width: 60%;
+    left: auto;
+    right: 0;
+    object-position: right center;
+  }
+
+  .home-cta-banner__container {
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .home-cta-banner__content {
-    max-width: 40rem;
-    padding: 3.5rem clamp(1.5rem, 5vw, 4.5rem);
-  }
-
-  .home-cta-banner__shade {
-    -webkit-mask-image: linear-gradient(
-      108deg,
-      #000 0%,
-      #000 36%,
-      rgba(0, 0, 0, 0.88) 46%,
-      rgba(0, 0, 0, 0.4) 56%,
-      transparent 68%
-    );
-    mask-image: linear-gradient(
-      108deg,
-      #000 0%,
-      #000 36%,
-      rgba(0, 0, 0, 0.88) 46%,
-      rgba(0, 0, 0, 0.4) 56%,
-      transparent 68%
-    );
-  }
-
-  .home-cta-banner__photo img {
-    object-position: 55% center;
+    text-align: left;
+    align-items: flex-start;
+    width: 45%;
+    max-width: none;
   }
 }
 
@@ -370,83 +410,6 @@
 
   .home-gallery {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .home-cta-banner {
-    min-height: 28rem;
-  }
-
-  .home-cta-banner__content {
-    max-width: 42rem;
-    padding: 4rem clamp(2.5rem, 6vw, 5.5rem);
-  }
-
-  .home-cta-banner__title {
-    font-size: clamp(2.25rem, 3vw, 2.85rem);
-  }
-
-  .home-cta-banner__text {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-  }
-
-  .home-cta-banner .home-cta-button {
-    padding: 0 2.75rem;
-    font-size: 1.1rem;
-    line-height: 3.75em;
-  }
-
-  .home-cta-banner__shade {
-    -webkit-mask-image: linear-gradient(
-      110deg,
-      #000 0%,
-      #000 34%,
-      rgba(0, 0, 0, 0.9) 44%,
-      rgba(0, 0, 0, 0.45) 54%,
-      transparent 66%
-    );
-    mask-image: linear-gradient(
-      110deg,
-      #000 0%,
-      #000 34%,
-      rgba(0, 0, 0, 0.9) 44%,
-      rgba(0, 0, 0, 0.45) 54%,
-      transparent 66%
-    );
-  }
-
-  .home-cta-banner__photo img {
-    object-position: 50% center;
-  }
-}
-
-@media (max-width: 699px) {
-  .home-cta-banner {
-    min-height: 0;
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .home-cta-banner__photo {
-    position: relative;
-    inset: auto;
-    order: 2;
-    min-height: 16rem;
-  }
-
-  .home-cta-banner__photo img {
-    min-height: 16rem;
-    object-position: center 40%;
-  }
-
-  .home-cta-banner__shade {
-    display: none;
-  }
-
-  .home-cta-banner__content {
-    order: 1;
-    max-width: none;
-    background: #121212;
   }
 }
 

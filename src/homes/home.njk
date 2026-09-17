@@ -127,26 +127,28 @@ tags:
 </section>
 {% endif %}
 
-<section class="home-cta-banner" aria-label="Find available rentals">
-  <div class="home-cta-banner__photo" aria-hidden="true">
+<section id="home-cta" class="home-cta-banner" aria-label="Find available rentals">
+  <div class="home-cta-banner__container">
+    <div class="home-cta-banner__content">
+      <span class="home-cta-banner__topper">SunSeeker Rentals</span>
+      <h2 class="home-cta-banner__title">Looking for a home to rent?</h2>
+      <p class="home-cta-banner__text">
+        See what’s available right now through our rental portal.
+      </p>
+      <a class="home-cta-button" href="/rentals/">See Current Available Rentals</a>
+    </div>
+  </div>
+
+  <picture class="home-cta-banner__background" aria-hidden="true">
     <img
-      src="/assets/images/home-cta-pool.webp"
-      alt=""
-      width="1200"
-      height="675"
       loading="lazy"
       decoding="async"
+      src="/assets/images/home-cta-pool.webp"
+      alt=""
+      width="1920"
+      height="660"
     >
-  </div>
-  <div class="home-cta-banner__shade" aria-hidden="true"></div>
-  <div class="home-cta-banner__content">
-    <span class="home-cta-banner__topper">SunSeeker Rentals</span>
-    <h2 class="home-cta-banner__title">Looking for a home to rent?</h2>
-    <p class="home-cta-banner__text">
-      See what’s available right now through our rental portal.
-    </p>
-    <a class="home-cta-button" href="/rentals/">See Current Available Rentals</a>
-  </div>
+  </picture>
 </section>
 
 <script src="/assets/js/homes-gallery.js" defer></script>
