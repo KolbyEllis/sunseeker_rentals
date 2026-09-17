@@ -1,0 +1,43 @@
+name: Sync AppFolio listings
+
+on:
+  schedule:
+    # Every 6 hours — picks up new/unposted AppFolio listings without a manual push
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync listings from AppFolio
+        run: npm run sync:listings
+
+      - name: Commit and push if homes data changed
+        run: |
+          if git diff --quiet -- src/_data/homes.json; then
+            echo "No listing changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/_data/homes.json
+          git commit -m "Sync AppFolio listings."
+          git push
