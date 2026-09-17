@@ -59,16 +59,16 @@ tags:
       <p class="home-lead">
         This property is available now.
       </p>
-      <div class="home-actions">
+      <div class="home-actions home-actions--available">
         {% if home.appfolioUrl %}
           <a
-            class="home-cta-button"
+            class="home-action home-action--apply"
             href="{{ home.appfolioUrl }}"
             target="_blank"
             rel="noopener noreferrer"
           >Apply Now</a>
         {% endif %}
-        <a class="home-cta-button" href="/contact/">Set Up a Showing</a>
+        <a class="home-action home-action--showing" href="/contact/">Set Up a Showing</a>
       </div>
     {% else %}
       <p class="home-lead">
@@ -76,7 +76,7 @@ tags:
       </p>
       <div class="home-actions">
         <a class="home-cta-button" href="/rentals/">See Current Available Rentals</a>
-        <a class="home-cta-button" href="/contact/">Set Up a Showing</a>
+        <a class="home-action home-action--showing" href="/contact/">Set Up a Showing</a>
       </div>
     {% endif %}
   </div>

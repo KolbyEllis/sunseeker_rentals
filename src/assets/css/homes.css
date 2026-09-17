@@ -78,6 +78,66 @@
   min-width: min(100%, 12rem);
 }
 
+/* Available-listing action pair — stacked, clear hierarchy */
+.home-actions--available {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 0.65rem;
+  width: 100%;
+  max-width: 20rem;
+}
+
+.home-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0.95rem 1.35rem;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.home-actions--available .home-action {
+  width: 100%;
+}
+
+.home-action--apply {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.home-action--apply:hover {
+  background-color: #2a2723;
+  border-color: #2a2723;
+  color: #fff;
+}
+
+.home-action--showing {
+  background-color: transparent;
+  border-color: #2a2723;
+  color: #2a2723;
+}
+
+.home-action--showing:hover {
+  background-color: #2a2723;
+  border-color: #2a2723;
+  color: #fff;
+}
+
 .home-cta-button {
   z-index: 1;
   position: relative;
