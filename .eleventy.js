@@ -11,6 +11,7 @@ const configServer = require("./src/config/server");
 
 // Other
 const filterPostDate = require("./src/config/postDate");
+const { sortHomes } = require("./src/config/sortHomes");
 const { DateTime } = require("luxon");
 const isProduction = configServer.isProduction;
 
@@ -108,6 +109,12 @@ module.exports = function (eleventyConfig) {
         if (!dateObj) return "";
         return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
     });
+
+    /**
+     *  Sorts property listings A–Z by street name.
+     *  Use - {% for home in homes | sortHomes %}
+     */
+    eleventyConfig.addFilter("sortHomes", sortHomes);
     /**=====================================================================
                                     END FILTERS
     =======================================================================*/

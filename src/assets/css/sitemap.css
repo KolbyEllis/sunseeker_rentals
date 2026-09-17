@@ -223,23 +223,3 @@
     width: 53%;
   }
 }
-
-#content-page-1533 .sitemap-homes-intro {
-  margin-bottom: 1rem;
-}
-
-#content-page-1533 .sitemap-rentals-cta {
-  margin: 0 0 1.75rem;
-  color: #fff;
-  border-radius: 0.25rem;
-  text-decoration: none;
-  filter: none;
-}
-
-#content-page-1533 .sitemap-rentals-cta:hover {
-  color: #fff;
-}
-
-#content-page-1533 .sitemap-rentals-cta:before {
-  border-radius: 0.25rem;
-}

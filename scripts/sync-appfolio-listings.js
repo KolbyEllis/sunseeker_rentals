@@ -4,6 +4,7 @@
  */
 const fs = require("node:fs")
 const path = require("node:path")
+const { sortHomes } = require("../src/config/sortHomes")
 
 const LISTINGS_HOST = process.env.APPFOLIO_LISTINGS_HOST || "https://sunseeker.appfolio.com"
 const LISTINGS_INDEX = `${LISTINGS_HOST}/listings`
@@ -287,13 +288,13 @@ async function main() {
     }
 
     const archived = markMissingAsUnposted(homes, new Set(listingIds))
-    homes.sort((a, b) => String(a.address).localeCompare(String(b.address)))
+    const sortedHomes = sortHomes(homes)
 
     fs.mkdirSync(path.dirname(DATA_PATH), { recursive: true })
-    fs.writeFileSync(DATA_PATH, `${JSON.stringify(homes, null, 2)}\n`, "utf8")
+    fs.writeFileSync(DATA_PATH, `${JSON.stringify(sortedHomes, null, 2)}\n`, "utf8")
 
     console.log(
-        `Done. total=${homes.length} created=${created} updated=${updated} markedUnposted=${archived} -> ${DATA_PATH}`
+        `Done. total=${sortedHomes.length} created=${created} updated=${updated} markedUnposted=${archived} -> ${DATA_PATH}`
     )
 }
 
