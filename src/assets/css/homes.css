@@ -115,6 +115,21 @@
   width: 100%;
 }
 
+.home-cta-button--secondary {
+  background-color: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.home-cta-button--secondary:before {
+  display: none;
+}
+
+.home-cta-button--secondary:hover {
+  background-color: var(--primary);
+  color: #fff;
+}
+
 .home-photo-link {
   display: block;
   width: 100%;

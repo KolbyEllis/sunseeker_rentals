@@ -55,12 +55,31 @@ tags:
         {% if home.sqft %}{{ home.sqft }} Sq. Ft.{% endif %}
       </p>
     {% endif %}
-    <p class="home-lead">
-      Interested in renting with us? Browse homes that are available right now. Availability changes often.
-    </p>
-    <div class="home-actions">
-      <a class="home-cta-button" href="/rentals/">See Current Available Rentals</a>
-    </div>
+    {% if home.currentlyPosted %}
+      <p class="home-lead">
+        This property is available now.
+      </p>
+      <div class="home-actions">
+        {% if home.appfolioUrl %}
+          <a
+            class="home-cta-button"
+            href="{{ home.appfolioUrl }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Apply Now</a>
+        {% endif %}
+        <a class="home-cta-button home-cta-button--secondary" href="/contact/">Set Up a Showing</a>
+        <a class="home-cta-button home-cta-button--secondary" href="/rentals/">See Current Available Rentals</a>
+      </div>
+    {% else %}
+      <p class="home-lead">
+        Interested in renting with us? Browse homes that are available right now. Availability changes often.
+      </p>
+      <div class="home-actions">
+        <a class="home-cta-button" href="/rentals/">See Current Available Rentals</a>
+        <a class="home-cta-button home-cta-button--secondary" href="/contact/">Set Up a Showing</a>
+      </div>
+    {% endif %}
   </div>
 </section>
 
