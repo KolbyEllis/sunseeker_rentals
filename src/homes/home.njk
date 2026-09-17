@@ -18,10 +18,17 @@ tags:
 
 {% block body %}
 {% set featuredPhoto = home.photos[0] if home.photos and home.photos.length else "/assets/images/cabinets2.webp" %}
+{% set allPhotos = home.photos if home.photos and home.photos.length else [featuredPhoto] %}
 
 <section class="home-hero">
   <div class="home-hero__media">
-    <a class="home-photo-link" href="{{ featuredPhoto }}" target="_blank" rel="noopener noreferrer" aria-label="View full-size photo of {{ home.address }}">
+    <button
+      type="button"
+      class="home-photo-link"
+      data-home-gallery-index="0"
+      data-home-gallery-src="{{ featuredPhoto }}"
+      aria-label="Open photo gallery for {{ home.address }}"
+    >
       <img
         src="{{ featuredPhoto }}"
         alt="{{ home.address }}"
@@ -30,7 +37,7 @@ tags:
         fetchpriority="high"
         decoding="async"
       >
-    </a>
+    </button>
   </div>
   <div class="home-hero__content">
     <p class="home-eyebrow">Managed by SunSeeker Rentals</p>
@@ -46,7 +53,7 @@ tags:
       Interested in renting with us? Browse homes that are available right now. Availability changes often.
     </p>
     <div class="home-actions">
-      <a class="cs-button-solid" href="/rentals/">See Current Available Rentals</a>
+      <a class="home-cta-button" href="/rentals/">See Current Available Rentals</a>
     </div>
   </div>
 </section>
@@ -84,14 +91,20 @@ tags:
   </div>
 </section>
 
-{% if home.photos and home.photos.length > 1 %}
+{% if allPhotos.length > 1 %}
 <section class="home-section home-section--gallery">
   <div class="home-container">
     <h2 class="home-section-title">Photos</h2>
     <div class="home-gallery">
-      {% for photo in home.photos %}
+      {% for photo in allPhotos %}
         <figure class="home-gallery__item">
-          <a class="home-photo-link" href="{{ photo }}" target="_blank" rel="noopener noreferrer" aria-label="View full-size photo {{ loop.index }} of {{ home.address }}">
+          <button
+            type="button"
+            class="home-photo-link"
+            data-home-gallery-index="{{ loop.index0 }}"
+            data-home-gallery-src="{{ photo }}"
+            aria-label="Open photo {{ loop.index }} of {{ home.address }}"
+          >
             <img
               src="{{ photo }}"
               alt="{{ home.address }} photo {{ loop.index }}"
@@ -100,7 +113,7 @@ tags:
               loading="lazy"
               decoding="async"
             >
-          </a>
+          </button>
         </figure>
       {% endfor %}
     </div>
@@ -108,11 +121,28 @@ tags:
 </section>
 {% endif %}
 
-<section class="home-section home-section--cta">
-  <div class="home-container home-cta">
-    <h2 class="home-section-title">Looking for a home to rent?</h2>
-    <p class="home-lead">Check what’s available now and apply through our secure rental portal.</p>
-    <a class="cs-button-solid" href="/rentals/">See Current Available Rentals</a>
+<section class="home-cta-banner" aria-label="Find available rentals">
+  <div class="home-cta-banner__inner">
+    <div class="home-cta-banner__content">
+      <span class="home-cta-banner__topper">SunSeeker Rentals</span>
+      <h2 class="home-cta-banner__title">Looking for a home to rent?</h2>
+      <p class="home-cta-banner__text">
+        Check what’s available now and apply through our secure rental portal.
+      </p>
+      <a class="home-cta-button" href="/rentals/">See Current Available Rentals</a>
+    </div>
   </div>
+  <picture class="home-cta-banner__media" aria-hidden="true">
+    <img
+      src="/assets/images/home-cta-pool.webp"
+      alt=""
+      width="1200"
+      height="675"
+      loading="lazy"
+      decoding="async"
+    >
+  </picture>
 </section>
+
+<script src="/assets/js/homes-gallery.js" defer></script>
 {% endblock %}
