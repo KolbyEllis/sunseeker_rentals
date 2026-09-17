@@ -21,14 +21,16 @@ tags:
 
 <section class="home-hero">
   <div class="home-hero__media">
-    <img
-      src="{{ featuredPhoto }}"
-      alt="{{ home.address }}"
-      width="1200"
-      height="800"
-      fetchpriority="high"
-      decoding="async"
-    >
+    <a class="home-photo-link" href="{{ featuredPhoto }}" target="_blank" rel="noopener noreferrer" aria-label="View full-size photo of {{ home.address }}">
+      <img
+        src="{{ featuredPhoto }}"
+        alt="{{ home.address }}"
+        width="1200"
+        height="800"
+        fetchpriority="high"
+        decoding="async"
+      >
+    </a>
   </div>
   <div class="home-hero__content">
     <p class="home-eyebrow">Managed by SunSeeker Rentals</p>
@@ -41,11 +43,10 @@ tags:
       </p>
     {% endif %}
     <p class="home-lead">
-      Interested in renting with us? Browse homes that are available right now — availability changes often.
+      Interested in renting with us? Browse homes that are available right now. Availability changes often.
     </p>
     <div class="home-actions">
-      <a class="home-button home-button--primary" href="/rentals/">See current available rentals</a>
-      <a class="home-button home-button--secondary" href="/contact/">Contact us</a>
+      <a class="cs-button-solid" href="/rentals/">See Current Available Rentals</a>
     </div>
   </div>
 </section>
@@ -62,10 +63,22 @@ tags:
       <p class="home-description">{{ home.description }}</p>
     {% endif %}
 
+    {% if home.petPolicy and home.petPolicy.length %}
+      <div class="home-pet-policy">
+        <h3 class="home-subtitle">Pet policy</h3>
+        <ul class="home-list">
+          {% for item in home.petPolicy %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+        <p class="home-note">Based on the last listing. Policies can change. Confirm on Current Rentals.</p>
+      </div>
+    {% endif %}
+
     {% if not home.currentlyPosted %}
       <p class="home-note">
-        This property is part of our managed portfolio archive. It may not be available today —
-        <a href="/rentals/">view current listings</a> for homes you can apply to now.
+        This property is part of our managed portfolio archive. It may not be available today.
+        <a href="/rentals/">View current listings</a> for homes you can apply to now.
       </p>
     {% endif %}
   </div>
@@ -78,31 +91,19 @@ tags:
     <div class="home-gallery">
       {% for photo in home.photos %}
         <figure class="home-gallery__item">
-          <img
-            src="{{ photo }}"
-            alt="{{ home.address }} photo {{ loop.index }}"
-            width="800"
-            height="600"
-            loading="lazy"
-            decoding="async"
-          >
+          <a class="home-photo-link" href="{{ photo }}" target="_blank" rel="noopener noreferrer" aria-label="View full-size photo {{ loop.index }} of {{ home.address }}">
+            <img
+              src="{{ photo }}"
+              alt="{{ home.address }} photo {{ loop.index }}"
+              width="800"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            >
+          </a>
         </figure>
       {% endfor %}
     </div>
-  </div>
-</section>
-{% endif %}
-
-{% if home.petPolicy and home.petPolicy.length %}
-<section class="home-section">
-  <div class="home-container">
-    <h2 class="home-section-title">Pet policy (when last listed)</h2>
-    <ul class="home-list">
-      {% for item in home.petPolicy %}
-        <li>{{ item }}</li>
-      {% endfor %}
-    </ul>
-    <p class="home-note">Policies can change. Confirm details on our current rentals page.</p>
   </div>
 </section>
 {% endif %}
@@ -111,7 +112,7 @@ tags:
   <div class="home-container home-cta">
     <h2 class="home-section-title">Looking for a home to rent?</h2>
     <p class="home-lead">Check what’s available now and apply through our secure rental portal.</p>
-    <a class="home-button home-button--primary" href="/rentals/">See current available rentals</a>
+    <a class="cs-button-solid" href="/rentals/">See Current Available Rentals</a>
   </div>
 </section>
 {% endblock %}
