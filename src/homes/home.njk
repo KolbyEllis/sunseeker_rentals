@@ -112,7 +112,9 @@ tags:
             <li>{{ item }}</li>
           {% endfor %}
         </ul>
-        <p class="home-note"><strong>Based on the last listing. Policies can change. Confirm on Current Rentals.</strong></p>
+        {% if not home.currentlyPosted %}
+          <p class="home-note"><strong>Based on the last listing. Policies can change. Confirm on Current Rentals.</strong></p>
+        {% endif %}
       </div>
     {% endif %}
 
