@@ -114,7 +114,7 @@
   padding: 0;
   border: 0;
   background: transparent;
-  cursor: zoom-in;
+  cursor: pointer;
 }
 
 .home-photo-link img {
@@ -207,20 +207,54 @@
   max-width: 36rem;
 }
 
-/* Split CTA banner — dark text panel + full-bleed photo */
+/* Split CTA banner — full-bleed photo with slanted black blend */
 .home-cta-banner {
-  background: #121212;
+  position: relative;
+  display: flex;
+  align-items: center;
   width: 100%;
+  min-height: 22rem;
   overflow: hidden;
+  background: #121212;
 }
 
-.home-cta-banner__inner {
-  display: grid;
-  grid-template-columns: 1fr;
+.home-cta-banner__photo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.home-cta-banner__photo img {
   width: 100%;
-  max-width: none;
-  margin: 0;
-  min-height: 22rem;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% center;
+  display: block;
+}
+
+/* Soft diagonal black blend — wider at top, slanted like the reference */
+.home-cta-banner__shade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: #121212;
+  -webkit-mask-image: linear-gradient(
+    105deg,
+    #000 0%,
+    #000 38%,
+    rgba(0, 0, 0, 0.85) 48%,
+    rgba(0, 0, 0, 0.35) 58%,
+    transparent 70%
+  );
+  mask-image: linear-gradient(
+    105deg,
+    #000 0%,
+    #000 38%,
+    rgba(0, 0, 0, 0.85) 48%,
+    rgba(0, 0, 0, 0.35) 58%,
+    transparent 70%
+  );
 }
 
 .home-cta-banner__content {
@@ -230,10 +264,10 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 0;
-  text-align: left;
+  width: 100%;
+  max-width: 36rem;
   padding: 3rem 1.5rem;
-  background: #121212;
+  text-align: left;
 }
 
 .home-cta-banner__topper {
@@ -260,7 +294,7 @@
   opacity: 0.92;
   line-height: 1.6;
   font-size: 1.05rem;
-  max-width: 30rem;
+  max-width: 28rem;
 }
 
 .home-cta-banner .home-cta-button {
@@ -270,64 +304,41 @@
   min-width: 12rem;
 }
 
-.home-cta-banner__photo {
-  position: relative;
-  min-height: 18rem;
-  overflow: hidden;
-  background: #121212;
-}
-
-/* Soft diagonal fade — slanted like / into the photo */
-.home-cta-banner__photo:before {
-  content: "";
-  position: absolute;
-  inset: -8% 0 -8% -18%;
-  width: 62%;
-  z-index: 1;
-  pointer-events: none;
-  background: linear-gradient(
-    108deg,
-    #121212 0%,
-    #121212 38%,
-    rgba(18, 18, 18, 0.72) 52%,
-    rgba(18, 18, 18, 0.28) 68%,
-    transparent 86%
-  );
-}
-
-.home-cta-banner__photo img {
-  width: 100%;
-  height: 100%;
-  min-height: 18rem;
-  object-fit: cover;
-  /* Keep the glowing pool in frame */
-  object-position: 35% center;
-  display: block;
-}
-
 @media (min-width: 700px) {
   .home-gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .home-cta-banner__inner {
-    grid-template-columns: minmax(18rem, 0.78fr) minmax(0, 1.22fr);
+  .home-cta-banner {
     min-height: 24rem;
   }
 
   .home-cta-banner__content {
-    padding: 3.5rem clamp(1.5rem, 4vw, 3.5rem) 3.5rem clamp(1.5rem, 5vw, 4rem);
+    max-width: 40rem;
+    padding: 3.5rem clamp(1.5rem, 5vw, 4.5rem);
   }
 
-  .home-cta-banner__photo {
-    min-height: 100%;
+  .home-cta-banner__shade {
+    -webkit-mask-image: linear-gradient(
+      108deg,
+      #000 0%,
+      #000 36%,
+      rgba(0, 0, 0, 0.88) 46%,
+      rgba(0, 0, 0, 0.4) 56%,
+      transparent 68%
+    );
+    mask-image: linear-gradient(
+      108deg,
+      #000 0%,
+      #000 36%,
+      rgba(0, 0, 0, 0.88) 46%,
+      rgba(0, 0, 0, 0.4) 56%,
+      transparent 68%
+    );
   }
 
   .home-cta-banner__photo img {
-    position: absolute;
-    inset: 0;
-    min-height: 0;
-    height: 100%;
+    object-position: 55% center;
   }
 }
 
@@ -361,13 +372,13 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .home-cta-banner__inner {
-    grid-template-columns: minmax(20rem, 0.72fr) minmax(0, 1.28fr);
+  .home-cta-banner {
     min-height: 28rem;
   }
 
   .home-cta-banner__content {
-    padding: 4rem clamp(2rem, 4vw, 3.5rem) 4rem clamp(2.5rem, 6vw, 5rem);
+    max-width: 42rem;
+    padding: 4rem clamp(2.5rem, 6vw, 5.5rem);
   }
 
   .home-cta-banner__title {
@@ -385,46 +396,57 @@
     line-height: 3.75em;
   }
 
-  .home-cta-banner__photo:before {
-    inset: -10% 0 -10% -22%;
-    width: 58%;
-    background: linear-gradient(
+  .home-cta-banner__shade {
+    -webkit-mask-image: linear-gradient(
       110deg,
-      #121212 0%,
-      #121212 36%,
-      rgba(18, 18, 18, 0.7) 50%,
-      rgba(18, 18, 18, 0.25) 66%,
-      transparent 84%
+      #000 0%,
+      #000 34%,
+      rgba(0, 0, 0, 0.9) 44%,
+      rgba(0, 0, 0, 0.45) 54%,
+      transparent 66%
+    );
+    mask-image: linear-gradient(
+      110deg,
+      #000 0%,
+      #000 34%,
+      rgba(0, 0, 0, 0.9) 44%,
+      rgba(0, 0, 0, 0.45) 54%,
+      transparent 66%
     );
   }
 
   .home-cta-banner__photo img {
-    object-position: 40% center;
+    object-position: 50% center;
   }
 }
 
 @media (max-width: 699px) {
-  .home-cta-banner__inner {
+  .home-cta-banner {
     min-height: 0;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .home-cta-banner__photo {
+    position: relative;
+    inset: auto;
+    order: 2;
     min-height: 16rem;
   }
 
-  .home-cta-banner__photo:before {
-    inset: 0;
-    width: 100%;
-    background: linear-gradient(
-      180deg,
-      #121212 0%,
-      rgba(18, 18, 18, 0.45) 22%,
-      transparent 52%
-    );
+  .home-cta-banner__photo img {
+    min-height: 16rem;
+    object-position: center 40%;
   }
 
-  .home-cta-banner__photo img {
-    object-position: center 40%;
+  .home-cta-banner__shade {
+    display: none;
+  }
+
+  .home-cta-banner__content {
+    order: 1;
+    max-width: none;
+    background: #121212;
   }
 }
 
