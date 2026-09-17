@@ -197,6 +197,7 @@ function parseDetail(html, appfolioId) {
         photoCount: photos.length,
         appfolioId,
         appfolioUrl: `${LISTINGS_HOST}/listings/detail/${appfolioId}`,
+        applyUrl: `${LISTINGS_HOST}/listings/rental_applications/new?listable_uid=${appfolioId}&source=Website`,
         currentlyPosted: true,
         lastSyncedAt: new Date().toISOString()
     }

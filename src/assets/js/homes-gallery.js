@@ -24,6 +24,8 @@
     }
 
     let index = 0
+    let touchStartX = 0
+    let touchStartY = 0
 
     const overlay = document.createElement("div")
     overlay.className = "home-lightbox"
@@ -33,7 +35,7 @@
         <button type="button" class="home-lightbox__close" data-home-lightbox-close aria-label="Close gallery">&times;</button>
         <button type="button" class="home-lightbox__nav home-lightbox__nav--prev" data-home-lightbox-prev aria-label="Previous photo">&#10094;</button>
         <figure class="home-lightbox__figure">
-            <img class="home-lightbox__image" alt="">
+            <img class="home-lightbox__image" alt="" draggable="false">
             <figcaption class="home-lightbox__caption"></figcaption>
         </figure>
         <button type="button" class="home-lightbox__nav home-lightbox__nav--next" data-home-lightbox-next aria-label="Next photo">&#10095;</button>
@@ -42,6 +44,10 @@
 
     const imageEl = overlay.querySelector(".home-lightbox__image")
     const captionEl = overlay.querySelector(".home-lightbox__caption")
+
+    function isMobileLightbox() {
+        return window.matchMedia("(max-width: 700px)").matches
+    }
 
     function render() {
         const src = uniquePhotos[index]
@@ -84,6 +90,13 @@
 
     overlay.addEventListener("click", (event) => {
         if (event.target.closest("[data-home-lightbox-close]")) {
+            // On mobile, only the X closes — backdrop taps were too easy to hit by accident
+            if (
+                event.target.classList.contains("home-lightbox__backdrop") &&
+                isMobileLightbox()
+            ) {
+                return
+            }
             close()
         } else if (event.target.closest("[data-home-lightbox-next]")) {
             next()
@@ -91,6 +104,38 @@
             prev()
         }
     })
+
+    overlay.addEventListener(
+        "touchstart",
+        (event) => {
+            if (overlay.hidden || !event.touches.length) {
+                return
+            }
+            touchStartX = event.touches[0].clientX
+            touchStartY = event.touches[0].clientY
+        },
+        { passive: true }
+    )
+
+    overlay.addEventListener(
+        "touchend",
+        (event) => {
+            if (overlay.hidden || !event.changedTouches.length) {
+                return
+            }
+            const dx = event.changedTouches[0].clientX - touchStartX
+            const dy = event.changedTouches[0].clientY - touchStartY
+            if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy)) {
+                return
+            }
+            if (dx < 0) {
+                next()
+            } else {
+                prev()
+            }
+        },
+        { passive: true }
+    )
 
     document.addEventListener("keydown", (event) => {
         if (overlay.hidden) {

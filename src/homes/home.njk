@@ -60,7 +60,14 @@ tags:
         This property is available now.
       </p>
       <div class="home-actions home-actions--available">
-        {% if home.appfolioUrl %}
+        {% if home.applyUrl or home.appfolioId %}
+          <a
+            class="home-action home-action--apply"
+            href="{% if home.applyUrl %}{{ home.applyUrl }}{% else %}https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid={{ home.appfolioId }}&source=Website{% endif %}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Apply Now</a>
+        {% elif home.appfolioUrl %}
           <a
             class="home-action home-action--apply"
             href="{{ home.appfolioUrl }}"
