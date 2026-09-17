@@ -50,6 +50,20 @@
   color: #2f2c28;
 }
 
+.home-rent {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--primary);
+}
+
+.home-rent__period {
+  font-size: 0.7em;
+  font-weight: 600;
+  color: #6b655c;
+}
+
 .home-summary,
 .home-lead,
 .home-description,
