@@ -79,6 +79,21 @@ eleventyNavigation:
                 <li><a href="https://www.dropbox.com/request/yX4yL4sUaGVCRtaGlhH7" target="_blank">Vendors Submit Invoices Here</a></li>
                 <li><a href="https://sunseeker.appfolio.com/oportal/users/log_in" target="_blank">View Statements</a></li>
             </ul>
+
+            {% if homes and homes.length %}
+            <h2 class="cs-title" style="margin-top: 2.5rem;">Property Pages</h2>
+            <p class="cs-text" style="margin-bottom: 1rem;">
+                Archive pages for properties we’ve marketed. For homes you can apply to right now, see
+                <a href="/rentals/">Current Rentals</a>.
+            </p>
+            <ul>
+                {% for home in homes %}
+                <li>
+                    <a href="/homes/{{ home.slug }}/">{{ home.address }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
             
         </div>
     </div>

@@ -18,8 +18,13 @@
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="{{ client.domain }}{{ page.url }}"/>
         {% if preloadImg != '' %}
+        {% if preloadImg.slice(0, 4) == "http" %}
+        <meta property="og:image" content="{{ preloadImg }}"/>
+        <meta property="og:image:secure_url" content="{{ preloadImg }}"/>
+        {% else %}
         <meta property="og:image" content="{{ client.domain }}{{ preloadImg }}"/>
         <meta property="og:image:secure_url" content="{{ client.domain }}{{ preloadImg }}"/>
+        {% endif %}
         {% else %}
         <meta property="og:image" content="{{ client.domain }}/assets/images/logo-small.png"/>
         <meta property="og:image:secure_url" content="{{ client.domain }}/assets/images/logo-small.png"/>
