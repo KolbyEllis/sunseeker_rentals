@@ -54,6 +54,14 @@ function slugifyAddress(address) {
         .replace(/^-+|-+$/g, "")
 }
 
+/** Fix AppFolio typos like "Buckeye, AS 85326" → "Buckeye, AZ 85326" */
+function normalizeAddress(address) {
+    return decodeHtml(address)
+        .replace(/,\s*AS\s+(?=\d{5})/gi, ", AZ ")
+        .replace(/\s+/g, " ")
+        .trim()
+}
+
 function unique(values) {
     return [...new Set(values.filter(Boolean))]
 }
@@ -157,7 +165,7 @@ function extractRent(html, rentalTerms) {
 }
 
 function parseDetail(html, appfolioId) {
-    const address = extractMeta(html, "og:title")
+    const address = normalizeAddress(extractMeta(html, "og:title"))
     const description =
         extractMeta(html, "og:description") ||
         extractTagText(html, /class="listing-detail__description[^"]*"[^>]*>([\s\S]*?)<\/p>/i)
