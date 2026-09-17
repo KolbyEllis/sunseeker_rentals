@@ -73,6 +73,11 @@
   gap: 0.75rem;
 }
 
+.home-actions .home-cta-button {
+  flex: 1 1 auto;
+  min-width: min(100%, 12rem);
+}
+
 .home-cta-button {
   z-index: 1;
   position: relative;
@@ -113,21 +118,6 @@
 
 .home-cta-button:hover:before {
   width: 100%;
-}
-
-.home-cta-button--secondary {
-  background-color: transparent;
-  color: var(--primary);
-  border: 2px solid var(--primary);
-}
-
-.home-cta-button--secondary:before {
-  display: none;
-}
-
-.home-cta-button--secondary:hover {
-  background-color: var(--primary);
-  color: #fff;
 }
 
 .home-photo-link {
