@@ -1,7 +1,17 @@
-// Blocks a known recurring scam phrase before form submission.
+// Blocks recurring "portfolio owner seeking PM" scam messages (exact + paraphrased).
 (function () {
+    // Exact copies from known spam submissions.
     const blockedPhrases = [
-        "i currently own several rental units across arizona and am looking for a dependable property manager who can oversee these properties effectively. as i work toward expanding my real estate portfolio, managing everything on my own has become increasingly demanding, and i'm reaching the point where i need dedicated support to ensure everything continues to run smoothly."
+        "i currently own several rental units across arizona and am looking for a dependable property manager who can oversee these properties effectively. as i work toward expanding my real estate portfolio, managing everything on my own has become increasingly demanding, and i'm reaching the point where i need dedicated support to ensure everything continues to run smoothly.",
+        "i own several rental properties across arizona and am looking for a reliable and experienced property management company to oversee them. as i continue expanding my real estate portfolio, managing the properties independently has become increasingly demanding. i am therefore seeking professional support to handle the day-to-day operations, including tenant communication, maintenance coordination, rent collection, property inspections, and other management responsibilities. i look forward to hearing from you and discussing how we might work together."
+    ]
+
+    // Every variant of this scam hits all of these.
+    const requiredSignals = [
+        /expanding .{0,40}portfolio/,
+        /own several rental (units|properties) across arizona/,
+        /managing .{0,60}increasingly demanding/,
+        /(looking for|seeking).{0,100}(property manager|property management)/
     ]
 
     function normalizeText(value) {
@@ -10,6 +20,19 @@
             .replace(/\u2019/g, "'")
             .replace(/\s+/g, " ")
             .trim()
+    }
+
+    function looksLikePortfolioSpam(text) {
+        const normalized = normalizeText(text)
+        if (!normalized) {
+            return false
+        }
+
+        if (blockedPhrases.some((phrase) => normalized.includes(phrase))) {
+            return true
+        }
+
+        return requiredSignals.every((signal) => signal.test(normalized))
     }
 
     function formHasBlockedPhrase(form) {
@@ -22,8 +45,7 @@
             }
         }
 
-        const normalizedContent = normalizeText(values.join(" "))
-        return blockedPhrases.some((phrase) => normalizedContent.includes(phrase))
+        return looksLikePortfolioSpam(values.join(" "))
     }
 
     function showSpamMessage(form) {

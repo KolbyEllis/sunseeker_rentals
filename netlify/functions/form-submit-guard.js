@@ -1,5 +1,15 @@
+// Exact copies from known spam submissions.
 const BLOCKED_PHRASES = [
-    "i currently own several rental units across arizona and am looking for a dependable property manager who can oversee these properties effectively. as i work toward expanding my real estate portfolio, managing everything on my own has become increasingly demanding, and i'm reaching the point where i need dedicated support to ensure everything continues to run smoothly."
+    "i currently own several rental units across arizona and am looking for a dependable property manager who can oversee these properties effectively. as i work toward expanding my real estate portfolio, managing everything on my own has become increasingly demanding, and i'm reaching the point where i need dedicated support to ensure everything continues to run smoothly.",
+    "i own several rental properties across arizona and am looking for a reliable and experienced property management company to oversee them. as i continue expanding my real estate portfolio, managing the properties independently has become increasingly demanding. i am therefore seeking professional support to handle the day-to-day operations, including tenant communication, maintenance coordination, rent collection, property inspections, and other management responsibilities. i look forward to hearing from you and discussing how we might work together."
+]
+
+// Every variant of this scam hits all of these.
+const REQUIRED_SPAM_SIGNALS = [
+    /expanding .{0,40}portfolio/,
+    /own several rental (units|properties) across arizona/,
+    /managing .{0,60}increasingly demanding/,
+    /(looking for|seeking).{0,100}(property manager|property management)/
 ]
 
 const TENANT_INQUIRY = "I am looking to rent as a tenant"
@@ -28,7 +38,15 @@ function toFormDataMap(rawBody) {
 
 function hasBlockedPhrase(values) {
     const combined = normalizeText(values.join(" "))
-    return BLOCKED_PHRASES.some((phrase) => combined.includes(phrase))
+    if (!combined) {
+        return false
+    }
+
+    if (BLOCKED_PHRASES.some((phrase) => combined.includes(phrase))) {
+        return true
+    }
+
+    return REQUIRED_SPAM_SIGNALS.every((signal) => signal.test(combined))
 }
 
 function buildOrigin(headers) {
