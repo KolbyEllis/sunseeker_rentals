@@ -44,7 +44,7 @@
     "appfolioId": "37e18679-4561-4b40-aac5-9d94cfc4abf3",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/37e18679-4561-4b40-aac5-9d94cfc4abf3",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-10-02T21:49:11.028Z",
+    "lastSyncedAt": "2026-10-03T03:48:18.488Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=37e18679-4561-4b40-aac5-9d94cfc4abf3&source=Website"
   },
   {
@@ -74,7 +74,78 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/f1955861-9f8b-4135-b8ce-5b1e27960b17",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=f1955861-9f8b-4135-b8ce-5b1e27960b17&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-10-02T21:49:05.248Z"
+    "lastSyncedAt": "2026-10-03T03:48:12.070Z"
+  },
+  {
+    "slug": "27156-n-169th-dr-surprise-az-85387",
+    "address": "27156 N 169th Dr, Surprise, AZ 85387",
+    "city": "Surprise",
+    "marketingTitle": "Newer built home with loads of space and SOLAR!",
+    "description": "** No showings until 10/10 ** Welcome to this newer built, spacious home in Surprise, AZ, boasting an impressive five bedrooms and three bathrooms. This XXL home is not only expansive in size but also eco-friendly, equipped with solar technology that makes it affordable to live in. The kitchen is a chef's dream, featuring an oversized pantry and an abundance of beautiful quartz countertops. The home is filled with numerous upgrades throughout, enhancing its modern appeal and has three separate living areas. Upstairs, you'll find a large loft, perfect for a variety of uses. Step outside to a large backyard, beautifully landscaped with gorgeous turf. This home is a perfect blend of space, style, and sustainability. Come and experience the comfort and convenience of this solar-powered gem!  $2200 security deposit, $500 cleaning deposit, NO PETS, $20 mthly admin fee.  Tenant must maintain tenant insurance during their lease.",
+    "beds": "5",
+    "baths": "3",
+    "sqft": "3240",
+    "rent": "$2,695",
+    "rentalTerms": [
+      "Rent: $2,695",
+      "Security Deposit: $2,200",
+      "Available 10/12/26"
+    ],
+    "petPolicy": [
+      "Cats not allowed",
+      "Dogs not allowed"
+    ],
+    "photos": [
+      "https://images.cdn.appfolio.com/sunseeker/images/ec0985b6-f308-4cdf-bc51-2162aea2ef77/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/23c84fca-e34d-4f00-b667-798c9550ecf8/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/4ecca156-0d55-46c7-9126-d667999d0b4e/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/0dd663e2-fd3c-4f87-afd2-1a33ff63fe38/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/5a381e2f-0e9f-4d89-b18e-6741e488238c/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/d5655f7d-0a5c-436d-8f7b-31ff984af671/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/7ad2c9ea-2a03-4ed5-986b-d973089cb847/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/2d73d0ce-334e-48d3-9127-4698ed49cd65/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/bcfa4f39-b37d-40b0-92c2-2ad61e6ee5a7/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/3f53cde2-bb44-4bfb-b5b9-bf9c347bb526/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/d997abe2-b3bd-481a-a40a-cabc3da4cdf3/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/269fb1f0-cdeb-4afd-aab0-b3ae52e13a9c/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/b544d693-fbdc-4576-ab82-e1a77a4596a5/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/132d9b48-79b3-40d1-96b1-80563af0dca0/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/74bc68e1-abe3-4a06-b338-2b5ede49a8b6/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/f6bbbb4e-df59-473c-806b-ed0cb4d70987/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/3fcf5690-5fa0-43d0-a540-e042711ea122/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/ead5bcbf-99ad-482f-831e-8b7b60ffff91/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/e8330f55-91f7-42dc-a6b8-73856d99470e/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/dc0d0a92-f667-4275-8c32-bd5824620196/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/3366698c-d288-4c8b-90d4-ee135182ba44/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/6ccf1158-3d45-4b7d-9a0d-c10839185744/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/9e23f6d5-19ef-43a9-9c05-2cce9b7f9abb/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/7b84a5c1-62b9-4ecf-9fbc-651993d171f3/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/a476cf0f-5f6a-4137-b901-26e7946cb821/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/01cad7cb-7da4-4ffa-a89e-f21099ab0be6/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/0fe7ebcc-1d7a-4459-89bb-182704531d06/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/a0e91f56-7f40-40f3-98eb-c249af6d6dd6/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/95e43294-d0e9-4e80-bc8c-4f4dc7d644e4/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/58481190-fdc5-4ccd-bc67-51db81f5a0f0/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/702e7f5f-bff4-4781-b49e-8799d002e52f/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/46dd3b92-eb4c-4f06-9a5e-c3b67009f077/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/bae7d981-ace0-48f8-bb28-09a0d55a2d36/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/ed78a2c5-06c1-4e3a-8712-e79cdd81d3dd/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/e3692126-1244-49ca-937b-7e30fb613625/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/042d8932-b680-4bb1-8273-c1d8e37a6104/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/7a53f556-3218-4457-85aa-8eda170fc723/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/8c717558-26b9-445f-80ea-f3c030bc7deb/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/54bf6b6f-a3b8-48d4-bb07-1df904647b91/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/ff4ddb95-bfb2-4bd6-b8c7-c7113c6254cf/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/be5db96b-54d2-4c05-ade5-01b25cf77e04/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/845820c8-a5b2-48f1-82f7-bd3026014923/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/44a57037-2346-41c8-a2ab-11ac05a48871/large.jpg"
+    ],
+    "photoCount": 43,
+    "appfolioId": "a5ac941f-1ff0-460b-a4c3-444c3c85fffb",
+    "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/a5ac941f-1ff0-460b-a4c3-444c3c85fffb",
+    "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=a5ac941f-1ff0-460b-a4c3-444c3c85fffb&source=Website",
+    "currentlyPosted": true,
+    "lastSyncedAt": "2026-10-03T03:48:11.296Z"
   },
   {
     "slug": "5426-n-rattler-way-litchfield-park-az-85340",
@@ -141,7 +212,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/6d8e5b36-cb36-4f05-939d-28157d41fb55",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=6d8e5b36-cb36-4f05-939d-28157d41fb55&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-10-02T21:49:04.912Z"
+    "lastSyncedAt": "2026-10-03T03:48:11.694Z"
   },
   {
     "slug": "614-s-111th-dr-avondale-az-85323",
@@ -202,7 +273,7 @@
     "appfolioId": "e3e28ea5-fa22-4fff-9674-37fd432259ea",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/e3e28ea5-fa22-4fff-9674-37fd432259ea",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-10-02T21:49:07.811Z",
+    "lastSyncedAt": "2026-10-03T03:48:14.954Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=e3e28ea5-fa22-4fff-9674-37fd432259ea&source=Website"
   },
   {
@@ -257,7 +328,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/961dcd0f-2f37-41bd-a1a5-68cfe58da4c0",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=961dcd0f-2f37-41bd-a1a5-68cfe58da4c0&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-10-02T21:49:06.855Z"
+    "lastSyncedAt": "2026-10-03T03:48:13.793Z"
   },
   {
     "slug": "1953-s-174th-ln-goodyear-az-85338",
@@ -312,7 +383,7 @@
     "appfolioId": "221a80d6-6e23-47b0-8e69-e71b91dc90d5",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/221a80d6-6e23-47b0-8e69-e71b91dc90d5",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-10-02T21:49:08.128Z",
+    "lastSyncedAt": "2026-10-03T03:48:15.334Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=221a80d6-6e23-47b0-8e69-e71b91dc90d5&source=Website"
   },
   {
@@ -366,7 +437,7 @@
     "appfolioId": "e150d0ec-8237-4b14-a29a-ba6f412b60b3",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/e150d0ec-8237-4b14-a29a-ba6f412b60b3",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-10-02T21:49:10.700Z",
+    "lastSyncedAt": "2026-10-03T03:48:18.183Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=e150d0ec-8237-4b14-a29a-ba6f412b60b3&source=Website"
   },
   {
@@ -414,7 +485,7 @@
     "appfolioId": "483e00a7-aab8-430d-a799-2636464e79dd",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/483e00a7-aab8-430d-a799-2636464e79dd",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-10-02T21:49:10.064Z",
+    "lastSyncedAt": "2026-10-03T03:48:17.443Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=483e00a7-aab8-430d-a799-2636464e79dd&source=Website"
   },
   {
@@ -467,7 +538,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/271bc972-b55d-4cdd-9a97-9b2b5afcba49",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=271bc972-b55d-4cdd-9a97-9b2b5afcba49&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-10-02T21:49:06.212Z"
+    "lastSyncedAt": "2026-10-03T03:48:13.078Z"
   },
   {
     "slug": "13588-w-alvarado-dr-goodyear-az-85395",
@@ -526,7 +597,7 @@
     "appfolioId": "d8567806-5c10-44b5-98e1-9d1369f2c782",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/d8567806-5c10-44b5-98e1-9d1369f2c782",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-10-02T21:49:10.384Z",
+    "lastSyncedAt": "2026-10-03T03:48:17.825Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=d8567806-5c10-44b5-98e1-9d1369f2c782&source=Website"
   },
   {
@@ -637,7 +708,7 @@
     "appfolioId": "35fb0baf-401f-4ef1-ae1e-5198cb1c0394",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/35fb0baf-401f-4ef1-ae1e-5198cb1c0394",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-10-02T21:49:07.173Z",
+    "lastSyncedAt": "2026-10-03T03:48:14.106Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=35fb0baf-401f-4ef1-ae1e-5198cb1c0394&source=Website"
   },
   {
@@ -695,7 +766,7 @@
     "appfolioId": "3001aab4-c18a-4a95-9978-0e8df7bb05da",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/3001aab4-c18a-4a95-9978-0e8df7bb05da",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-10-02T21:49:09.425Z",
+    "lastSyncedAt": "2026-10-03T03:48:16.710Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=3001aab4-c18a-4a95-9978-0e8df7bb05da&source=Website"
   },
   {
@@ -869,7 +940,7 @@
     "appfolioId": "dcc7bd66-c0e9-4678-a391-01967de8eba6",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/dcc7bd66-c0e9-4678-a391-01967de8eba6",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-10-02T21:49:09.742Z",
+    "lastSyncedAt": "2026-10-03T03:48:17.078Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=dcc7bd66-c0e9-4678-a391-01967de8eba6&source=Website"
   },
   {
@@ -925,7 +996,7 @@
     "appfolioId": "457a2a04-b4ed-41f2-bf58-f986917c9bba",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/457a2a04-b4ed-41f2-bf58-f986917c9bba",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-10-02T21:49:08.768Z",
+    "lastSyncedAt": "2026-10-03T03:48:16.005Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=457a2a04-b4ed-41f2-bf58-f986917c9bba&source=Website"
   },
   {
@@ -1107,7 +1178,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/8be923a3-ba87-403d-b687-9adbf7c214fd",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=8be923a3-ba87-403d-b687-9adbf7c214fd&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-10-02T21:49:05.571Z"
+    "lastSyncedAt": "2026-10-03T03:48:12.387Z"
   },
   {
     "slug": "14160-w-larkspur-dr-surprise-az-85379",
@@ -1228,7 +1299,7 @@
     "appfolioId": "8cc6ca78-b1b6-4e78-8c12-1d33e57b55eb",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/8cc6ca78-b1b6-4e78-8c12-1d33e57b55eb",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-10-02T21:49:08.455Z",
+    "lastSyncedAt": "2026-10-03T03:48:15.696Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=8cc6ca78-b1b6-4e78-8c12-1d33e57b55eb&source=Website"
   },
   {
@@ -1286,7 +1357,7 @@
     "appfolioId": "80a0ab64-6878-4eb0-a919-407848114676",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/80a0ab64-6878-4eb0-a919-407848114676",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-10-02T21:49:06.543Z",
+    "lastSyncedAt": "2026-10-03T03:48:13.471Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=80a0ab64-6878-4eb0-a919-407848114676&source=Website"
   },
   {
@@ -1339,7 +1410,7 @@
     "appfolioId": "dbe62dfd-1ca8-4ddf-9f74-61cc5a72552c",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/dbe62dfd-1ca8-4ddf-9f74-61cc5a72552c",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-10-02T21:49:09.100Z",
+    "lastSyncedAt": "2026-10-03T03:48:16.317Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=dbe62dfd-1ca8-4ddf-9f74-61cc5a72552c&source=Website"
   },
   {
@@ -1516,8 +1587,56 @@
     "appfolioId": "70627650-29ad-4a27-826b-f2651a040457",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/70627650-29ad-4a27-826b-f2651a040457",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-10-02T21:49:05.899Z",
+    "lastSyncedAt": "2026-10-03T03:48:12.761Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=70627650-29ad-4a27-826b-f2651a040457&source=Website"
+  },
+  {
+    "slug": "13410-w-watson-lane-surprise-az-85379",
+    "address": "13410 W Watson Lane, Surprise, AZ 85379",
+    "city": "Surprise",
+    "marketingTitle": "Newer flooring and paint! Excellent location!!",
+    "description": "650 minimum credit score. No pets.  Newly available in the Roseview community, this beautiful home features 3-bedrooms, a den, 2-bathrooms, and a 2-car-garage. All carpets have been replaced with vinyl plank and the home has a one year old fresh coat of paint throughout. Kitchen also features brand new microwave, oven, and dishwasher in stainless steel. Backyard is big with lots of free space to make it your own!  $1800 security deposit, $400 cleaning deposit, $20 monthly admin fee. Tenant must maintain tenant insurance during their tenancy.",
+    "beds": "3",
+    "baths": "2",
+    "sqft": "1548",
+    "rent": "$1,795",
+    "rentalTerms": [
+      "Rent: $1,795",
+      "Security Deposit: $1,800",
+      "Available 10/5/26"
+    ],
+    "petPolicy": [
+      "Cats not allowed",
+      "Dogs not allowed"
+    ],
+    "photos": [
+      "https://images.cdn.appfolio.com/sunseeker/images/0588ec78-1954-4e7b-acd4-f25be766696f/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/f7949810-c97f-4107-93f9-e8c4282b1289/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/c10fd690-dfc4-4206-8e9c-fd7225b7cdfc/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/a18a8d0d-12a2-4352-b799-5557810e6f0c/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/e77f66ef-3f77-4675-87e2-b58777615034/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/e7b5551a-edc5-4653-90ba-8c96c163b6ec/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/923207a5-8550-457f-9df7-db6af9f34471/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/dba7693d-89cf-4624-aa6c-5cc504ab23bb/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/bd2f4e77-b853-415b-a80a-4775df4b217a/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/8715cb86-4389-4690-b0a8-286bf36a4869/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/a3ed9225-a8e5-41fe-a4a5-6b27e1fbd77e/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/f4aa9357-9038-4ddf-919d-e6782d5fd578/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/cd6420b5-1944-4c0d-8af4-89e250088b12/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/0ee9dfa7-311a-4d57-bb4d-916d6c0a95bd/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/5fb24743-1f8f-4813-9c8d-d56aee6a3c00/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/e0b36b6f-bd31-4079-98bc-b31a040641bd/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/ea8d9712-b0b9-4a44-bc16-276fb31a3ed4/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/49cbf41e-cfae-4727-a408-39d13d1e8dd0/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/f2480f63-a440-44a9-9f8c-747c0273e6b3/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/0f24805e-caba-4e54-b39b-fd9896c1415a/large.jpg"
+    ],
+    "photoCount": 20,
+    "appfolioId": "45941a6b-a585-4925-80a5-4a1b1adc102c",
+    "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/45941a6b-a585-4925-80a5-4a1b1adc102c",
+    "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=45941a6b-a585-4925-80a5-4a1b1adc102c&source=Website",
+    "currentlyPosted": true,
+    "lastSyncedAt": "2026-10-03T03:48:10.968Z"
   },
   {
     "slug": "14173-w-weldon-ave-goodyear-az-85395",
@@ -1571,7 +1690,7 @@
     "appfolioId": "52ece6c6-6869-4e30-9326-b30b438bbe97",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/52ece6c6-6869-4e30-9326-b30b438bbe97",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-10-02T21:49:07.486Z",
+    "lastSyncedAt": "2026-10-03T03:48:14.642Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=52ece6c6-6869-4e30-9326-b30b438bbe97&source=Website"
   }
 ]
