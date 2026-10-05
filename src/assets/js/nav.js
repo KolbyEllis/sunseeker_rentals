@@ -15,6 +15,23 @@ function setAriaExpanded(element, expanded) {
     element.setAttribute("aria-expanded", expanded ? "true" : "false");
 }
 
+function setBackgroundInert(inert) {
+    document.querySelectorAll("a.skip, main, footer").forEach((element) => {
+        if (inert) element.setAttribute("inert", "");
+        else element.removeAttribute("inert");
+    });
+}
+
+function isShown(element) {
+    if (!element || element.hasAttribute("disabled")) return false;
+    const style = window.getComputedStyle(element);
+    return style.display !== "none" && style.visibility !== "hidden" && element.getClientRects().length > 0;
+}
+
+function menuFocusables() {
+    return Array.from(navbarMenu.querySelectorAll("a[href], button, input, select, textarea")).filter(isShown);
+}
+
 // Toggle hamburger menu
 function toggleMenu() {
     hamburgerMenu.classList.toggle("cs-active");
@@ -23,6 +40,7 @@ function toggleMenu() {
     const expanded = hamburgerMenu.classList.contains("cs-active");
     setAriaExpanded(hamburgerMenu, expanded);
     hamburgerMenu.setAttribute("aria-label", expanded ? "Close menu" : "Open menu");
+    setBackgroundInert(expanded && isMobile());
 }
 
 // Toggle dropdowns on mobile
@@ -155,10 +173,33 @@ dropdownLinks.forEach(link => {
     });
 });
 
+window.matchMedia("(max-width: 63.9375rem)").addEventListener("change", () => {
+    const open = hamburgerMenu.classList.contains("cs-active");
+    setBackgroundInert(open && isMobile());
+});
+
+// Keep keyboard focus inside the open phone menu
+document.addEventListener("keydown", (event) => {
+    if (event.key !== "Tab" || !isMobile() || !hamburgerMenu.classList.contains("cs-active")) return;
+    const items = menuFocusables();
+    if (!items.length) return;
+    const first = items[0];
+    const last = items[items.length - 1];
+    const active = document.activeElement;
+    if (event.shiftKey && (active === first || !navbarMenu.contains(active))) {
+        event.preventDefault();
+        last.focus();
+    } else if (!event.shiftKey && (active === last || !navbarMenu.contains(active))) {
+        event.preventDefault();
+        first.focus();
+    }
+});
+
 // Escape key closes nav
 document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && hamburgerMenu.classList.contains("cs-active")) {
         toggleMenu();
+        hamburgerMenu.focus();
     }
 });
 
