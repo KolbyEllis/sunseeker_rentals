@@ -33,13 +33,13 @@ permalink: 'contact/'
         <span class="cs-topper">Contact Us</span>
         <h2 class="cs-title">Get In Touch</h2>
     </div>
-    <label class="cs-label">
+    <label class="cs-label" for="first-name-1333">
         First Name
-        <input class="cs-input" required type="text" id="name-1333" name="First Name" placeholder="First Name">
+        <input class="cs-input" required type="text" id="first-name-1333" name="First Name" placeholder="First Name">
     </label>
-    <label class="cs-label">
+    <label class="cs-label" for="last-name-1333">
         Last Name
-        <input class="cs-input" required type="text" id="name-1333" name="Last Name" placeholder="Last Name">
+        <input class="cs-input" required type="text" id="last-name-1333" name="Last Name" placeholder="Last Name">
     </label>
     <label class="cs-label cs-email">
         Email
@@ -49,17 +49,14 @@ permalink: 'contact/'
         Phone
         <input class="cs-input" required type="text" id="phone-1333" name="Phone" placeholder="Phone">
     </label>
-    <label class="cs-label">
+    <label class="cs-label" for="inquiry-purpose-1333">
         Purpose of Inquiry
-        <div class="custom-dropdown" tabindex="0">
-          <div class="custom-selected">Please Select An Option</div>
-          <ul class="custom-options">
-            <li data-value="I am a property owner looking for management services">I am a property owner looking for management services</li>
-            <li data-value="I am looking to rent as a tenant">I am looking to rent as a tenant</li>
-            <li data-value="Other">Other</li>
-          </ul>
-          <input type="hidden" name="Inquiry Purpose" required>
-        </div>
+        <select class="cs-input" id="inquiry-purpose-1333" name="Inquiry Purpose" required>
+          <option value="">Please Select An Option</option>
+          <option value="I am a property owner looking for management services">I am a property owner looking for management services</option>
+          <option value="I am looking to rent as a tenant">I am looking to rent as a tenant</option>
+          <option value="Other">Other</option>
+        </select>
     </label>
     <label class="cs-label">
         Message
@@ -76,7 +73,7 @@ permalink: 'contact/'
               
                 <!-- Active class added as default -->
                 <li class="cs-faq-item active">
-                  <button class="cs-button">
+                  <button type="button" class="cs-button">
                     <span class="cs-button-text">
                       What Property Management Services Do You Offer?
                     </span>
@@ -87,7 +84,7 @@ permalink: 'contact/'
                 </li>
               
                 <li class="cs-faq-item">
-                  <button class="cs-button">
+                  <button type="button" class="cs-button">
                     <span class="cs-button-text">
                       Do You Manage Furnished Rental Properties?
                     </span>
@@ -98,7 +95,7 @@ permalink: 'contact/'
                 </li>
               
                 <li class="cs-faq-item">
-                  <button class="cs-button">
+                  <button type="button" class="cs-button">
                     <span class="cs-button-text">
                       What Areas Do You Serve?
                     </span>
@@ -155,7 +152,7 @@ permalink: 'contact/'
 <!-- ============================================ -->
 
 <section id="map-720">
-    <a href="https://maps.app.goo.gl/3u6wYUjSyFbRuw4p8" target="_blank" style="display: block;">
+    <a href="https://maps.app.goo.gl/3u6wYUjSyFbRuw4p8" target="_blank" style="display: block;" aria-label="Map of the SunSeeker Rentals office">
       <picture class="cs-background">
         <!-- Mobile Image -->
         <source media="(max-width: 600px)" srcset="/assets/images/map-m.webp">

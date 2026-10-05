@@ -522,8 +522,8 @@
     border: none;
   }
   #contact-983 .cs-input::placeholder {
-    color: #fff;
-    opacity: 0.5;
+    color: #E8E8E8;
+    opacity: 1;
   }
   #contact-983 .cs-textarea {
     height: 7.5rem;

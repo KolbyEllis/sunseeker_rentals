@@ -10,7 +10,7 @@
     <!--Navigation List-->
     <nav class="cs-nav" role="navigation">
         <!--Mobile Nav Toggle-->
-        <button class="cs-toggle" aria-label="mobile menu toggle">
+        <button class="cs-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="cs-expanded">
             <div class="cs-box" aria-hidden="true">
                 <span class="cs-line cs-line1" aria-hidden="true"></span>
                 <span class="cs-line cs-line2" aria-hidden="true"></span>
@@ -33,28 +33,25 @@
 
                 <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
                 <li class="cs-li cs-dropdown">
-                    <span class="cs-li-link">
+                    <button type="button" class="cs-li-link cs-dropdown-button" aria-expanded="false" aria-controls="services-menu" aria-haspopup="true">
                         Services
-                        <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
-                    </span>
-    <ul class="cs-drop-ul">
-        <li class="cs-drop-li cs-drop3-main">
-            <a href="/tenants" class="cs-li-link cs-drop-link no-underline">
-                Tenants
-                <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
-            </a>
-            <!--Tertiary-->
-            <ul class="cs-drop3">
-                <li class="cs-drop-li3">
-                    <a href="https://www.paypal.com/ncp/payment/9RMEJ74HRU9LL" target="_blank" class="cs-li-link cs-drop-link cs-drop-link3">Pay Application Fees</a>
-                </li>
-                <li class="cs-drop-li3">
-                    <a href="https://sunseeker.appfolio.com/connect/users/sign_in" target="_blank" class="cs-li-link cs-drop-link cs-drop-link3">View Tenant Portal</a>
-                </li>
-            <!--    <li class="cs-drop-li3">
-                    <a href="/utility-info" target="_blank" class="cs-li-link cs-drop-link cs-drop-link3">Utility Info</a>
-                </li>-->
-            </ul>
+                        <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="" width="15" height="15" decoding="async" aria-hidden="true">
+                    </button>
+                    <ul id="services-menu" class="cs-drop-ul">
+                        <li class="cs-drop-li cs-drop3-main">
+                            <a href="/tenants" class="cs-li-link cs-drop-link no-underline">
+                                Tenants
+                                <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="" width="15" height="15" decoding="async" aria-hidden="true">
+                            </a>
+                            <ul class="cs-drop3">
+                                <li class="cs-drop-li3">
+                                    <a href="https://www.paypal.com/ncp/payment/9RMEJ74HRU9LL" target="_blank" class="cs-li-link cs-drop-link cs-drop-link3">Pay Application Fees</a>
+                                </li>
+                                <li class="cs-drop-li3">
+                                    <a href="https://sunseeker.appfolio.com/connect/users/sign_in" target="_blank" class="cs-li-link cs-drop-link cs-drop-link3">View Tenant Portal</a>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="cs-drop-li">
                             <a href="/owners" class="cs-li-link cs-drop-link">Owners</a>
                         </li>

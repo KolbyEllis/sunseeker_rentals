@@ -35,9 +35,10 @@
     /* 49px - 84px */
     font-size: clamp(3.0625rem, 6vw, 5.25rem);
   }
+  #hero-1839 .cs-topper,
   #hero-1839 .cs-title,
   #hero-1839 .cs-text {
-    color: var(--bodyTextColorWhite);
+    color: #fff;
   }
   #hero-1839 .cs-text {
     margin-bottom: 2rem;
@@ -175,7 +176,7 @@
     background: #000;
     /* prevents the cursor from interacting with it */
     pointer-events: none;
-    opacity: 0.7;
+    opacity: 0.85;
     display: block;
     position: absolute;
     top: 0;

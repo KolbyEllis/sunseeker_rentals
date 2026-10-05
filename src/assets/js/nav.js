@@ -10,11 +10,9 @@ const tertiaryDropTriggers = document.querySelectorAll("#cs-navigation .cs-drop3
 // Detect mobile
 const isMobile = () => window.matchMedia("(max-width: 63.9375rem)").matches;
 
-// Toggle aria-expanded for accessibility
-function toggleAriaExpanded(element) {
+function setAriaExpanded(element, expanded) {
     if (!element) return;
-    const expanded = element.getAttribute("aria-expanded") === "true";
-    element.setAttribute("aria-expanded", !expanded);
+    element.setAttribute("aria-expanded", expanded ? "true" : "false");
 }
 
 // Toggle hamburger menu
@@ -22,7 +20,9 @@ function toggleMenu() {
     hamburgerMenu.classList.toggle("cs-active");
     navbarMenu.classList.toggle("cs-active");
     bodyElement.classList.toggle("cs-open");
-    toggleAriaExpanded(hamburgerMenu);
+    const expanded = hamburgerMenu.classList.contains("cs-active");
+    setAriaExpanded(hamburgerMenu, expanded);
+    hamburgerMenu.setAttribute("aria-label", expanded ? "Close menu" : "Open menu");
 }
 
 // Toggle dropdowns on mobile
@@ -30,7 +30,7 @@ function toggleDropdown(element) {
     if (!element) return;
     element.classList.toggle("cs-active");
     const button = element.querySelector(".cs-dropdown-button");
-    toggleAriaExpanded(button);
+    setAriaExpanded(button, element.classList.contains("cs-active"));
 }
 
 // Set active nav link based only on current path
@@ -114,18 +114,21 @@ dropdownElements.forEach(element => {
         if (!element.contains(event.relatedTarget)) {
             element.classList.remove("cs-active");
             const button = element.querySelector(".cs-dropdown-button");
-            toggleAriaExpanded(button);
+            setAriaExpanded(button, false);
         }
     });
 
     element.addEventListener("keydown", (event) => {
-        if (event.key === "Enter" || event.key === " ") {
+        const button = element.querySelector(".cs-dropdown-button");
+        if ((event.key === "Enter" || event.key === " ") && event.target === button) {
             event.preventDefault();
             toggleDropdown(element);
         }
         if (event.key === "Escape") {
             escapePressed = true;
             element.classList.remove("cs-active");
+            setAriaExpanded(button, false);
+            if (button) button.focus();
         }
     });
 });
@@ -160,12 +163,64 @@ document.addEventListener("keydown", (event) => {
 });
 
 const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
-        for (const item of faqItems) {
-            const onClick = () => {
-            item.classList.toggle('active')
+faqItems.forEach((item, index) => {
+    const button = item.querySelector('button');
+    const panel = item.querySelector('.cs-item-p');
+    if (!button || !panel) return;
+    if (!panel.id) panel.id = `faq-panel-${index}`;
+    button.setAttribute('aria-controls', panel.id);
+    const setOpen = (open) => {
+        item.classList.toggle('active', open);
+        button.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) panel.removeAttribute('hidden');
+        else panel.setAttribute('hidden', '');
+    };
+    setOpen(item.classList.contains('active'));
+    button.addEventListener('click', () => {
+        setOpen(button.getAttribute('aria-expanded') !== 'true');
+    });
+});
+
+const inquirySelect = document.querySelector('#inquiry-purpose-1333');
+if (inquirySelect) {
+    inquirySelect.addEventListener('keydown', (event) => {
+        if (event.key !== 'Enter' && event.key !== ' ' && event.key !== 'ArrowDown') return;
+        event.preventDefault();
+        if (typeof inquirySelect.showPicker === 'function') {
+            inquirySelect.showPicker();
         }
-        item.addEventListener('click', onClick)
+    });
+}
+
+document.querySelectorAll('a.cs-big-link').forEach((link) => {
+    if (!link.getAttribute('aria-label') && !link.textContent.trim()) {
+        link.setAttribute('aria-label', 'Play the SunSeeker Rentals video');
+    }
+});
+
+const skipLink = document.querySelector("a.skip");
+const mainContent = document.getElementById("main");
+if (skipLink && mainContent) {
+    skipLink.addEventListener("click", () => {
+        mainContent.focus({ preventScroll: true });
+        mainContent.scrollIntoView();
+    });
+}
+
+document.querySelectorAll('a[target="_blank"]').forEach((link) => {
+    const label = link.getAttribute('aria-label');
+    if (label) {
+        if (!/new tab/i.test(label)) {
+            link.setAttribute('aria-label', `${label} (opens in a new tab)`);
         }
+        return;
+    }
+    if (link.querySelector('.sr-only')) return;
+    const note = document.createElement('span');
+    note.className = 'sr-only';
+    note.textContent = ' (opens in a new tab)';
+    link.appendChild(note);
+});
                                 
 document.querySelectorAll('.custom-dropdown').forEach(dropdown => {
   const selected = dropdown.querySelector('.custom-selected');

@@ -786,7 +786,8 @@
   #cs-contact-486 .cs-input::placeholder,
   #cs-contact-486 .cs-textarea::placeholder,
   #cs-contact-486 #cs-select-486::placeholder {
-    color: #7d799c;
+    color: #4E4B66;
+    opacity: 1;
     font-size: 1rem;
   }
   #cs-contact-486 .cs-textarea {

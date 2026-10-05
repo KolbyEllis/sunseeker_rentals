@@ -26,10 +26,14 @@
     let index = 0
     let touchStartX = 0
     let touchStartY = 0
+    let lastFocus = null
 
     const overlay = document.createElement("div")
     overlay.className = "home-lightbox"
     overlay.hidden = true
+    overlay.setAttribute("role", "dialog")
+    overlay.setAttribute("aria-modal", "true")
+    overlay.setAttribute("aria-label", "Property photos")
     overlay.innerHTML = `
         <div class="home-lightbox__backdrop" data-home-lightbox-close></div>
         <button type="button" class="home-lightbox__close" data-home-lightbox-close aria-label="Close gallery">&times;</button>
@@ -56,17 +60,25 @@
         captionEl.textContent = `${index + 1} / ${uniquePhotos.length}`
     }
 
+    function focusableInLightbox() {
+        return Array.from(overlay.querySelectorAll("button")).filter((el) => !el.disabled)
+    }
+
     function openAt(startIndex) {
+        lastFocus = document.activeElement
         index = Math.max(0, Math.min(startIndex, uniquePhotos.length - 1))
         render()
         overlay.hidden = false
         document.body.classList.add("home-lightbox-open")
+        const closeBtn = overlay.querySelector(".home-lightbox__close")
+        if (closeBtn) closeBtn.focus()
     }
 
     function close() {
         overlay.hidden = true
         document.body.classList.remove("home-lightbox-open")
         imageEl.removeAttribute("src")
+        if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus()
     }
 
     function next() {
@@ -147,6 +159,18 @@
             next()
         } else if (event.key === "ArrowLeft") {
             prev()
+        } else if (event.key === "Tab") {
+            const nodes = focusableInLightbox()
+            if (!nodes.length) return
+            const first = nodes[0]
+            const last = nodes[nodes.length - 1]
+            if (event.shiftKey && document.activeElement === first) {
+                event.preventDefault()
+                last.focus()
+            } else if (!event.shiftKey && document.activeElement === last) {
+                event.preventDefault()
+                first.focus()
+            }
         }
     })
 })()

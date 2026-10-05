@@ -96,7 +96,7 @@
     left: 0;
     /* color overlay */
     content: "";
-    opacity: 0.6;
+    opacity: 0.85;
     display: block;
     background: #000;
     height: 100%;
@@ -563,7 +563,7 @@
   .blog-article #blog-content a {
     text-decoration: underline;
     font-size: inherit;
-    color: var(--secondary);
+    color: var(--primary);
   }
   .blog-article #blog-content ul,
   .blog-article #blog-content ol {
