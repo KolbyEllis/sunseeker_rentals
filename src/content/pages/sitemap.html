@@ -80,6 +80,17 @@ eleventyNavigation:
                 <li><a href="https://sunseeker.appfolio.com/oportal/users/log_in" target="_blank">View Statements</a></li>
             </ul>
 
+            {% if rentalCities and rentalCities.length %}
+            <h2 class="cs-title" style="margin-top: 2.5rem;">Houses for Rent</h2>
+            <ul>
+                {% for city in rentalCities %}
+                <li>
+                    <a href="/houses-for-rent/{{ city.slug }}/">Houses for Rent in {{ city.name }}, AZ</a>
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
             {% if homes and homes.length %}
             <h2 class="cs-title" style="margin-top: 2.5rem;">Property Pages</h2>
             <p style="margin-bottom: 1rem;">
