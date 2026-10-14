@@ -22,52 +22,75 @@ tags:
 
 {% block body %}
 <section class="city-rentals">
-  <div class="home-container">
-    <p class="home-eyebrow">Managed by <span class="home-eyebrow__brand">SunSeeker Rentals</span></p>
-    <h1 class="home-title">Houses for Rent in {{ rentalCity.name }}, AZ</h1>
+  <div class="city-rentals__wrap">
+    <header class="city-rentals__intro">
+      <p class="home-eyebrow">Managed by <span class="home-eyebrow__brand">SunSeeker Rentals</span></p>
+      <h1 class="home-title">Houses for Rent in {{ rentalCity.name }}, AZ</h1>
+      <p class="home-lead">
+        {% if rentalCity.homes.length == 1 %}
+          1 house available in {{ rentalCity.name }}.
+        {% elif rentalCity.homes.length %}
+          {{ rentalCity.homes.length }} houses available in {{ rentalCity.name }}.
+        {% else %}
+          Nothing is listed in {{ rentalCity.name }} right now.
+        {% endif %}
+      </p>
+      <div class="home-actions city-rentals__actions">
+        {% if rentalCity.homes.length %}
+        <a class="home-action home-action--apply" href="/contact/">Contact Us</a>
+        {% endif %}
+        <a class="home-action home-action--showing" href="/rentals/">See All Current Rentals</a>
+      </div>
+    </header>
+
     {% if rentalCity.homes.length %}
-    <p class="home-lead">
-      These are the houses for rent in {{ rentalCity.name }} right now.
-      Open a home to see the rent, photos, and how to apply. Availability changes often.
-    </p>
-
-    <ul class="city-rentals__list">
-      {% for home in rentalCity.homes %}
-        {% set photo = home.photos[0] if home.photos and home.photos.length else "" %}
-        <li>
-          <a class="city-rentals__card" href="/homes/{{ home.slug }}/">
-            {% if photo %}
-              <img src="{{ photo }}" alt="" width="640" height="420" loading="lazy" decoding="async">
-            {% endif %}
-            <span class="city-rentals__body">
-              <span class="city-rentals__address">{{ home.address }}</span>
-              {% if home.rent %}
-                <span class="city-rentals__rent">{{ home.rent }} / month</span>
-              {% endif %}
-              {% if home.beds or home.baths or home.sqft %}
-                <span class="city-rentals__meta">
-                  {% if home.beds %}{{ home.beds }} bd{% endif %}{% if home.beds and home.baths %}, {% endif %}
-                  {% if home.baths %}{{ home.baths }} ba{% endif %}{% if (home.beds or home.baths) and home.sqft %}, {% endif %}
-                  {% if home.sqft %}{{ home.sqft }} sq ft{% endif %}
-                </span>
-              {% endif %}
-            </span>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-
-    <p class="city-rentals__more">
-      <a href="/rentals/">See all current rentals</a>
-    </p>
-    {% else %}
-    <p class="home-lead">
-      There are no houses for rent in {{ rentalCity.name }} right now.
-      Availability changes often, so check the current rentals for homes you can apply to today.
-    </p>
-    <p class="city-rentals__more">
-      <a href="/rentals/">See current rentals</a>
-    </p>
+    <div class="city-rentals__available">
+      <ul class="city-rentals__list">
+        {% for home in rentalCity.homes %}
+          {% set photo = home.photos[0] if home.photos and home.photos.length else "" %}
+          <li>
+            <a class="city-rentals__card" href="/homes/{{ home.slug }}/">
+              <span class="city-rentals__photo">
+                {% if photo %}
+                  <img src="{{ photo }}" alt="" loading="lazy" decoding="async">
+                {% endif %}
+              </span>
+              <span class="city-rentals__body">
+                <span class="city-rentals__address">{{ home.address }}</span>
+                {% if home.rent %}
+                  <span class="city-rentals__rent">{{ home.rent }} / month</span>
+                {% endif %}
+                {% if home.beds or home.baths or home.sqft %}
+                  <span class="city-rentals__meta">
+                    {% if home.beds %}{{ home.beds }} bd{% endif %}{% if home.beds and home.baths %}, {% endif %}
+                    {% if home.baths %}{{ home.baths }} ba{% endif %}{% if (home.beds or home.baths) and home.sqft %}, {% endif %}
+                    {% if home.sqft %}{{ home.sqft }} sq ft{% endif %}
+                  </span>
+                {% endif %}
+                <span class="city-rentals__view">View this home</span>
+              </span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <section class="city-rentals__requirements">
+      <h2>Attention Realtors</h2>
+      <p>
+        We will compensate you for bringing us a tenant! These are our minimum rental requirements.
+        Please note that some owners of individual properties may have slightly different requirements.
+      </p>
+      <ul>
+        <li>Credit score of at least 625</li>
+        <li>Earn at least 3x the monthly rent</li>
+        <li>Currently employed for at least 12 months</li>
+        <li>No prior evictions or landlord judgments</li>
+        <li>No open or recent bankruptcies</li>
+        <li>Positive rental reference if applicable</li>
+        <li>No Cats</li>
+        <li>No Smoking</li>
+      </ul>
+    </section>
     {% endif %}
   </div>
 </section>

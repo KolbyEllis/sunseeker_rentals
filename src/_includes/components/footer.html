@@ -55,10 +55,14 @@
                         </a>
                     </li>
                     <li>
+                        {% if "/houses-for-rent/" in page.url or "/homes/" in page.url %}
+                        <a href="/contact/">Contact form</a>
+                        {% else %}
                         <a href="tel:{{client.phoneForTel}}">
                             T:
                             {{client.phoneFormatted}}
                         </a>
+                        {% endif %}
                     </li>
                     <li>
                         <a href="mailto:{{client.email}}">Click to Email</a>
