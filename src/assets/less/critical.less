@@ -43,6 +43,7 @@
         .cs-title,
         .cs-text {
             color: #fff;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85), 0 2px 12px rgba(0, 0, 0, 0.55);
         }
 
         .cs-text {
@@ -192,14 +193,14 @@
             z-index: -2;
 
             &:before {
-                /* Overlay */
+                /* Overlay — lighter so the photo shows; text-shadow keeps titles readable */
                 content: "";
                 width: 100%;
                 height: 100%;
                 background: #000;
                 /* prevents the cursor from interacting with it */
                 pointer-events: none;
-                opacity: 0.85;
+                opacity: 0.5;
                 display: block;
                 position: absolute;
                 top: 0;

@@ -71,6 +71,7 @@
     font-weight: 700;
     color: #fff;
     text-align: left;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85), 0 2px 12px rgba(0, 0, 0, 0.55);
   }
   #header .blog-bg {
     z-index: -1;
@@ -94,9 +95,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    /* color overlay */
+    /* color overlay — lighter so the photo shows through */
     content: "";
-    opacity: 0.85;
+    opacity: 0.5;
     display: block;
     background: #000;
     height: 100%;
@@ -144,6 +145,7 @@
     font-size: 2.13333333rem;
     color: #fff;
     text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85), 0 2px 12px rgba(0, 0, 0, 0.55);
   }
   #int-hero p {
     display: block;
@@ -153,6 +155,7 @@
     width: 96%;
     color: #fff;
     text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85), 0 2px 12px rgba(0, 0, 0, 0.55);
   }
   #int-hero:before {
     z-index: -1;
@@ -160,7 +163,7 @@
     top: 0;
     left: 0;
     content: "";
-    opacity: 0.7;
+    opacity: 0.5;
     display: block;
     background: #000;
     height: 100%;

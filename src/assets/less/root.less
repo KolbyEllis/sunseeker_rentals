@@ -1175,6 +1175,7 @@ html {
             font-size: (64/30rem);
             color: #fff;
             text-align: center;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85), 0 2px 12px rgba(0, 0, 0, 0.55);
         }
 
         p {
@@ -1185,6 +1186,7 @@ html {
             width: 96%;
             color: #fff;
             text-align: center;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85), 0 2px 12px rgba(0, 0, 0, 0.55);
         }
 
         &:before {
@@ -1193,7 +1195,8 @@ html {
             top: 0;
             left: 0;
             content: "";
-            opacity: 0.85;
+            /* Lighter overlay so the photo shows; text-shadow keeps titles readable */
+            opacity: 0.5;
             display: block;
             background: #000;
             height: 100%;
@@ -1258,11 +1261,13 @@ html {
 
         .cs-title {
             color: var(--bodyTextColorWhite);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85), 0 2px 12px rgba(0, 0, 0, 0.55);
         }
 
         .cs-text {
             margin-bottom: (16/16rem);
             color: var(--bodyTextColorWhite);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85), 0 2px 12px rgba(0, 0, 0, 0.55);
             &:last-of-type {
                 margin-bottom: (32/16rem);
             }
@@ -1319,14 +1324,14 @@ html {
             z-index: -1;
 
             &:before {
-                /* black color overlay */
+                /* black color overlay — lighter so the photo shows through */
                 content: "";
                 position: absolute;
                 display: block;
                 height: 100%;
                 width: 100%;
                 background: #000;
-                opacity: 0.85;
+                opacity: 0.5;
                 top: 0;
                 left: 0;
                 z-index: 1;
