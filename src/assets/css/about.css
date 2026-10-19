@@ -585,14 +585,14 @@
     z-index: -1;
   }
   #contact-983 .cs-background:before {
-    /* background color overlay — lighter so the photo shows through */
+    /* Dark overlay for the rental estimate form so white text stays readable */
     content: "";
     position: absolute;
     display: block;
     height: 100%;
     width: 100%;
     background: #1a1a1a;
-    opacity: 0.5;
+    opacity: 0.9;
     top: 0;
     left: 0;
     z-index: 1;
