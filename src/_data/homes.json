@@ -43,9 +43,10 @@
     "photoCount": 20,
     "appfolioId": "37e18679-4561-4b40-aac5-9d94cfc4abf3",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/37e18679-4561-4b40-aac5-9d94cfc4abf3",
-    "currentlyPosted": true,
+    "currentlyPosted": false,
     "lastSyncedAt": "2026-11-04T13:46:12.000Z",
-    "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=37e18679-4561-4b40-aac5-9d94cfc4abf3&source=Website"
+    "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=37e18679-4561-4b40-aac5-9d94cfc4abf3&source=Website",
+    "unpostedAt": "2026-11-04T23:12:21.193Z"
   },
   {
     "slug": "2515-n-148th-dr-goodyear-az-85395",
@@ -154,7 +155,7 @@
     "address": "5426 N Rattler Way, Litchfield Park, AZ 85340",
     "city": "Litchfield Park",
     "marketingTitle": "4 Bedroom Home with Solar! Private Pool and Landscaping Included!",
-    "description": "Upgraded 4 bedroom home close to Luke AFB with a private pool, 3 car garage, and powerful solar system! Weekly pool service and monthly landscaping included! Enjoy a spacious open floor plan with high ceilings, tile and carpet flooring, and a kitchen featuring stainless appliances, RO system, new dishwasher, and walk-in pantry. The backyard offers a covered patio, grass area, and fenced pool.  The house also features a built in ActivePure air purification system that provides fresh clean air throughout the home and the property sits next to both walking paths and playgrounds. $2,500 deposit, $400 cleaning deposit, and $20 monthly admin fee. Renters insurance required. Solar is a 43 panel two solar system that provides 23-25 kWh of production a year and significant savings to your bill.",
+    "description": "MOVE-IN SPECIAL! Move in before 2027 and receive a $1,000 move-in credit!\r\n\r\nUpgraded 4-bedroom home near Luke AFB featuring a private pool, 3-car garage, and 43-panel solar system for significant electric savings. Weekly pool service and monthly landscaping included! Enjoy an open floor plan, high ceilings, tile and carpet flooring, and an upgraded kitchen with stainless appliances, RO system, new dishwasher, and walk-in pantry. The backyard features a covered patio, grass area, and fenced pool. Additional features include a built-in ActivePure whole-home air purification system, plus nearby walking paths and playgrounds.\r\n\r\n$2,500 deposit, $400 cleaning deposit, $20 monthly admin fee, and $400 non-refundable pet fee if one small dog is approved. Renters insurance required.",
     "beds": "4",
     "baths": "2",
     "sqft": "2134",
@@ -166,11 +167,12 @@
     ],
     "petPolicy": [
       "Cats not allowed",
-      "Dogs not allowed"
+      "Small dogs allowed"
     ],
     "photos": [
       "https://images.cdn.appfolio.com/sunseeker/images/fbd09bf7-424e-422c-821a-5cd783892d8d/large.jpg",
       "https://images.cdn.appfolio.com/sunseeker/images/1bbfea28-4e3f-4a7d-b277-39b264cacae7/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/369bd185-b381-4e85-a450-70dc3abf7e6c/large.jpg",
       "https://images.cdn.appfolio.com/sunseeker/images/d2a99614-8954-4066-b1dc-0210a9cf8c64/large.jpg",
       "https://images.cdn.appfolio.com/sunseeker/images/168a139b-9374-40d4-967a-978a5d33cf86/large.jpg",
       "https://images.cdn.appfolio.com/sunseeker/images/febad5d7-de73-46be-9869-267d7263c5fd/large.jpg",
@@ -204,7 +206,6 @@
       "https://images.cdn.appfolio.com/sunseeker/images/a72b6b8d-0bcf-4431-bbfd-43c738d33897/large.jpg",
       "https://images.cdn.appfolio.com/sunseeker/images/bb77230b-040c-4448-9322-5023c7457aea/large.jpg",
       "https://images.cdn.appfolio.com/sunseeker/images/318be5bc-ac41-4d03-8b5e-b3ba22e307cf/large.jpg",
-      "https://images.cdn.appfolio.com/sunseeker/images/369bd185-b381-4e85-a450-70dc3abf7e6c/large.jpg",
       "https://images.cdn.appfolio.com/sunseeker/images/5a3f36e8-d5ed-4af8-bb70-e1886b855b33/large.jpg"
     ],
     "photoCount": 37,
@@ -212,21 +213,21 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/6d8e5b36-cb36-4f05-939d-28157d41fb55",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=6d8e5b36-cb36-4f05-939d-28157d41fb55&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-04T13:46:10.391Z"
+    "lastSyncedAt": "2026-11-04T23:12:17.173Z"
   },
   {
     "slug": "614-s-111th-dr-avondale-az-85323",
     "address": "614 S 111th Dr, Avondale, AZ 85323",
     "city": "Avondale",
     "marketingTitle": "Amazing Move In Ready House In Avondale With Pool and Den!",
-    "description": "This 3 bed, 2 bath home has a spacious living area plus an extra room that works as an office or den. The property sits on a larger lot with a wider than normal driveway out front and a pool, swim-up table, and covered patio out back. Comes with upgraded wooden plank flooring in the living room and kitchen area and upgraded modern appliances. Lots of windows for natural light. The main bedroom has dual sinks, a separate tub and shower, and walk-in closet. $2500 deposit, $400 cleaning deposit, $20 monthly admin fee. Tenant must maintain tenant insurance during their tenancy.",
+    "description": "This 3 bed, 2 bath home has a spacious living area plus an extra room that works as an office or den. The property sits on a larger lot with a wider than normal driveway out front and a pool, swim-up table, and covered patio out back. Comes with upgraded wooden plank flooring in the living room and kitchen area and upgraded modern appliances. Lots of windows for natural light. The main bedroom has dual sinks, a separate tub and shower, and walk-in closet. $2400 deposit, $400 cleaning deposit, $20 monthly admin fee. Tenant must maintain tenant insurance during their tenancy.",
     "beds": "3",
     "baths": "2",
     "sqft": "1977",
-    "rent": "$2,600",
+    "rent": "$2,500",
     "rentalTerms": [
-      "Rent: $2,600",
-      "Security Deposit: $2,500",
+      "Rent: $2,500",
+      "Security Deposit: $2,400",
       "Available Now"
     ],
     "petPolicy": [
@@ -273,7 +274,7 @@
     "appfolioId": "e3e28ea5-fa22-4fff-9674-37fd432259ea",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/e3e28ea5-fa22-4fff-9674-37fd432259ea",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-04T13:46:11.682Z",
+    "lastSyncedAt": "2026-11-04T23:12:16.809Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=e3e28ea5-fa22-4fff-9674-37fd432259ea&source=Website"
   },
   {
@@ -387,7 +388,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/da829224-4cae-4af9-ba73-67c787b03b4a",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=da829224-4cae-4af9-ba73-67c787b03b4a&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-04T13:46:11.356Z"
+    "lastSyncedAt": "2026-11-04T23:12:19.161Z"
   },
   {
     "slug": "946-s-166th-ave-goodyear-az-85338",
@@ -440,7 +441,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/11c322e5-1d88-46ed-846e-d23f95f459ba",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=11c322e5-1d88-46ed-846e-d23f95f459ba&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-04T13:46:10.712Z"
+    "lastSyncedAt": "2026-11-04T23:12:18.479Z"
   },
   {
     "slug": "1953-s-174th-ln-goodyear-az-85338",
@@ -634,7 +635,7 @@
     "appfolioId": "e150d0ec-8237-4b14-a29a-ba6f412b60b3",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/e150d0ec-8237-4b14-a29a-ba6f412b60b3",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-04T13:46:09.742Z",
+    "lastSyncedAt": "2026-11-04T23:12:17.787Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=e150d0ec-8237-4b14-a29a-ba6f412b60b3&source=Website",
     "unpostedAt": "2026-10-21T16:36:39.005Z"
   },
@@ -683,7 +684,7 @@
     "appfolioId": "483e00a7-aab8-430d-a799-2636464e79dd",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/483e00a7-aab8-430d-a799-2636464e79dd",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-04T13:46:13.620Z",
+    "lastSyncedAt": "2026-11-04T23:12:20.943Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=483e00a7-aab8-430d-a799-2636464e79dd&source=Website"
   },
   {
@@ -736,7 +737,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/271bc972-b55d-4cdd-9a97-9b2b5afcba49",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=271bc972-b55d-4cdd-9a97-9b2b5afcba49&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-04T13:46:12.950Z"
+    "lastSyncedAt": "2026-11-04T23:12:20.210Z"
   },
   {
     "slug": "13588-w-alvarado-dr-goodyear-az-85395",
@@ -966,7 +967,7 @@
     "appfolioId": "3001aab4-c18a-4a95-9978-0e8df7bb05da",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/3001aab4-c18a-4a95-9978-0e8df7bb05da",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-04T13:46:13.287Z",
+    "lastSyncedAt": "2026-11-04T23:12:20.574Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=3001aab4-c18a-4a95-9978-0e8df7bb05da&source=Website"
   },
   {
@@ -1074,7 +1075,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/0170d27f-c48a-4d76-8113-373448fd56a1",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=0170d27f-c48a-4d76-8113-373448fd56a1&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-04T13:46:09.425Z"
+    "lastSyncedAt": "2026-11-04T23:12:17.478Z"
   },
   {
     "slug": "12523-w-estero-ln-litchfield-park-az-85340",
@@ -1128,7 +1129,7 @@
     "appfolioId": "0cad3744-a6f6-43a8-8626-c3a7de5e8bc0",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/0cad3744-a6f6-43a8-8626-c3a7de5e8bc0",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-04T13:46:12.320Z",
+    "lastSyncedAt": "2026-11-04T23:12:19.539Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=0cad3744-a6f6-43a8-8626-c3a7de5e8bc0&source=Website",
     "unpostedAt": "2026-10-01T22:20:37.062Z"
   },
@@ -1261,7 +1262,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/f7f24d0c-7d1f-4ebc-ad37-8e10cd02f416",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=f7f24d0c-7d1f-4ebc-ad37-8e10cd02f416&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-04T13:46:10.061Z"
+    "lastSyncedAt": "2026-11-04T23:12:18.173Z"
   },
   {
     "slug": "12933-w-fleetwood-ln-glendale-az-85307",
@@ -1740,7 +1741,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/c10941c8-32db-4e08-ace3-7988923cfb5d",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=c10941c8-32db-4e08-ace3-7988923cfb5d&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-04T13:46:11.031Z"
+    "lastSyncedAt": "2026-11-04T23:12:18.787Z"
   },
   {
     "slug": "15857-w-moreland-st-goodyear-az-85338",
@@ -2020,7 +2021,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/45941a6b-a585-4925-80a5-4a1b1adc102c",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=45941a6b-a585-4925-80a5-4a1b1adc102c&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-04T13:46:12.637Z"
+    "lastSyncedAt": "2026-11-04T23:12:19.847Z"
   },
   {
     "slug": "14173-w-weldon-ave-goodyear-az-85395",
