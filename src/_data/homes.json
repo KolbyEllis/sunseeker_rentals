@@ -44,7 +44,7 @@
     "appfolioId": "37e18679-4561-4b40-aac5-9d94cfc4abf3",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/37e18679-4561-4b40-aac5-9d94cfc4abf3",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-17T15:29:20.650Z",
+    "lastSyncedAt": "2026-11-18T00:31:07.375Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=37e18679-4561-4b40-aac5-9d94cfc4abf3&source=Website",
     "unpostedAt": "2026-11-04T23:12:21.193Z"
   },
@@ -75,7 +75,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/f1955861-9f8b-4135-b8ce-5b1e27960b17",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=f1955861-9f8b-4135-b8ce-5b1e27960b17&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-17T15:29:19.259Z",
+    "lastSyncedAt": "2026-11-18T00:31:06.359Z",
     "unpostedAt": "2026-11-10T01:10:48.601Z"
   },
   {
@@ -333,14 +333,14 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/176e49d8-8c18-4e17-8543-d7a1b7140cf7",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=176e49d8-8c18-4e17-8543-d7a1b7140cf7&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-17T15:29:18.894Z"
+    "lastSyncedAt": "2026-11-18T00:31:05.699Z"
   },
   {
     "slug": "614-s-111th-dr-avondale-az-85323",
     "address": "614 S 111th Dr, Avondale, AZ 85323",
     "city": "Avondale",
     "marketingTitle": "Amazing Move In Ready House In Avondale With Pool and Den!",
-    "description": "This 3 bed, 2 bath home has a spacious living area plus an extra room that works as an office or den. The property sits on a larger lot with a wider than normal driveway out front and a pool, swim-up table, and covered patio out back. Comes with upgraded wooden plank flooring in the living room and kitchen area and upgraded modern appliances. Lots of windows for natural light. The main bedroom has dual sinks, a separate tub and shower, and walk-in closet. $2400 deposit, $400 cleaning deposit, $20 monthly admin fee. Tenant must maintain tenant insurance during their tenancy.",
+    "description": "This 3 bed, 2 bath home has a spacious living area plus an extra room that works as an office or den. The property sits on a larger lot with a wider than normal driveway out front and a pool, swim-up table, and covered patio out back. Comes with upgraded wooden plank flooring in the living room and kitchen area and upgraded modern appliances. Lots of windows for natural light. The main bedroom has dual sinks, a separate tub and shower, and walk-in closet. $2400 deposit, $400 cleaning deposit, $400 non-refundable pet fee if your one small dog is approved. $20 monthly admin fee. Tenant must maintain tenant insurance during their tenancy.",
     "beds": "3",
     "baths": "2",
     "sqft": "1977",
@@ -352,7 +352,7 @@
     ],
     "petPolicy": [
       "Cats not allowed",
-      "Dogs not allowed"
+      "Small dogs allowed"
     ],
     "photos": [
       "https://images.cdn.appfolio.com/sunseeker/images/ef26d0eb-2624-429e-99be-6c1dc7d015bd/large.jpg",
@@ -394,7 +394,7 @@
     "appfolioId": "e3e28ea5-fa22-4fff-9674-37fd432259ea",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/e3e28ea5-fa22-4fff-9674-37fd432259ea",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-17T15:29:21.529Z",
+    "lastSyncedAt": "2026-11-18T00:31:04.647Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=e3e28ea5-fa22-4fff-9674-37fd432259ea&source=Website"
   },
   {
@@ -508,7 +508,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/da829224-4cae-4af9-ba73-67c787b03b4a",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=da829224-4cae-4af9-ba73-67c787b03b4a&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-17T15:29:23.166Z"
+    "lastSyncedAt": "2026-11-18T00:31:08.925Z"
   },
   {
     "slug": "946-s-166th-ave-goodyear-az-85338",
@@ -859,7 +859,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/271bc972-b55d-4cdd-9a97-9b2b5afcba49",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=271bc972-b55d-4cdd-9a97-9b2b5afcba49&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-17T15:29:24.114Z"
+    "lastSyncedAt": "2026-11-18T00:31:09.682Z"
   },
   {
     "slug": "13588-w-alvarado-dr-goodyear-az-85395",
@@ -1089,7 +1089,7 @@
     "appfolioId": "3001aab4-c18a-4a95-9978-0e8df7bb05da",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/3001aab4-c18a-4a95-9978-0e8df7bb05da",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-17T15:29:24.545Z",
+    "lastSyncedAt": "2026-11-18T00:31:10.002Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=3001aab4-c18a-4a95-9978-0e8df7bb05da&source=Website"
   },
   {
@@ -1197,7 +1197,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/0170d27f-c48a-4d76-8113-373448fd56a1",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=0170d27f-c48a-4d76-8113-373448fd56a1&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-17T15:29:21.957Z"
+    "lastSyncedAt": "2026-11-18T00:31:07.762Z"
   },
   {
     "slug": "12523-w-estero-ln-litchfield-park-az-85340",
@@ -1251,7 +1251,7 @@
     "appfolioId": "0cad3744-a6f6-43a8-8626-c3a7de5e8bc0",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/0cad3744-a6f6-43a8-8626-c3a7de5e8bc0",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-17T15:29:23.597Z",
+    "lastSyncedAt": "2026-11-18T00:31:09.307Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=0cad3744-a6f6-43a8-8626-c3a7de5e8bc0&source=Website",
     "unpostedAt": "2026-10-01T22:20:37.062Z"
   },
@@ -1384,7 +1384,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/f7f24d0c-7d1f-4ebc-ad37-8e10cd02f416",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=f7f24d0c-7d1f-4ebc-ad37-8e10cd02f416&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-17T15:29:22.375Z"
+    "lastSyncedAt": "2026-11-18T00:31:08.148Z"
   },
   {
     "slug": "12933-w-fleetwood-ln-glendale-az-85307",
@@ -1863,7 +1863,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/c10941c8-32db-4e08-ace3-7988923cfb5d",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=c10941c8-32db-4e08-ace3-7988923cfb5d&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-17T15:29:22.808Z"
+    "lastSyncedAt": "2026-11-18T00:31:08.531Z"
   },
   {
     "slug": "15857-w-moreland-st-goodyear-az-85338",
@@ -2093,7 +2093,7 @@
     "appfolioId": "70627650-29ad-4a27-826b-f2651a040457",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/70627650-29ad-4a27-826b-f2651a040457",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-17T15:29:19.687Z",
+    "lastSyncedAt": "2026-11-18T00:31:06.743Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=70627650-29ad-4a27-826b-f2651a040457&source=Website",
     "unpostedAt": "2026-11-03T22:54:14.201Z"
   },
@@ -2102,14 +2102,14 @@
     "address": "24202 W Watkins St, Buckeye, AZ 85326",
     "city": "Buckeye",
     "marketingTitle": "Beautiful 4-Bedroom Anderson Parc Home with Modern Kitchen & Paver Patio!",
-    "description": "Look no further! This charming rental home in the Anderson Parc Community is the one! Featuring 4 beds, 3 baths, paver driveway, stone-accent facade, and an inviting gated front paver patio. Inside, you'll find an open floor plan with abundant natural light, high ceilings, tile floors & soft carpet in the right places, and a welcoming living area. The eat-in kitchen boasts gray shaker cabinetry w/crown molding, quartz countertops, SS appliances, and an island w/breakfast bar. The sizable primary bedroom includes a private bath w/dual sinks and a walk-in closet. One secondary bedroom also offers a walk-in closet. Easy access to I-10. Move-in ready! $2,200 security deposit, $400 cleaning deposit, $20 monthly admin fee. Renters insurance required.",
+    "description": "MOVE-IN SPECIAL! Move in before 2027 and receive a $1,000 credit towards rent!\r\n\r\nThis charming rental home features 4 beds, 3 baths, paver driveway, stone-accent facade, and an inviting gated front paver patio. Inside, you'll find an open floor plan with abundant natural light, high ceilings, tile floors & soft carpet in the right places, and a welcoming living area. The eat-in kitchen boasts gray shaker cabinetry w/crown molding, quartz countertops, SS appliances, and an island w/breakfast bar. The sizable primary bedroom includes a private bath w/dual sinks and a walk-in closet. One secondary bedroom also offers a walk-in closet. Easy access to I-10. Move-in ready! $2,100 security deposit, $400 cleaning deposit, $20 monthly admin fee. Renters insurance required.",
     "beds": "4",
     "baths": "3",
     "sqft": "1809",
-    "rent": "$2,300",
+    "rent": "$2,200",
     "rentalTerms": [
-      "Rent: $2,300",
-      "Security Deposit: $2,200",
+      "Rent: $2,200",
+      "Security Deposit: $2,100",
       "Available Now"
     ],
     "petPolicy": [
@@ -2157,7 +2157,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/818bdb44-d087-4d20-97cb-79d92b084750",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=818bdb44-d087-4d20-97cb-79d92b084750&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-17T15:29:21.074Z"
+    "lastSyncedAt": "2026-11-18T00:31:04.188Z"
   },
   {
     "slug": "13410-w-watson-lane-surprise-az-85379",
@@ -2205,7 +2205,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/45941a6b-a585-4925-80a5-4a1b1adc102c",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=45941a6b-a585-4925-80a5-4a1b1adc102c&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-17T15:29:20.211Z",
+    "lastSyncedAt": "2026-11-18T00:31:07.061Z",
     "unpostedAt": "2026-11-07T04:39:43.839Z"
   },
   {
