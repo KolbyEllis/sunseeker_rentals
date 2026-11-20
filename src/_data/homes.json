@@ -44,7 +44,7 @@
     "appfolioId": "37e18679-4561-4b40-aac5-9d94cfc4abf3",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/37e18679-4561-4b40-aac5-9d94cfc4abf3",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-19T15:14:54.219Z",
+    "lastSyncedAt": "2026-11-20T00:17:42.997Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=37e18679-4561-4b40-aac5-9d94cfc4abf3&source=Website",
     "unpostedAt": "2026-11-04T23:12:21.193Z"
   },
@@ -75,7 +75,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/f1955861-9f8b-4135-b8ce-5b1e27960b17",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=f1955861-9f8b-4135-b8ce-5b1e27960b17&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-19T15:14:53.246Z",
+    "lastSyncedAt": "2026-11-20T00:17:42.020Z",
     "unpostedAt": "2026-11-10T01:10:48.601Z"
   },
   {
@@ -333,7 +333,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/176e49d8-8c18-4e17-8543-d7a1b7140cf7",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=176e49d8-8c18-4e17-8543-d7a1b7140cf7&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-19T15:14:52.928Z"
+    "lastSyncedAt": "2026-11-20T00:17:41.651Z"
   },
   {
     "slug": "614-s-111th-dr-avondale-az-85323",
@@ -394,7 +394,7 @@
     "appfolioId": "e3e28ea5-fa22-4fff-9674-37fd432259ea",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/e3e28ea5-fa22-4fff-9674-37fd432259ea",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-19T15:14:52.431Z",
+    "lastSyncedAt": "2026-11-20T00:17:41.258Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=e3e28ea5-fa22-4fff-9674-37fd432259ea&source=Website"
   },
   {
@@ -508,7 +508,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/da829224-4cae-4af9-ba73-67c787b03b4a",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=da829224-4cae-4af9-ba73-67c787b03b4a&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-19T15:14:55.538Z"
+    "lastSyncedAt": "2026-11-20T00:17:44.286Z"
   },
   {
     "slug": "946-s-166th-ave-goodyear-az-85338",
@@ -1090,7 +1090,7 @@
     "appfolioId": "3001aab4-c18a-4a95-9978-0e8df7bb05da",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/3001aab4-c18a-4a95-9978-0e8df7bb05da",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-19T15:14:56.197Z",
+    "lastSyncedAt": "2026-11-20T00:17:44.898Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=3001aab4-c18a-4a95-9978-0e8df7bb05da&source=Website"
   },
   {
@@ -1198,7 +1198,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/0170d27f-c48a-4d76-8113-373448fd56a1",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=0170d27f-c48a-4d76-8113-373448fd56a1&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-19T15:14:54.551Z"
+    "lastSyncedAt": "2026-11-20T00:17:43.307Z"
   },
   {
     "slug": "12523-w-estero-ln-litchfield-park-az-85340",
@@ -1252,7 +1252,7 @@
     "appfolioId": "0cad3744-a6f6-43a8-8626-c3a7de5e8bc0",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/0cad3744-a6f6-43a8-8626-c3a7de5e8bc0",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-19T15:14:55.870Z",
+    "lastSyncedAt": "2026-11-20T00:17:44.590Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=0cad3744-a6f6-43a8-8626-c3a7de5e8bc0&source=Website",
     "unpostedAt": "2026-10-01T22:20:37.062Z"
   },
@@ -1385,7 +1385,59 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/f7f24d0c-7d1f-4ebc-ad37-8e10cd02f416",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=f7f24d0c-7d1f-4ebc-ad37-8e10cd02f416&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-19T15:14:54.878Z"
+    "lastSyncedAt": "2026-11-20T00:17:43.614Z"
+  },
+  {
+    "slug": "11210-w-filmore-st-avondale-az-85392",
+    "address": "11210 W Filmore St, Avondale, AZ 85392",
+    "city": "Avondale",
+    "marketingTitle": "Excellent price on this 4 bedroom!",
+    "description": "Explore this spacious 4-bedroom, 3-bathroom home in Avondale, conveniently located near Avondale Boulevard and all of it's conveniences. The home features newer flooring, a recently painted interior, and a large kitchen with plenty of countertop space. Offering generous room for the money, this home is ready to welcome you. $2000 security deposit, $400 cleaning deposit, $400 pet fee IF the owner approves your one small dog. $20 monthly admin fee. Tenant must maintain tenant insurance during their lease.",
+    "beds": "4",
+    "baths": "3",
+    "sqft": "2074",
+    "rent": "$2,150",
+    "rentalTerms": [
+      "Rent: $2,150",
+      "Security Deposit: $2,000",
+      "Available 12/1/26"
+    ],
+    "petPolicy": [
+      "Cats not allowed",
+      "Small dogs allowed"
+    ],
+    "photos": [
+      "https://images.cdn.appfolio.com/sunseeker/images/8f249be4-62fa-4dad-bb45-d3f4b02adb42/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/011a1eac-23b1-44ca-b3c9-1a16804ff3e6/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/19077fa8-5e76-4820-b13d-f4107404fb1b/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/cd97ed2a-cd27-422b-b7e5-a6bafc148874/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/9b7d1e96-c5d9-424e-8ec2-720bf4180071/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/30ebfd19-1f7b-4ffb-a42b-fb42ff83960b/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/92ff9d40-fd37-4f38-8421-2b0466a34693/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/82152a1d-05e9-4c2e-aca6-02a6ba6caa1a/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/8fe2d586-4326-4449-b0fb-afff6d44136a/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/f0c2c4a7-0cd8-4323-b56e-78b428624c17/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/29a9c527-ac91-45a4-8a72-55cc2a0e9111/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/ed7e9f00-d347-4fe0-8aca-5f7935b4d712/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/071afc08-1ceb-4a62-867b-170ee323e632/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/402b2378-40c4-4594-9c86-9de10710ad05/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/24b6add3-e28a-412c-b9c9-f27a5658187a/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/0334455e-ea3b-4de7-a0fa-20dea3924e8e/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/6ab2e0de-4044-413a-92c4-f23f566e84aa/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/5095ec9e-1634-4d5d-b29c-63454f96765a/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/e9b03124-6fe5-44ed-bd4f-d2a63dafd869/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/a7bfd9b9-8327-440f-b6c0-6872271296f5/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/c5ed1761-68a0-4fd0-9598-a36ea40dbe1a/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/bb004517-255f-48f7-a6e6-7cd5856d6ab1/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/7f8c3ba7-862c-4e8c-aeef-ac08e29ecb2c/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/a6677e43-03ea-4d59-9d29-6b980c883b3f/large.jpg"
+    ],
+    "photoCount": 24,
+    "appfolioId": "afc8c317-b9a3-4e6e-b30a-671b477c38f8",
+    "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/afc8c317-b9a3-4e6e-b30a-671b477c38f8",
+    "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=afc8c317-b9a3-4e6e-b30a-671b477c38f8&source=Website",
+    "currentlyPosted": true,
+    "lastSyncedAt": "2026-11-20T00:17:40.576Z"
   },
   {
     "slug": "12933-w-fleetwood-ln-glendale-az-85307",
@@ -1814,7 +1866,7 @@
     "address": "12736 W Midway Ave, Glendale, AZ 85307",
     "city": "Glendale",
     "marketingTitle": "Small but very clean and convenient location!",
-    "description": "650 minimum credit requrired. Welcome to this small but very clean and conveniently located house in Glendale, AZ! New flooring and paint have just been completed. Built in 2021 this charming home features 3 bedrooms and 2 bathrooms, perfect for those seeking a cozy living space. Situated near XL parks, shopping centers, and restaurants, this house offers the ultimate convenience. The kitchen has a gas range, making meal preparation a breeze. All appliances are included for your convenience. Step outside to the large backyard, ideal for outdoor gatherings or simply enjoying the Arizona sunshine. Don't miss out on this opportunity to call this lovely house your home!  $1900 security deposit, $400 cleaning deposit. $20 monthly admin fee, tenant must provide proof of tenant insurance.",
+    "description": "Welcome to this small but very clean and conveniently located house in Glendale, AZ! New flooring and paint have just been completed. Built in 2021 this charming home features 3 bedrooms and 2 bathrooms, perfect for those seeking a cozy living space. Situated near XL parks, shopping centers, and restaurants, this house offers the ultimate convenience. The kitchen has a gas range, making meal preparation a breeze. All appliances are included for your convenience. Step outside to the large backyard, ideal for outdoor gatherings or simply enjoying the Arizona sunshine. Don't miss out on this opportunity to call this lovely house your home!  $1900 security deposit, $400 cleaning deposit. $20 monthly admin fee, tenant must provide proof of tenant insurance.",
     "beds": "3",
     "baths": "2",
     "sqft": "1350",
@@ -1829,8 +1881,8 @@
       "Dogs not allowed"
     ],
     "photos": [
-      "https://images.cdn.appfolio.com/sunseeker/images/48671a3e-02b5-4496-ba6e-ca432a558143/large.jpg",
       "https://images.cdn.appfolio.com/sunseeker/images/8cf02473-27e2-4a13-a0d1-8859e5a132ee/large.jpg",
+      "https://images.cdn.appfolio.com/sunseeker/images/48671a3e-02b5-4496-ba6e-ca432a558143/large.jpg",
       "https://images.cdn.appfolio.com/sunseeker/images/249bb5df-7298-4114-aa16-f4c9efcd1135/large.jpg",
       "https://images.cdn.appfolio.com/sunseeker/images/bfeb668f-4547-4a6f-8f18-c902fca9e875/large.jpg",
       "https://images.cdn.appfolio.com/sunseeker/images/9829429e-4aa7-4a9d-90e1-1ad889a53268/large.jpg",
@@ -1864,7 +1916,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/c10941c8-32db-4e08-ace3-7988923cfb5d",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=c10941c8-32db-4e08-ace3-7988923cfb5d&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-19T15:14:55.212Z"
+    "lastSyncedAt": "2026-11-20T00:17:43.975Z"
   },
   {
     "slug": "15857-w-moreland-st-goodyear-az-85338",
@@ -2094,7 +2146,7 @@
     "appfolioId": "70627650-29ad-4a27-826b-f2651a040457",
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/70627650-29ad-4a27-826b-f2651a040457",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-19T15:14:53.562Z",
+    "lastSyncedAt": "2026-11-20T00:17:42.329Z",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=70627650-29ad-4a27-826b-f2651a040457&source=Website",
     "unpostedAt": "2026-11-03T22:54:14.201Z"
   },
@@ -2158,7 +2210,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/818bdb44-d087-4d20-97cb-79d92b084750",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=818bdb44-d087-4d20-97cb-79d92b084750&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-19T15:14:52.111Z"
+    "lastSyncedAt": "2026-11-20T00:17:40.888Z"
   },
   {
     "slug": "13410-w-watson-lane-surprise-az-85379",
@@ -2206,7 +2258,7 @@
     "appfolioUrl": "https://sunseeker.appfolio.com/listings/detail/45941a6b-a585-4925-80a5-4a1b1adc102c",
     "applyUrl": "https://sunseeker.appfolio.com/listings/rental_applications/new?listable_uid=45941a6b-a585-4925-80a5-4a1b1adc102c&source=Website",
     "currentlyPosted": true,
-    "lastSyncedAt": "2026-11-19T15:14:53.898Z",
+    "lastSyncedAt": "2026-11-20T00:17:42.634Z",
     "unpostedAt": "2026-11-07T04:39:43.839Z"
   },
   {
